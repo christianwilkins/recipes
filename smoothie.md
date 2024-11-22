@@ -1,14 +1,18 @@
-# Info
-serving: 1
-time: 7 mins
+# info
+- servings: 1
+- time: 7 mins
 
-# Ingredients
-- Milk
-- Frozen fruit (preferably triple berry blend for antioxidants or mango for taste)
-- Fresh banana or fruit (if have/want)?
-- Whey protein isolate
-- Creatine monohydrate
-- Sweetener if wanted (maple syrup or honey)
+# ingredients
+| amount | ingredient |
+| ------ | ---------- |
+| 1 cup | milk |
+| 1 cup | frozen fruit (triple berry or mango) |
+| 1 | banana (optional) |
+| 30g scoop | whey protein isolate |
+| 5g | creatine monohydrate |
+| to taste | sweetener (maple syrup or honey) |
 
-# Instructions
-1. Place all ingredients in cup and blend
+# instructions
+1. Place all ingredients in blender cup
+2. Blend until smooth and creamy
+3. Serve immediately
