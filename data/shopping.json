@@ -1,0 +1,20 @@
+{
+  "checked": "September 11, 2026",
+  "store": "Walmart Lewis Center Supercenter",
+  "address": "8659 Columbus Pike, Lewis Center, OH 43035",
+  "storeUrl": "https://www.walmart.com/store/2725-lewis-center-oh",
+  "items": [
+    { "id": "yogurt", "name": "Plain nonfat Greek yogurt", "buy": "Great Value, 32 oz tub", "needed": "400g total", "price": 3.28, "local": true, "url": "https://www.walmart.com/ip/26559565" },
+    { "id": "whey", "name": "Vanilla whey protein", "buy": "Equate, 24 oz / 22 servings", "needed": "2 scoops total", "price": 20.12, "local": true, "url": "https://www.walmart.com/ip/5563948388" },
+    { "id": "banana-mix", "name": "Zero-sugar banana cream pudding mix", "buy": "Jell-O instant, 0.9 oz box", "needed": "1 tbsp dry powder", "price": 1.63, "local": true, "url": "https://www.walmart.com/ip/13812813" },
+    { "id": "cheesecake-mix", "name": "Zero-sugar cheesecake pudding mix", "buy": "Jell-O instant, 1 oz box", "needed": "10g dry powder", "price": 1.63, "local": true, "url": "https://www.walmart.com/ip/13812827" },
+    { "id": "cream-cheese", "name": "Reduced-fat cream cheese", "buy": "Great Value Neufchâtel, 8 oz brick", "needed": "2 tbsp / about 30g total", "price": 1.56, "local": false, "url": "https://www.walmart.com/ip/10452358", "note": "Budget substitute for the low-fat cream cheese." },
+    { "id": "milk", "name": "Fat-free milk", "buy": "Fairlife, 52 fl oz bottle", "needed": "2 tbsp total", "price": 4.78, "local": false, "url": "https://www.walmart.com/c/kp/fairlife-fat-free", "budgetPrice": 1.62, "budgetBuy": "Great Value skim milk, ½ gallon", "budgetUrl": "https://www.walmart.com/c/best-sellers/skim-milk-great-value", "note": "Use milk you already have if possible." },
+    { "id": "banana", "name": "Banana", "buy": "1 banana, priced by weight", "needed": "½ banana", "price": 0.20, "local": false, "url": "https://www.walmart.com/ip/44390948" },
+    { "id": "wafers", "name": "Vanilla wafers", "buy": "Great Value, 11 oz box", "needed": "3 cookies", "price": 2.87, "local": false, "url": "https://www.walmart.com/c/kp/great-value-vanilla-wafers", "note": "Budget substitute for Nilla wafers. Choose the round vanilla wafers, not layered cream wafers." },
+    { "id": "cookie-butter", "name": "Biscoff creamy cookie butter", "buy": "14.1 oz jar", "needed": "1 tbsp, plus optional 1 tsp topping", "price": 5.47, "local": true, "url": "https://www.walmart.com/ip/19857695" },
+    { "id": "biscoff-cookies", "name": "Biscoff cookies", "buy": "8.8 oz / about 32 cookies", "needed": "1 cookie", "price": 3.12, "local": false, "url": "https://www.walmart.com/ip/10813607" },
+    { "id": "vanilla", "name": "Vanilla extract", "buy": "Great Value pure vanilla, 1 fl oz", "needed": "½ tsp", "price": 3.24, "local": true, "url": "https://www.walmart.com/ip/21368021", "omitBudget": true, "note": "Budget option: omit if the vanilla whey provides enough flavor." },
+    { "id": "sweetener", "name": "Monk fruit sweetener", "buy": "Lakanto, 8.29 oz bag", "needed": "1 tsp total", "price": 8.79, "local": false, "url": "https://www.walmart.com/ip/51775310", "omitBudget": true, "note": "Budget option: taste first and omit if already sweet enough." }
+  ]
+}
