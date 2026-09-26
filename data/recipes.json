@@ -60,5 +60,56 @@
       "The tablespoon of cookie butter goes into the bowl. Only the extra teaspoon on top is optional in the original recipe.",
       "Budget swaps: reduced-fat Neufchâtel and ordinary skim milk. Taste before adding monk fruit because the whey, pudding mix, and cookie butter already contribute sweetness."
     ]
+  },
+  {
+    "slug": "cuban-style-black-beans",
+    "title": "Cuban-Style Black Beans",
+    "description": "A large-batch Cuban-style black bean recipe made from 2 lb dried black beans, with onion, green pepper, garlic, cumin, oregano, and vinegar. Includes both soaked and no-soak cooking methods.",
+    "category": "Side dish",
+    "shopping": false,
+    "servings": "approximately 12–16 servings",
+    "time": "Prep: about 20 minutes. Soaked beans: cook 1 hour 20 minutes–2 hours; total 1 hour 40 minutes–2 hours 20 minutes, plus 8–12 hours soaking. No-soak beans: cook 2 hours 15 minutes–3 hours 10 minutes; total 2 hours 35 minutes–3 hours 30 minutes. Allow additional time to bring the pot to a boil; older beans may take longer.",
+    "ingredients": [
+      ["2 lb", "dried black beans"],
+      ["About 14–16 cups", "water"],
+      ["2", "bay leaves"],
+      ["1½ tbsp, plus ½–1 tsp more to taste", "salt"],
+      ["1½ tsp total", "black pepper"],
+      ["3 tsp total", "ground cumin"],
+      ["2½ tsp total", "dried oregano"],
+      ["2 tbsp", "olive oil"],
+      ["1 medium", "onion, diced"],
+      ["1", "green bell pepper, diced"],
+      ["6–8 cloves", "garlic, minced"],
+      ["2 tbsp", "white vinegar"],
+      ["1–2 tsp, optional", "sugar"]
+    ],
+    "steps": [
+      "Rinse the dried black beans thoroughly and pick out any stones or damaged beans. Choose either Option A or Option B below to cook the beans, then continue with the remaining steps.",
+      "Option A — Soaked Beans: Cover the beans generously with water and soak for 8–12 hours or overnight. Drain and discard the soaking water. Add the beans to a large pot with about 14 cups fresh water. Add the bay leaves, 1½ tbsp salt, 1 tsp black pepper, 1 tsp cumin, and 1 tsp oregano. Bring to a boil, then reduce to a gentle simmer and partially cover. Cook approximately 60–90 minutes, until the beans are completely tender.",
+      "Option B — No-Soak / Straight From Dry: Place the rinsed dry beans directly into a large pot. Add about 16 cups water, the bay leaves, 1½ tbsp salt, 1 tsp black pepper, 1 tsp cumin, and 1 tsp oregano. Bring to a full boil. Boil for about 10 minutes, then reduce to a gentle simmer and partially cover. Cook approximately 1¾–2½ hours, or until the beans are completely tender. Check periodically and add additional hot water if the beans are no longer comfortably submerged. Older beans may require additional cooking time.",
+      "Regardless of which method you use, do not drain the beans once cooked. Keep the cooking liquid because it becomes the base of the sauce.",
+      "While the beans are finishing, heat 2 tbsp olive oil in a skillet over medium heat.",
+      "Add the diced onion and green bell pepper. Cook until softened, approximately 6–8 minutes.",
+      "Add the minced garlic and cook for about 30–60 seconds, until fragrant.",
+      "Stir 2 tsp cumin, 1½ tsp oregano, and ½ tsp black pepper into the sofrito. Cook briefly to bloom the spices.",
+      "Once the beans are completely tender, stir the sofrito into the bean pot.",
+      "Add 2 tbsp white vinegar and, optionally, 1–2 tsp sugar.",
+      "Taste and add another ½–1 tsp salt as needed.",
+      "Simmer uncovered for another 20–30 minutes until the liquid reduces and becomes rich and creamy.",
+      "For thicker beans, mash a small portion of the beans against the side of the pot and stir them back into the mixture.",
+      "Remove the bay leaves before serving."
+    ],
+    "notes": [
+      "Soaking is optional. Soaked beans cook faster and somewhat more predictably, while unsoaked beans work perfectly well but require substantially more cooking time.",
+      "If cooking directly from dry, start with more water and check the pot periodically during the longer simmer.",
+      "Do not add the vinegar until the beans are already completely tender.",
+      "Keep the bean cooking liquid; do not drain it.",
+      "Cook times can vary significantly depending on the age of the dried beans.",
+      "If the beans are still firm, continue cooking rather than relying strictly on the stated time.",
+      "The beans will thicken considerably as they cool.",
+      "They are especially good reheated the next day.",
+      "Serve with rice, chicken, tofu, or other Cuban-style dishes."
+    ]
   }
 ]

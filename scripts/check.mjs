@@ -7,7 +7,7 @@ assert.equal(new Set(shopping.items.map(i=>i.id)).size, shopping.items.length);
 for (const r of recipes) {
   assert.match(r.slug, /^[a-z0-9-]+$/);
   assert.ok(r.title && r.ingredients.length && r.steps.length);
-  assert.equal(new URL(r.source).hostname, 'www.instagram.com');
+  if (r.source) assert.equal(new URL(r.source).hostname, 'www.instagram.com');
 }
 for (const item of shopping.items) {
   assert.ok(item.name && item.buy && item.needed);
