@@ -111,5 +111,83 @@
       "They are especially good reheated the next day.",
       "Serve with rice, chicken, tofu, or other Cuban-style dishes."
     ]
+  },
+  {
+    "slug": "beef-stuffed-sweet-potatoes",
+    "title": "Beef and black bean stuffed sweet potatoes",
+    "category": "Dinner",
+    "description": "Baked sweet potatoes with seasoned beef, black beans, melted cheese, pico, avocado, and lime yogurt sauce.",
+    "shoppingPath": "/trader-joes/",
+    "servings": "4 stuffed sweet potatoes",
+    "time": "About 15 minutes prep and 45–60 minutes baking",
+    "ingredients": [
+      ["4 medium", "sweet potatoes"],
+      ["1 lb", "ground beef, already on hand"],
+      ["1 can / 15 oz", "black beans, drained and rinsed"],
+      ["About ½ cup", "shredded cheese, already on hand; adjust to taste"],
+      ["1–2 tbsp", "taco seasoning, to taste; or use cumin, chili powder, and garlic powder"],
+      ["½–1 cup", "pico de gallo"],
+      ["1–2", "avocados, sliced"],
+      ["½ cup", "plain Greek yogurt"],
+      ["1–2", "limes, to taste"],
+      ["To taste", "salt"],
+      ["As needed", "water to thin the sauce"],
+      ["Optional", "cilantro for serving"]
+    ],
+    "steps": [
+      "Heat the oven to 425°F. Wash and pierce the sweet potatoes, place on a baking sheet, and bake for about 45–60 minutes, until soft all the way through. Larger potatoes may take longer.",
+      "While the potatoes bake, cook the beef in a skillet, breaking it up, until it reaches 160°F internally. Drain excess fat if desired. Add the seasoning and a splash of water as needed, then stir in the black beans and heat through.",
+      "Mix the yogurt with lime juice and a pinch of salt. Add a little water until the sauce is easy to spoon or drizzle.",
+      "Split the potatoes and fluff their centers. Divide the beef and beans between them, add cheese, and return to the oven briefly until the cheese melts.",
+      "Finish with pico, avocado, lime yogurt sauce, and optional cilantro."
+    ],
+    "methodNote": "A practical recipe developed for this shopping list. Beef, cheese, and topping quantities are adjustable.",
+    "notes": [
+      "Use the beef and cheese already on hand. Scale the filling to the amount of beef available.",
+      "The grocery list includes extra beans, yogurt, and produce for other meals.",
+      "Jarred salsa works in place of pico. Keep the cool toppings separate when saving leftovers."
+    ]
+  },
+  {
+    "slug": "chicken-satay-rice-bowls",
+    "title": "Chicken satay rice bowls",
+    "category": "Dinner",
+    "description": "Coconut and curry marinated chicken with a powdered peanut butter sauce, rice, and lime.",
+    "source": "https://www.instagram.com/reel/Ddl58InP2Ws/",
+    "sourceLabel": "Levi Dang’s satay reel",
+    "shoppingPath": "/trader-joes/",
+    "servings": "8 skewers / 2 rice bowls",
+    "time": "About 20 minutes prep, at least 2 hours refrigerated marinating, plus cooking",
+    "ingredients": [
+      ["500g / about 1.1 lb", "boneless, skinless chicken thighs, cut into 1 inch pieces"],
+      ["50ml", "coconut milk for the marinade"],
+      ["1 tsp", "Thai red curry paste for the marinade"],
+      ["1 tbsp", "curry powder"],
+      ["1 tsp", "honey"],
+      ["1 tsp", "salt"],
+      ["40g", "powdered peanut butter, such as PB2"],
+      ["50–100ml", "hot water for the sauce"],
+      ["1 tbsp", "coconut milk for the sauce"],
+      ["1 tsp", "Thai red curry paste for the sauce"],
+      ["1 tsp", "dark soy sauce"],
+      ["1", "lime, for sauce and serving"],
+      ["1 tsp, optional", "crushed roasted peanuts"],
+      ["300g cooked", "rice, about 150g per bowl"],
+      ["Optional", "cilantro and chili for serving"]
+    ],
+    "steps": [
+      "Whisk together 50ml coconut milk, 1 tsp red curry paste, curry powder, honey, and salt. Add the chicken and coat well. Cover and marinate in the refrigerator for at least 2 hours, or overnight.",
+      "Whisk the powdered peanut butter with 50ml hot water until smooth. Stir in 1 tbsp coconut milk, 1 tsp red curry paste, dark soy sauce, and a squeeze of lime. Add more water as needed, up to about 100ml total, and adjust to taste.",
+      "Thread the chicken onto 8 skewers, around 60g per skewer. If using wooden skewers, prepare them according to their package directions. You can also cook the pieces without skewers.",
+      "Grill or pan-cook the chicken, turning to brown both sides, or bake on a lined baking sheet at 425°F. Cook until the thickest pieces reach 165°F internally; cooking time depends on the size of the pieces and the method. Do not rely on browning alone.",
+      "Let the chicken rest for 2 minutes. Serve 4 skewers per bowl with 150g cooked rice and half the peanut sauce. Finish with optional crushed peanuts, cilantro, chili, and lime."
+    ],
+    "methodNote": "Ingredients and serving arrangement adapted from Levi Dang’s Instagram caption. Cooking directions use an internal temperature endpoint instead of the reel’s short timing estimate.",
+    "notes": [
+      "Thai red curry paste and curry powder are separate ingredients. Curry simmer sauce is not a direct substitute for the paste.",
+      "Powdered peanut butter, Thai red curry paste, and dark soy sauce may require a second store; availability at Trader Joe’s has not been verified.",
+      "Regular peanut butter can replace the powder: start with about 2 tbsp and thin with warm water, then adjust to taste. It changes the sauce’s fat, calories, and texture. Regular soy sauce can replace dark soy with a different flavor.",
+      "Nutrition has not been calculated for the complete bowls, including sauce and rice."
+    ]
   }
 ]

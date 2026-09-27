@@ -1,0 +1,71 @@
+{
+  "date": "September 27, 2026",
+  "store": "Trader Joe’s Dublin",
+  "address": "6355 Sawmill Road, Dublin, OH 43017",
+  "storeUrl": "https://locations.traderjoes.com/oh/dublin/672/",
+  "groups": [
+    {
+      "id": "produce",
+      "title": "Produce",
+      "items": [
+        { "id": "sweet-potatoes", "name": "Sweet potatoes", "quantity": "4 medium", "note": "For the beef and black bean stuffed sweet potatoes." },
+        { "id": "avocados", "name": "Avocados", "quantity": "2", "note": "One slightly soft for soon, one firmer for later." },
+        { "id": "limes", "name": "Limes", "quantity": "3", "note": "Two for the sweet potatoes and yogurt sauce; one for satay." },
+        { "id": "cilantro", "name": "Cilantro", "quantity": "1 bunch, optional", "note": "Shared topping for both recipes." },
+        { "id": "bananas", "name": "Bananas", "quantity": "5–7", "note": "For breakfast or snacks." },
+        { "id": "chili", "name": "Fresh chili", "quantity": "1, optional", "note": "For serving with satay if you want extra heat." }
+      ]
+    },
+    {
+      "id": "refrigerated",
+      "title": "Meat, dairy, and refrigerated",
+      "items": [
+        { "id": "chicken", "name": "Boneless, skinless chicken thighs", "quantity": "About 1¼ lb", "note": "The satay recipe uses 500g, about 1.1 lb." },
+        { "id": "yogurt", "name": "Plain Greek yogurt", "quantity": "2 large tubs, around 32 oz each", "note": "Nonfat or 2%. Use for breakfasts and the lime sauce. Compare price per ounce." },
+        { "id": "eggs", "name": "Eggs", "quantity": "1 dozen", "note": "Easy protein for breakfast and rice bowls." },
+        { "id": "cottage-cheese", "name": "Cottage cheese", "quantity": "1 tub, optional", "note": "An extra protein option if you like it." },
+        { "id": "pico", "name": "Refrigerated pico de gallo", "quantity": "1 tub, mild or hot", "note": "For sweet potatoes, eggs, and rice bowls. Substitute a jar of salsa if unavailable." }
+      ]
+    },
+    {
+      "id": "pantry",
+      "title": "Rice, beans, and pantry",
+      "items": [
+        { "id": "rice", "name": "Dry jasmine or brown rice", "quantity": "1 bag", "note": "For everyday bowls and satay. Satay uses 300g cooked rice for two bowls." },
+        { "id": "beans", "name": "Canned black beans", "quantity": "4 cans", "note": "Use one 15 oz can for the stuffed sweet potatoes; save the rest for rice bowls." },
+        { "id": "oats", "name": "Rolled oats", "quantity": "1 bag or container", "note": "For oatmeal or overnight oats with yogurt." },
+        { "id": "coconut-milk", "name": "Coconut milk", "quantity": "1 can", "note": "Satay needs 50ml for the marinade plus 1 tbsp for the sauce." },
+        { "id": "peanut-butter", "name": "Powdered peanut butter, such as PB2", "quantity": "1 container; recipe uses 40g", "note": "TJ’s availability is unconfirmed; another store may be needed. Regular peanut butter also works, thinned with warm water, but changes the macros." },
+        { "id": "red-curry-paste", "name": "Thai red curry paste", "quantity": "1 small jar; recipe uses 2 tsp", "note": "TJ’s availability is unconfirmed; another store may be needed. Curry simmer sauce is not the same ingredient." },
+        { "id": "curry-powder", "name": "Curry powder", "quantity": "1 jar if needed; recipe uses 1 tbsp" },
+        { "id": "honey", "name": "Honey", "quantity": "If needed; recipe uses 1 tsp" },
+        { "id": "soy-sauce", "name": "Dark soy sauce", "quantity": "If needed; recipe uses 1 tsp", "note": "Regular soy sauce is a workable substitute with a different flavor. Dark soy availability at TJ’s is unconfirmed." },
+        { "id": "peanuts", "name": "Roasted peanuts", "quantity": "1 small bag, optional", "note": "Crush a teaspoon for the satay sauce or garnish." },
+        { "id": "taco-seasoning", "name": "Taco seasoning", "quantity": "Only if needed", "note": "Use the cumin, chili powder, and garlic powder you already have instead." }
+      ]
+    },
+    {
+      "id": "freezer",
+      "title": "Freezer staples and backup meals",
+      "items": [
+        { "id": "berries", "name": "Frozen berries", "quantity": "1 bag", "note": "For Greek yogurt and oats." },
+        { "id": "vegetables", "name": "Plain frozen broccoli or mixed vegetables", "quantity": "2 bags", "note": "Sides for rice bowls and orange chicken." },
+        { "id": "edamame", "name": "Frozen shelled edamame", "quantity": "1 bag", "note": "Protein and fiber for bowls or snacks." },
+        { "id": "burrito-bowls", "name": "Chicken Burrito Bowls", "quantity": "2", "note": "Microwave backup meals. Check the current package for nutrition and cooking directions." },
+        { "id": "teriyaki-bowls", "name": "Teriyaki Chicken Bowls", "quantity": "1–2", "note": "An easy chicken, rice, and vegetable meal." },
+        { "id": "orange-chicken", "name": "Mandarin Orange Chicken", "quantity": "1 bag", "note": "Pair with your rice and frozen broccoli." }
+      ]
+    },
+    {
+      "id": "skincare",
+      "title": "Skincare",
+      "items": [
+        { "id": "cleanser", "name": "Marula Oil Cream Cleanser", "quantity": "1 tube", "note": "Listed at $6.99 for 5 oz. Low-lather cream cleanser with 1% colloidal oatmeal.", "url": "https://www.traderjoes.com/home/products/pdp/marula-oil-cream-cleanser-082583" },
+        { "id": "sunscreen", "name": "Daily Facial Mineral Sunscreen SPF 40", "quantity": "1 tube", "note": "Budget about $13; check the shelf price. Look specifically for Mineral. May leave a white cast.", "url": "https://www.traderjoes.com/home/products/pdp/daily-facial-mineral-sunscreen-spf-40-080885" },
+        { "id": "moisturizer", "name": "Ultra Hydrating Gel Moisturizer", "quantity": "1 jar, optional", "note": "Budget about $9. A lightweight option for mild dryness; a richer fragrance-free cream may suit very dry skin better. Keep an existing moisturizer if it works well." }
+      ]
+    }
+  ],
+  "alreadyHave": ["Ground beef", "Cheese"],
+  "checkAtHome": ["Salt", "Cooking oil", "Cumin, chili powder, and garlic powder", "Honey", "Soy sauce", "Curry powder", "Skewers, or cook the chicken pieces without them"]
+}

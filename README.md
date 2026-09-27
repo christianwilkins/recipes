@@ -5,12 +5,15 @@ A personal recipe notebook at [recipes.chriswiki.com](https://recipes.chriswiki.
 - [Protein banana pudding](https://recipes.chriswiki.com/protein-banana-pudding/)
 - [Biscoff protein cheesecake bowl](https://recipes.chriswiki.com/biscoff-protein-cheesecake-bowl/)
 - [Combined shopping checklist](https://recipes.chriswiki.com/shopping/)
+- [Trader Joe’s grocery and skincare checklist](https://recipes.chriswiki.com/trader-joes/)
+- [Beef and black bean stuffed sweet potatoes](https://recipes.chriswiki.com/beef-stuffed-sweet-potatoes/)
+- [Chicken satay rice bowls](https://recipes.chriswiki.com/chicken-satay-rice-bowls/)
 
 The two dessert recipes are adapted from Prep with Drew's Instagram captions, linked on each page. Shopping prices are dated September 11, 2026; local pickup checks are distinguished from online estimates. Nutrition is the creator's estimate, not independently calculated.
 
 ## Editing and previewing
 
-Recipe content lives in `data/recipes.json`, and the shopping list in `data/shopping.json`. The dependency-free Node build produces static HTML in `dist/`. Recipe pages work without JavaScript; checklist persistence and automatic shopping totals progressively enhance them.
+Recipe content lives in `data/recipes.json`, the dessert shopping list in `data/shopping.json`, and the September 27 Dublin trip in `data/trader-joes.json`. The dependency-free Node build produces static HTML in `dist/`. Recipe pages work without JavaScript; checklist persistence and automatic dessert shopping totals progressively enhance them. The Trader Joe’s checklist has no verified full basket total or live inventory; its product estimates are labeled separately.
 
 ```sh
 npm ci
