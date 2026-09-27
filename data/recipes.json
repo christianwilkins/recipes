@@ -8,15 +8,42 @@
     "time": "10 minutes in the freezer, plus mixing",
     "nutrition": "Creator’s estimate: 350 calories · 45g protein · 35g carbs · 5.5g fat per bowl. Brands and scoop sizes change these numbers.",
     "ingredients": [
-      ["200g", "plain nonfat Greek yogurt"],
-      ["1 scoop", "vanilla or banana bread whey protein"],
-      ["1 tbsp", "sugar-free instant banana cream pudding mix, dry"],
-      ["1 tbsp", "Fairlife fat-free milk"],
-      ["1 tbsp", "low-fat cream cheese"],
-      ["½ tsp", "vanilla extract"],
-      ["½ tsp", "monk fruit sweetener"],
-      ["½", "banana"],
-      ["3", "Nilla wafers, crushed"]
+      [
+        "200g",
+        "plain nonfat Greek yogurt"
+      ],
+      [
+        "1 scoop",
+        "vanilla or banana bread whey protein"
+      ],
+      [
+        "1 tbsp",
+        "sugar-free instant banana cream pudding mix, dry"
+      ],
+      [
+        "1 tbsp",
+        "Fairlife fat-free milk"
+      ],
+      [
+        "1 tbsp",
+        "low-fat cream cheese"
+      ],
+      [
+        "½ tsp",
+        "vanilla extract"
+      ],
+      [
+        "½ tsp",
+        "monk fruit sweetener"
+      ],
+      [
+        "½",
+        "banana"
+      ],
+      [
+        "3",
+        "Nilla wafers, crushed"
+      ]
     ],
     "steps": [
       "Stir the yogurt, whey, dry pudding mix, milk, cream cheese, vanilla, and monk fruit together until smooth.",
@@ -39,15 +66,42 @@
     "time": "No baking; mix until smooth",
     "nutrition": "Creator’s estimate: 395 calories · 45g protein · 33g carbs · 8g fat per bowl. Brands, scoop sizes, and optional toppings change these numbers.",
     "ingredients": [
-      ["200g", "plain nonfat Greek yogurt"],
-      ["1 scoop", "vanilla whey protein"],
-      ["10g", "sugar-free instant cheesecake pudding mix, dry"],
-      ["1 tbsp / 15g", "low-fat cream cheese"],
-      ["1 tbsp / 15g", "Fairlife fat-free milk"],
-      ["½ tsp", "monk fruit sweetener"],
-      ["1 tbsp / 15g", "Biscoff cookie butter"],
-      ["1", "Biscoff cookie, crushed"],
-      ["1 tsp, optional", "extra Biscoff cookie butter for topping"]
+      [
+        "200g",
+        "plain nonfat Greek yogurt"
+      ],
+      [
+        "1 scoop",
+        "vanilla whey protein"
+      ],
+      [
+        "10g",
+        "sugar-free instant cheesecake pudding mix, dry"
+      ],
+      [
+        "1 tbsp / 15g",
+        "low-fat cream cheese"
+      ],
+      [
+        "1 tbsp / 15g",
+        "Fairlife fat-free milk"
+      ],
+      [
+        "½ tsp",
+        "monk fruit sweetener"
+      ],
+      [
+        "1 tbsp / 15g",
+        "Biscoff cookie butter"
+      ],
+      [
+        "1",
+        "Biscoff cookie, crushed"
+      ],
+      [
+        "1 tsp, optional",
+        "extra Biscoff cookie butter for topping"
+      ]
     ],
     "steps": [
       "Stir the yogurt, whey, dry pudding mix, cream cheese, milk, monk fruit, and tablespoon of cookie butter together until smooth.",
@@ -66,23 +120,61 @@
     "title": "Cuban-Style Black Beans",
     "description": "A large-batch Cuban-style black bean recipe made from 2 lb dried black beans, with onion, green pepper, garlic, cumin, oregano, and vinegar. Includes both soaked and no-soak cooking methods.",
     "category": "Side dish",
-    "shopping": false,
     "servings": "approximately 12–16 servings",
     "time": "Prep: about 20 minutes. Soaked beans: cook 1 hour 20 minutes–2 hours; total 1 hour 40 minutes–2 hours 20 minutes, plus 8–12 hours soaking. No-soak beans: cook 2 hours 15 minutes–3 hours 10 minutes; total 2 hours 35 minutes–3 hours 30 minutes. Allow additional time to bring the pot to a boil; older beans may take longer.",
     "ingredients": [
-      ["2 lb", "dried black beans"],
-      ["About 14–16 cups", "water"],
-      ["2", "bay leaves"],
-      ["1½ tbsp, plus ½–1 tsp more to taste", "salt"],
-      ["1½ tsp total", "black pepper"],
-      ["3 tsp total", "ground cumin"],
-      ["2½ tsp total", "dried oregano"],
-      ["2 tbsp", "olive oil"],
-      ["1 medium", "onion, diced"],
-      ["1", "green bell pepper, diced"],
-      ["6–8 cloves", "garlic, minced"],
-      ["2 tbsp", "white vinegar"],
-      ["1–2 tsp, optional", "sugar"]
+      [
+        "2 lb",
+        "dried black beans"
+      ],
+      [
+        "About 14–16 cups",
+        "water"
+      ],
+      [
+        "2",
+        "bay leaves"
+      ],
+      [
+        "1½ tbsp, plus ½–1 tsp more to taste",
+        "salt"
+      ],
+      [
+        "1½ tsp total",
+        "black pepper"
+      ],
+      [
+        "3 tsp total",
+        "ground cumin"
+      ],
+      [
+        "2½ tsp total",
+        "dried oregano"
+      ],
+      [
+        "2 tbsp",
+        "olive oil"
+      ],
+      [
+        "1 medium",
+        "onion, diced"
+      ],
+      [
+        "1",
+        "green bell pepper, diced"
+      ],
+      [
+        "6–8 cloves",
+        "garlic, minced"
+      ],
+      [
+        "2 tbsp",
+        "white vinegar"
+      ],
+      [
+        "1–2 tsp, optional",
+        "sugar"
+      ]
     ],
     "steps": [
       "Rinse the dried black beans thoroughly and pick out any stones or damaged beans. Choose either Option A or Option B below to cook the beans, then continue with the remaining steps.",
@@ -117,22 +209,57 @@
     "title": "Beef and black bean stuffed sweet potatoes",
     "category": "Dinner",
     "description": "Baked sweet potatoes with seasoned beef, black beans, melted cheese, pico, avocado, and lime yogurt sauce.",
-    "shoppingPath": "/trader-joes/",
     "servings": "4 stuffed sweet potatoes",
     "time": "About 15 minutes prep and 45–60 minutes baking",
     "ingredients": [
-      ["4 medium", "sweet potatoes"],
-      ["1 lb", "ground beef, already on hand"],
-      ["1 can / 15 oz", "black beans, drained and rinsed"],
-      ["About ½ cup", "shredded cheese, already on hand; adjust to taste"],
-      ["1–2 tbsp", "taco seasoning, to taste; or use cumin, chili powder, and garlic powder"],
-      ["½–1 cup", "pico de gallo"],
-      ["1–2", "avocados, sliced"],
-      ["½ cup", "plain Greek yogurt"],
-      ["1–2", "limes, to taste"],
-      ["To taste", "salt"],
-      ["As needed", "water to thin the sauce"],
-      ["Optional", "cilantro for serving"]
+      [
+        "4 medium",
+        "sweet potatoes"
+      ],
+      [
+        "1 lb",
+        "ground beef, already on hand"
+      ],
+      [
+        "1 can / 15 oz",
+        "black beans, drained and rinsed"
+      ],
+      [
+        "About ½ cup",
+        "shredded cheese, already on hand; adjust to taste"
+      ],
+      [
+        "1–2 tbsp",
+        "taco seasoning, to taste; or use cumin, chili powder, and garlic powder"
+      ],
+      [
+        "½–1 cup",
+        "pico de gallo"
+      ],
+      [
+        "1–2",
+        "avocados, sliced"
+      ],
+      [
+        "½ cup",
+        "plain Greek yogurt"
+      ],
+      [
+        "1–2",
+        "limes, to taste"
+      ],
+      [
+        "To taste",
+        "salt"
+      ],
+      [
+        "As needed",
+        "water to thin the sauce"
+      ],
+      [
+        "Optional",
+        "cilantro for serving"
+      ]
     ],
     "steps": [
       "Heat the oven to 425°F. Wash and pierce the sweet potatoes, place on a baking sheet, and bake for about 45–60 minutes, until soft all the way through. Larger potatoes may take longer.",
@@ -155,25 +282,73 @@
     "description": "Coconut and curry marinated chicken with a powdered peanut butter sauce, rice, and lime.",
     "source": "https://www.instagram.com/reel/Ddl58InP2Ws/",
     "sourceLabel": "Levi Dang’s satay reel",
-    "shoppingPath": "/trader-joes/",
     "servings": "8 skewers / 2 rice bowls",
     "time": "About 20 minutes prep, at least 2 hours refrigerated marinating, plus cooking",
     "ingredients": [
-      ["500g / about 1.1 lb", "boneless, skinless chicken thighs, cut into 1 inch pieces"],
-      ["50ml", "coconut milk for the marinade"],
-      ["1 tsp", "Thai red curry paste for the marinade"],
-      ["1 tbsp", "curry powder"],
-      ["1 tsp", "honey"],
-      ["1 tsp", "salt"],
-      ["40g", "powdered peanut butter, such as PB2"],
-      ["50–100ml", "hot water for the sauce"],
-      ["1 tbsp", "coconut milk for the sauce"],
-      ["1 tsp", "Thai red curry paste for the sauce"],
-      ["1 tsp", "dark soy sauce"],
-      ["1", "lime, for sauce and serving"],
-      ["1 tsp, optional", "crushed roasted peanuts"],
-      ["300g cooked", "rice, about 150g per bowl"],
-      ["Optional", "cilantro and chili for serving"]
+      [
+        "500g / about 1.1 lb",
+        "boneless, skinless chicken thighs, cut into 1 inch pieces"
+      ],
+      [
+        "50ml",
+        "coconut milk for the marinade"
+      ],
+      [
+        "1 tsp",
+        "Thai red curry paste for the marinade"
+      ],
+      [
+        "1 tbsp",
+        "curry powder"
+      ],
+      [
+        "1 tsp",
+        "honey"
+      ],
+      [
+        "1 tsp",
+        "salt"
+      ],
+      [
+        "40g",
+        "powdered peanut butter, such as PB2"
+      ],
+      [
+        "50–100ml",
+        "hot water for the sauce"
+      ],
+      [
+        "1 tbsp",
+        "coconut milk for the sauce"
+      ],
+      [
+        "1 tsp",
+        "Thai red curry paste for the sauce"
+      ],
+      [
+        "1 tsp",
+        "dark soy sauce"
+      ],
+      [
+        "1",
+        "lime, for sauce and serving"
+      ],
+      [
+        "1 tsp, optional",
+        "crushed roasted peanuts"
+      ],
+      [
+        "300g cooked",
+        "rice, about 150g per bowl"
+      ],
+      [
+        "Optional",
+        "cilantro for serving"
+      ],
+      [
+        "Optional",
+        "fresh chili for serving"
+      ]
     ],
     "steps": [
       "Whisk together 50ml coconut milk, 1 tsp red curry paste, curry powder, honey, and salt. Add the chicken and coat well. Cover and marinate in the refrigerator for at least 2 hours, or overnight.",
