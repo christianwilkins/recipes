@@ -1,18 +1,27 @@
 import { mkdir, readFile, writeFile, cp, rm } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { categories } from '../lib/groceries.mjs';
 
 const recipes = JSON.parse(await readFile(new URL('../data/recipes.json', import.meta.url)));
 const root = new URL('../dist/', import.meta.url);
+const assets = {};
+for (const name of ['style.css', 'app.js', 'groceries.js']) {
+  const content = await readFile(new URL(`../public/${name}`, import.meta.url));
+  const hash = createHash('sha256').update(content).digest('hex').slice(0, 12);
+  assets[name] = { content, filename: name.replace(/(\.[^.]+)$/, `.${hash}$1`) };
+}
+const assetUrl = name => `/${assets[name].filename}`;
 const e = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function page(title, description, path, body) {
   return `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>${e(title)} · chriswiki recipes</title><meta name="description" content="${e(description)}"><link rel="canonical" href="https://recipes.chriswiki.com${path}"><meta property="og:title" content="${e(title)}"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>${path === '/shopping/' ? '<script src="/groceries.js" defer></script>' : ''}</head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>${e(title)} · chriswiki recipes</title><meta name="description" content="${e(description)}"><link rel="canonical" href="https://recipes.chriswiki.com${path}"><meta property="og:title" content="${e(title)}"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><link rel="stylesheet" href="${assetUrl('style.css')}"><script src="${assetUrl('app.js')}" defer></script>${path === '/shopping/' ? `<script src="${assetUrl('groceries.js')}" defer></script>` : ''}</head>
 <body><a class="skip" href="#main">Skip to content</a><div class="shell"><header><a class="brand" href="/">chriswiki<span> / recipes</span></a><nav aria-label="Main"><a href="/"${path === '/' ? ' aria-current="page"' : ''}>Recipes</a><a href="/shopping/"${path === '/shopping/' ? ' aria-current="page"' : ''}>Grocery list</a><a href="https://chriswiki.com">Main site ↗</a></nav></header><main id="main">${body}</main><footer><span>A personal recipe notebook.</span><a href="https://github.com/christianwilkins/recipes">View source ↗</a></footer></div></body></html>`;
 }
 const addButton = r => `<button class="secondary" data-add-recipe="${e(r.slug)}" hidden>Add ingredients</button>`;
 await rm(root, {recursive:true, force:true});
 await mkdir(root, {recursive:true});
 await cp(new URL('../public/', import.meta.url), root, {recursive:true});
+for (const {content, filename} of Object.values(assets)) await writeFile(new URL(filename, root), content);
 async function output(path, html) {
   const dir = new URL(path, root);
   await mkdir(dir, {recursive:true});
