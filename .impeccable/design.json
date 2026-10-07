@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T03:43:56.373440+00:00",
+  "title": "Design System: chriswiki recipes",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Bg",
+        "tonalRamp": [
+          "oklch(.15 .008 80)",
+          "oklch(.26 .008 80)",
+          "oklch(.38 .008 80)",
+          "oklch(.49 .008 80)",
+          "oklch(.61 .008 80)",
+          "oklch(.72 .008 80)",
+          "oklch(.84 .008 80)",
+          "oklch(.95 .008 80)"
+        ]
+      },
+      "fg": {
+        "role": "neutral",
+        "displayName": "Fg",
+        "tonalRamp": [
+          "oklch(.15 .01 260)",
+          "oklch(.26 .01 260)",
+          "oklch(.38 .01 260)",
+          "oklch(.49 .01 260)",
+          "oklch(.61 .01 260)",
+          "oklch(.72 .01 260)",
+          "oklch(.84 .01 260)",
+          "oklch(.95 .01 260)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(.15 .01 260)",
+          "oklch(.26 .01 260)",
+          "oklch(.38 .01 260)",
+          "oklch(.49 .01 260)",
+          "oklch(.61 .01 260)",
+          "oklch(.72 .01 260)",
+          "oklch(.84 .01 260)",
+          "oklch(.95 .01 260)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(.15 .008 80)",
+          "oklch(.26 .008 80)",
+          "oklch(.38 .008 80)",
+          "oklch(.49 .008 80)",
+          "oklch(.61 .008 80)",
+          "oklch(.72 .008 80)",
+          "oklch(.84 .008 80)",
+          "oklch(.95 .008 80)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(.15 .008 80)",
+          "oklch(.26 .008 80)",
+          "oklch(.38 .008 80)",
+          "oklch(.49 .008 80)",
+          "oklch(.61 .008 80)",
+          "oklch(.72 .008 80)",
+          "oklch(.84 .008 80)",
+          "oklch(.95 .008 80)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Focus",
+        "tonalRamp": [
+          "oklch(.15 .06 250)",
+          "oklch(.26 .06 250)",
+          "oklch(.38 .06 250)",
+          "oklch(.49 .06 250)",
+          "oklch(.61 .06 250)",
+          "oklch(.72 .06 250)",
+          "oklch(.84 .06 250)",
+          "oklch(.95 .06 250)"
+        ]
+      },
+      "dark-bg": {
+        "role": "neutral",
+        "displayName": "Dark Bg",
+        "tonalRamp": [
+          "oklch(.15 .008 260)",
+          "oklch(.26 .008 260)",
+          "oklch(.38 .008 260)",
+          "oklch(.49 .008 260)",
+          "oklch(.61 .008 260)",
+          "oklch(.72 .008 260)",
+          "oklch(.84 .008 260)",
+          "oklch(.95 .008 260)"
+        ]
+      },
+      "dark-fg": {
+        "role": "neutral",
+        "displayName": "Dark Fg",
+        "tonalRamp": [
+          "oklch(.15 .008 80)",
+          "oklch(.26 .008 80)",
+          "oklch(.38 .008 80)",
+          "oklch(.49 .008 80)",
+          "oklch(.61 .008 80)",
+          "oklch(.72 .008 80)",
+          "oklch(.84 .008 80)",
+          "oklch(.95 .008 80)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted",
+        "tonalRamp": [
+          "oklch(.15 .008 80)",
+          "oklch(.26 .008 80)",
+          "oklch(.38 .008 80)",
+          "oklch(.49 .008 80)",
+          "oklch(.61 .008 80)",
+          "oklch(.72 .008 80)",
+          "oklch(.84 .008 80)",
+          "oklch(.95 .008 80)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark Line",
+        "tonalRamp": [
+          "oklch(.15 .008 260)",
+          "oklch(.26 .008 260)",
+          "oklch(.38 .008 260)",
+          "oklch(.49 .008 260)",
+          "oklch(.61 .008 260)",
+          "oklch(.72 .008 260)",
+          "oklch(.84 .008 260)",
+          "oklch(.95 .008 260)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark Surface",
+        "tonalRamp": [
+          "oklch(.15 .008 260)",
+          "oklch(.26 .008 260)",
+          "oklch(.38 .008 260)",
+          "oklch(.49 .008 260)",
+          "oklch(.61 .008 260)",
+          "oklch(.72 .008 260)",
+          "oklch(.84 .008 260)",
+          "oklch(.95 .008 260)"
+        ]
+      },
+      "dark-focus": {
+        "role": "primary",
+        "displayName": "Dark Focus",
+        "tonalRamp": [
+          "oklch(.15 .06 250)",
+          "oklch(.26 .06 250)",
+          "oklch(.38 .06 250)",
+          "oklch(.49 .06 250)",
+          "oklch(.61 .06 250)",
+          "oklch(.72 .06 250)",
+          "oklch(.84 .06 250)",
+          "oklch(.95 .06 250)"
+        ]
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-pressed",
+        "value": "translateY(1px)",
+        "purpose": "Immediate pressed-state shift; no animated transition is defined."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "medium",
+        "value": "900px"
+      },
+      {
+        "name": "narrow",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "description": "The recipe prompt copy action uses the existing primary button.",
+      "html": "<button class=\"ds-primary\">Copy recipe prompt</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid var(--fg);border-radius:var(--radius);font-family:inherit;font-size:.875rem;font-weight:550;text-decoration:none;white-space:nowrap;cursor:pointer;line-height:1.4;background:var(--fg);color:var(--bg)}.ds-primary:hover{opacity:.85}.ds-primary:active{transform:translateY(1px)}.ds-primary:focus-visible{outline:3px solid var(--focus);outline-offset:5px}.ds-primary:disabled{opacity:.55;cursor:wait}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "description": "Native share is offered only when supported.",
+      "html": "<button class=\"ds-secondary\">Share prompt\u2026</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid var(--fg);border-radius:var(--radius);font-family:inherit;font-size:.875rem;font-weight:550;text-decoration:none;white-space:nowrap;cursor:pointer;line-height:1.4;background:transparent;color:var(--fg);border-color:var(--line)}.ds-secondary:hover{opacity:.85}.ds-secondary:active{transform:translateY(1px)}.ds-secondary:focus-visible{outline:3px solid var(--focus);outline-offset:5px}.ds-secondary:disabled{opacity:.55;cursor:wait}",
+      "refersTo": "button-secondary"
+    },
+    {
+      "name": "Labeled field",
+      "kind": "input",
+      "description": "Existing grocery field styling also supplies the prompt textarea treatment.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-item\">Add an item</label><input id=\"ds-item\" placeholder=\"e.g. Greek yogurt\"></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:6px;min-width:0}.ds-field label{font-size:.85rem;font-weight:550}.ds-field input{width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);color:var(--fg);font:inherit;caret-color:var(--fg)}.ds-field input::placeholder{color:var(--muted);opacity:1}.ds-field input:focus-visible{outline:3px solid var(--focus);outline-offset:5px}",
+      "refersTo": "field"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Existing recipe and grocery navigation with the cross-site main-site link.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main\"><a href=\"/\" aria-current=\"page\">Recipes</a><a href=\"/shopping/\">Grocery list</a><a href=\"https://chriswiki.com\">Main site \u2197</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:26px;font-size:.875rem}.ds-nav a{color:var(--fg);text-decoration:none;padding:12px 0;text-underline-offset:.22em;text-decoration-thickness:1px}.ds-nav [aria-current]{text-decoration:underline}.ds-nav a:hover{text-decoration-thickness:2px}.ds-nav a:focus-visible{outline:3px solid var(--focus);outline-offset:5px}@media(max-width:640px){.ds-nav{width:100%;justify-content:space-between;gap:16px}}"
+    },
+    {
+      "name": "Prompt disclosure",
+      "kind": "custom",
+      "description": "Native disclosure and read-only manual-copy fallback; preview text is abbreviated here.",
+      "html": "<details class=\"ds-preview\"><summary>View prompt</summary><div class=\"ds-prompt-field\"><label for=\"ds-prompt\">Recipe prompt</label><textarea id=\"ds-prompt\" readonly rows=\"10\">Help me make this recipe.</textarea></div></details>",
+      "css": ".ds-preview{margin-top:18px;max-width:75ch;color:var(--fg)}.ds-preview summary{cursor:pointer;font-size:.85rem;padding:10px 0;width:fit-content;text-decoration:underline;text-underline-offset:.22em}.ds-preview summary:focus-visible{outline:3px solid var(--focus);outline-offset:5px}.ds-prompt-field{display:flex;flex-direction:column;gap:6px;min-width:0;margin-top:12px}.ds-prompt-field label{font-size:.85rem;font-weight:550}.ds-prompt-field textarea{width:100%;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);color:var(--fg);font:inherit;line-height:1.6;font-size:1rem;resize:vertical;caret-color:var(--fg)}.ds-prompt-field textarea:focus{outline:3px solid var(--focus);outline-offset:3px}@media print{.ds-preview{display:none!important}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A personal recipe notebook",
+    "overview": "This documents the existing implementation in `public/style.css`, `public/app.js`, and `scripts/build.mjs`, including the recipe-prompt extension. Serif headings, system body text, quiet neutral surfaces, and native controls support reading, cooking, and maintaining a grocery list.",
+    "keyCharacteristics": [
+      "Charter headings and system body text.",
+      "Neutral light and dark palettes, thin dividers, and flat surfaces.",
+      "Native controls with visible focus and readable fallback content."
+    ],
+    "rules": [],
+    "dos": [
+      "**Do** reuse the existing neutral tokens, Charter headings, system body text, and control treatments for this extension.",
+      "**Do** retain native disclosure and manual-copy access to the recipe prompt.",
+      "**Do** preserve the visible focus treatment and polite action feedback."
+    ],
+    "donts": [
+      "**Don't** introduce shadows or new accent colors into the documented notebook extension.",
+      "**Don't** include the recipe-prompt controls or preview in printed recipes."
+    ]
+  }
+}
