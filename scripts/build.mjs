@@ -17,6 +17,19 @@ function page(title, description, path, body) {
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light dark"><title>${e(title)} · chriswiki recipes</title><meta name="description" content="${e(description)}"><link rel="canonical" href="https://recipes.chriswiki.com${path}"><meta property="og:title" content="${e(title)}"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><link rel="stylesheet" href="${assetUrl('style.css')}"><script src="${assetUrl('app.js')}" defer></script>${path === '/shopping/' ? `<script src="${assetUrl('groceries.js')}" defer></script>` : ''}</head>
 <body><a class="skip" href="#main">Skip to content</a><div class="shell"><header><a class="brand" href="/">chriswiki<span> / recipes</span></a><nav aria-label="Main"><a href="/"${path === '/' ? ' aria-current="page"' : ''}>Recipes</a><a href="/shopping/"${path === '/shopping/' ? ' aria-current="page"' : ''}>Grocery list</a><a href="https://chriswiki.com">Main site ↗</a></nav></header><main id="main">${body}</main><footer><span>A personal recipe notebook.</span><a href="https://github.com/christianwilkins/recipes">View source ↗</a></footer></div></body></html>`;
 }
+function recipePrompt(r) {
+  return [
+    'Help me make this recipe. Ask how many servings I want and whether I need ingredient substitutions. Then scale the quantities if needed, help me identify groceries I am missing, and guide me through the cooking steps. Preserve the recipe notes and label any changes you suggest.',
+    '', r.title, r.description, `Servings: ${r.servings}`, `Time: ${r.time}`,
+    '', 'Ingredients', ...r.ingredients.map(([amount, name]) => `- ${amount} ${name}`),
+    '', 'Method', ...r.steps.map((step, i) => `${i + 1}. ${step}`),
+    ...(r.methodNote ? ['', r.methodNote] : []),
+    ...(r.notes.length ? ['', 'Notes', ...r.notes.map(note => `- ${note}`)] : []),
+    ...(r.nutrition ? ['', r.nutrition] : []),
+    '', `Recipe: https://recipes.chriswiki.com/${r.slug}/`,
+    ...(r.source ? [`Original source: ${r.source}`] : []),
+  ].join('\n');
+}
 const addButton = r => `<button class="secondary" data-add-recipe="${e(r.slug)}" hidden>Add ingredients</button>`;
 await rm(root, {recursive:true, force:true});
 await mkdir(root, {recursive:true});
@@ -38,6 +51,7 @@ ${[['Dinner','dinners','Dinners'], ['Dessert','desserts','Desserts'], ['Side dis
 for (const r of recipes) {
  await output(`${r.slug}/`, page(r.title,r.description,`/${r.slug}/`,`
 <a class="back" href="/">← All recipes</a><section class="recipe-heading"><h1>${e(r.title)}</h1><p>${e(r.description)}</p><p class="meta">${e(r.servings)} · ${e(r.time)}</p><div class="actions">${addButton(r)}<a href="/shopping/">View grocery list</a><button class="secondary print" hidden>Print recipe</button>${r.source ? `<a href="${e(r.source)}">${e(r.sourceLabel ?? 'Prep with Drew’s reel')} ↗</a>` : ''}</div><p class="action-status small" role="status" aria-live="polite"></p></section>
+<section class="recipe-prompt" aria-labelledby="prompt-heading"><h2 id="prompt-heading">Make it with your agent</h2><p class="small">Copy the full recipe and a ready-to-use prompt for Muse, ChatGPT, or another agent.</p><div class="actions"><button class="button" data-copy-prompt hidden>Copy recipe prompt</button><button class="secondary" data-share-prompt hidden>Share prompt…</button></div><p class="prompt-status small" role="status" aria-live="polite"></p><details class="prompt-preview"><summary>View prompt</summary><div class="field"><label for="recipe-prompt-text">Recipe prompt</label><textarea id="recipe-prompt-text" readonly rows="10">${e(recipePrompt(r))}</textarea></div></details></section>
 <div class="recipe-body"><section><h2>Ingredients</h2><p class="small">For ${e(r.servings)}. Check off as you cook.</p><ul class="ingredients">${r.ingredients.map(([amount,name],i)=>`<li><label><input type="checkbox" data-check="${r.slug}-${i}"><span><strong>${e(amount)}</strong> ${e(name)}</span></label></li>`).join('')}</ul></section><section><h2>Method</h2><ol class="steps">${r.steps.map(s=>`<li>${e(s)}</li>`).join('')}</ol>${r.methodNote ? `<p class="small">${e(r.methodNote)}</p>` : ''}<div class="notes"><h3>A few useful notes</h3>${r.notes.map(n=>`<p>${e(n)}</p>`).join('')}</div>${r.nutrition ? `<p class="small nutrition">${e(r.nutrition)}</p>` : ''}</section></div>`));
 }
 await output('shopping/', page('Grocery list', 'One shared grocery list. Add ingredients from recipes, add your own items, and edit from any device.', '/shopping/', `

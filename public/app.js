@@ -33,3 +33,40 @@ for (const button of document.querySelectorAll('[data-add-recipe]')) {
     } finally { button.disabled = false; }
   });
 }
+
+const promptText = document.querySelector('#recipe-prompt-text');
+if (promptText) {
+  const copyButton = document.querySelector('[data-copy-prompt]');
+  const shareButton = document.querySelector('[data-share-prompt]');
+  const status = document.querySelector('.prompt-status');
+  const showManualCopy = message => {
+    document.querySelector('.prompt-preview').open = true;
+    promptText.focus();
+    promptText.select();
+    status.textContent = message;
+  };
+  copyButton.hidden = false;
+  copyButton.addEventListener('click', async () => {
+    copyButton.disabled = true;
+    status.textContent = '';
+    try {
+      await navigator.clipboard.writeText(promptText.value);
+      status.textContent = 'Prompt copied. Paste it into Muse or your preferred agent.';
+    } catch {
+      showManualCopy('Select and copy the prompt below, then paste it into your agent.');
+    } finally { copyButton.disabled = false; }
+  });
+  const shareData = {title: document.querySelector('h1').textContent, text: promptText.value};
+  if (typeof navigator.share === 'function' && (!navigator.canShare || navigator.canShare(shareData))) {
+    shareButton.hidden = false;
+    shareButton.addEventListener('click', async () => {
+      shareButton.disabled = true;
+      status.textContent = '';
+      try {
+        await navigator.share(shareData);
+      } catch (error) {
+        if (error.name !== 'AbortError') showManualCopy('Sharing is unavailable. Copy the prompt below and paste it into your agent.');
+      } finally { shareButton.disabled = false; }
+    });
+  }
+}
