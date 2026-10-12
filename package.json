@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node --check scripts/build.mjs && node --check public/app.js && node --check public/groceries.js && node --check lib/groceries.mjs && node scripts/check.mjs",
+    "check": "node --check scripts/build.mjs && node --check public/app.js && node --check public/groceries.js && node --check lib/groceries.mjs && node --check lib/scale.mjs && node --check lib/nutrition.mjs && node scripts/check.mjs",
     "test": "node --test tests/*.test.mjs",
     "dev": "wrangler pages dev dist --port 4178",
     "check:functions": "wrangler pages functions build --outdir .functions-build",
