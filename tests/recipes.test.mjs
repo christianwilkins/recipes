@@ -38,7 +38,7 @@ test('family nutrition stays attached to its flavor and sauce source is complete
  assert.equal(recipeNutrition(pudding,pudding.variants[0]).perServing.calories,350);
  assert.equal(recipeNutrition(pudding,pudding.variants.find(v=>v.id==='ferrero-rocher')),null);
  const quesadilla=recipe('quesadillas');
- assert.equal(quesadilla.ingredients.find(([,name])=>name.startsWith('plain Greek'))[0],'300g');
- assert.equal(quesadilla.ingredients.find(([,name])=>name==='chili powder, for the sauce')[0],'1 tsp');
+ assert.equal(quesadilla.ingredients.find(([,name])=>name.startsWith('plain Greek'))[0],'150g');
+ assert.equal(quesadilla.ingredients.find(([,name])=>name==='chili powder, for the sauce')[0],'½ tsp');
  assert.equal(quesadilla.unrecorded,undefined);
 });
