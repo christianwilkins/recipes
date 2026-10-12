@@ -17,7 +17,7 @@ assert.equal(new Set(recipes.map(r=>r.slug)).size, recipes.length);
 assert.equal(new Set(shopping.items.map(i=>i.id)).size, shopping.items.length);
 for (const r of recipes) {
   assert.match(r.slug, /^[a-z0-9-]+$/);
-  assert.ok(r.title && r.ingredients.length && r.steps.length);
+  assert.ok(r.title && (r.ingredients.length || r.variants?.length) && (r.steps.length || r.variants?.length));
   if (r.source) assert.equal(new URL(r.source).hostname, 'www.instagram.com');
   if (r.shoppingPath) assert.ok(['/shopping/', '/trader-joes/'].includes(r.shoppingPath));
   if (r.variants) {

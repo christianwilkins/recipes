@@ -28,6 +28,17 @@ test('nutrition is per serving and stays consistent between dried and canned bea
  assert.equal(Math.round(dried.batch.calories/14),Math.round(dried.perServing.calories));
  const quesadillas=recipe('quesadillas');
  const filling=recipeNutrition(quesadillas,quesadillas.variants[0]);
- assert.equal(filling.perServing,null);assert.match(filling.note,/Not counted: tortillas/);
+ assert.equal(filling.perServing,null);assert.match(filling.note,/tortillas/);
  assert.equal(recipeNutrition(recipe('chicken-satay-rice-bowls')),null);
+});
+
+
+test('family nutrition stays attached to its flavor and sauce source is complete',()=>{
+ const pudding=recipe('greek-yogurt-pudding');
+ assert.equal(recipeNutrition(pudding,pudding.variants[0]).perServing.calories,350);
+ assert.equal(recipeNutrition(pudding,pudding.variants.find(v=>v.id==='ferrero-rocher')),null);
+ const quesadilla=recipe('quesadillas');
+ assert.equal(quesadilla.ingredients.find(([,name])=>name.startsWith('plain Greek'))[0],'300g');
+ assert.equal(quesadilla.ingredients.find(([,name])=>name==='chili powder, for the sauce')[0],'1 tsp');
+ assert.equal(quesadilla.unrecorded,undefined);
 });

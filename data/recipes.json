@@ -68,7 +68,9 @@
       "fiber": null,
       "sodium": null,
       "note": "The recipe creator’s estimate per bowl. Brands and scoop sizes change these numbers."
-    }
+    },
+    "family": "greek-yogurt-pudding",
+    "familyVariant": "banana-pudding"
   },
   {
     "slug": "biscoff-protein-cheesecake-bowl",
@@ -139,7 +141,9 @@
       "fiber": null,
       "sodium": null,
       "note": "The recipe creator’s estimate per bowl. Brands, scoop sizes, and optional toppings change these numbers."
-    }
+    },
+    "family": "greek-yogurt-pudding",
+    "familyVariant": "biscoff-cheesecake"
   },
   {
     "slug": "cuban-style-black-beans",
@@ -267,6 +271,9 @@
         "steps": [
           "Pour {8 cans} of black beans, with their liquid, into a large pot. Add {about 2 cups} water, the bay leaves, {1 tsp} black pepper, {1 tsp} cumin, and {1 tsp} oregano. Do not add salt yet; canned beans are already salted.",
           "Bring to a gentle simmer over medium heat, partially cover, and cook for about 15 minutes while you make the sofrito. Stir now and then so the beans do not stick."
+        ],
+        "notes": [
+          "This 8-can option adapts the dried-bean batch to a similar yield. The earlier four-can version from the chat history used different seasoning ratios and remains in the source audit."
         ]
       }
     ],
@@ -493,7 +500,19 @@
     "nutritionServings": {
       "count": 4,
       "label": "stuffed sweet potato"
-    }
+    },
+    "related": [
+      {
+        "slug": "cuban-style-black-beans",
+        "text": "Cuban-Style Black Beans",
+        "note": "A sauce to serve alongside."
+      },
+      {
+        "slug": "avocado-yogurt-spread",
+        "text": "Garlic-lime avocado yogurt spread",
+        "note": "A sauce to serve alongside."
+      }
+    ]
   },
   {
     "slug": "chicken-satay-rice-bowls",
@@ -590,26 +609,66 @@
     "title": "Quesadillas with creamy jalapeño yogurt sauce",
     "category": "Dinner",
     "description": "One quesadilla base with two fillings: chipotle chicken or vegetarian black beans. The tortillas, cheese, creamy jalapeño Greek yogurt sauce, and cooking method stay the same.",
-    "servings": "Servings not recorded",
-    "time": "Time not recorded",
+    "servings": "2 servings / 4 small quesadillas",
+    "time": "10 minutes prep + 10–15 minutes cooking; chill sauce 15–20 minutes",
     "variantLegend": "Filling",
     "variantParam": "filling",
     "ingredients": [
       [
-        "Amount not recorded",
-        "tortillas"
+        "4",
+        "small flour tortillas (approximately 5 inches)"
       ],
       [
-        "Amount not recorded",
-        "shredded cheese; use a vegetarian-compatible cheese for the black bean filling"
+        "100–120g",
+        "shredded Monterey Jack, cheddar, or Mexican-blend cheese; use vegetarian-compatible cheese for the black bean filling"
       ],
       [
-        "Amount not recorded",
+        "A small amount",
+        "butter or oil for cooking"
+      ],
+      [
+        "300g",
         "plain Greek yogurt, for the creamy jalapeño sauce"
       ],
       [
-        "Amount not recorded",
-        "jalapeño, for the creamy jalapeño sauce"
+        "2 tbsp",
+        "mayonnaise"
+      ],
+      [
+        "2 tbsp",
+        "pickled jalapeños, finely minced"
+      ],
+      [
+        "4 tsp",
+        "pickled jalapeño brine"
+      ],
+      [
+        "1 tsp",
+        "smoked paprika, for the sauce"
+      ],
+      [
+        "1 tsp",
+        "chili powder, for the sauce"
+      ],
+      [
+        "½ tsp",
+        "ground cumin, for the sauce"
+      ],
+      [
+        "½ tsp",
+        "garlic powder, for the sauce"
+      ],
+      [
+        "½ tsp",
+        "onion powder, for the sauce"
+      ],
+      [
+        "1 tsp",
+        "lime juice, for the sauce"
+      ],
+      [
+        "To taste",
+        "salt and cayenne pepper"
       ]
     ],
     "variants": [
@@ -629,7 +688,7 @@
           ]
         ],
         "steps": [
-          "Chop or shred {200–250g} fully cooked chipotle-seasoned chicken into small pieces so it spreads evenly. If the chicken is cold leftovers, warm it in the skillet first; reheated leftovers should reach 165°F."
+          "Warm the chicken: chop or shred {200–250g} fully cooked chipotle chicken. Heat in a skillet over medium heat with {1–2 tsp} water for about 2–3 minutes, until thoroughly heated to 165°F. Set aside."
         ]
       },
       {
@@ -679,23 +738,16 @@
       }
     ],
     "steps": [
-      "Make the creamy jalapeño Greek yogurt sauce by mixing the Greek yogurt with finely chopped or blended jalapeño. The sauce is the same for both fillings.",
-      "Heat a skillet over medium heat. Lay a tortilla in the pan, scatter cheese over half of it, add some of the filling, and top with a little more cheese so the quesadilla holds together.",
-      "Fold the tortilla over and cook until the underside is golden and crisp. Flip and cook until the second side is golden and the cheese has melted. Lower the heat if the tortilla browns before the cheese melts.",
-      "Repeat with the remaining tortillas, cheese, and filling. Let the quesadillas rest for a minute, cut into wedges, and serve with the sauce."
+      "Assemble: divide {100–120g} cheese and the prepared filling among {4} tortillas. Layer cheese, filling, then more cheese on one half of each tortilla and fold over. Keep the yogurt sauce out of the pan.",
+      "Cook: lightly butter or oil a skillet over medium-low to medium heat. Cook each quesadilla for 2–3 minutes per side, pressing gently, until golden and the cheese melts. Lower the heat if the tortilla browns too quickly.",
+      "Serve: rest for 30–60 seconds, then cut into wedges. Use {4 tbsp} chilled sauce across the batch, about 1 tbsp per quesadilla, inside after cooking or as a dip. Keep the remaining sauce for dipping or future meals."
     ],
-    "methodNote": "The filling amounts come from the recipe notes. The skillet method is a standard quesadilla technique, written here because the original method details were not recorded.",
-    "unrecorded": [
-      "the number and size of the tortillas",
-      "the type and amount of cheese",
-      "the full ingredient list and amounts for the creamy jalapeño Greek yogurt sauce",
-      "spice amounts for the quick canned beans",
-      "servings and cooking time"
-    ],
+    "methodNote": "The sauce batch makes more than the quesadillas need. Add it after cooking to keep the tortillas crisp and prevent the yogurt from separating.",
     "notes": [
       "The creamy jalapeño Greek yogurt sauce is identical for both fillings.",
       "The black bean filling is vegetarian when the cheese is vegetarian-compatible. Some cheeses are made with animal rennet, and some flour tortillas contain lard, so check both labels.",
-      "The nutrition estimate covers the filling only. The tortilla, cheese, and sauce amounts are not recorded, so adding them would mean guessing."
+      "Refrigerate the cooked quesadillas and sauce separately for 3–4 days. Reheat the quesadillas in a skillet or air fryer and add sauce just before eating. Do not freeze the yogurt sauce.",
+      "The nutrition table estimates only the selected filling. It excludes the tortillas, cheese, cooking fat, and sauce, and is not a whole-meal estimate."
     ],
     "customization": [
       [
@@ -716,6 +768,937 @@
       ]
     ],
     "nutritionLabel": "Filling only",
-    "nutritionNote": "Tortillas, cheese, and sauce are left out until their amounts are recorded, so this is not a full quesadilla estimate."
+    "nutritionNote": "This is a filling-only comparison. It excludes tortillas, cheese, cooking fat, and sauce; the sauce batch also produces leftovers.",
+    "sauceStart": 3,
+    "prepSteps": [
+      "Prepare the sauce: finely mince the pickled jalapeños. Stir or blend all the sauce ingredients until creamy. For less tang, start with {3 tsp} brine and add the rest to taste. Refrigerate for 15–20 minutes. The full sauce batch makes about {1½ cups}, leaving extra after serving the quesadillas."
+    ]
+  },
+  {
+    "slug": "greek-yogurt-pudding",
+    "title": "Greek yogurt pudding bowls",
+    "category": "Dessert",
+    "description": "One yogurt and dry instant-pudding base, with seven documented flavor variations.",
+    "servings": "1 bowl",
+    "time": "10 minutes in the freezer, plus mixing",
+    "ingredients": [],
+    "steps": [],
+    "notes": [
+      "Common method: stir dry instant pudding into Greek yogurt; do not make the pudding using the package milk instructions. Whey, liquid, additions, and chilling differ by variant.",
+      "These are flavored protein bowls, not entirely sugar-free desserts: fruit, Nutella, cookie butter, and toppings add sugar."
+    ],
+    "variants": [
+      {
+        "id": "banana-pudding",
+        "ingredients": [
+          [
+            "200g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla or banana bread whey protein"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant banana cream pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "Fairlife fat-free milk"
+          ],
+          [
+            "1 tbsp",
+            "low-fat cream cheese"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "½ tsp",
+            "monk fruit sweetener"
+          ],
+          [
+            "½",
+            "banana"
+          ],
+          [
+            "3",
+            "Nilla wafers, crushed"
+          ]
+        ],
+        "steps": [
+          "Stir the yogurt, whey, dry pudding mix, milk, cream cheese, vanilla, and monk fruit together until smooth.",
+          "Slice the half banana and add it to the pudding. Sprinkle the crushed wafers over the top.",
+          "Freeze for 10 minutes, then eat."
+        ],
+        "notes": [
+          "Add the pudding mix as dry powder; do not prepare it using the box’s milk instructions.",
+          "Vanilla whey works in both recipes, so there is no need to buy a second flavor.",
+          "Budget swaps: store-brand vanilla wafers, reduced-fat Neufchâtel, and ordinary skim milk. Taste before adding extra sweetener; you can also omit the extract if the vanilla whey gives enough flavor. These swaps change the original recipe."
+        ],
+        "servings": "1 bowl",
+        "time": "10 minutes in the freezer, plus mixing",
+        "nutrition": "Creator’s estimate: 350 calories · 45g protein · 35g carbs · 5.5g fat per bowl. Brands and scoop sizes change these numbers.",
+        "source": "https://www.instagram.com/reel/DandCQwMIAE/",
+        "label": "Protein banana pudding",
+        "default": true,
+        "nutritionEstimate": {
+          "label": "Creator’s estimate",
+          "calories": 350,
+          "protein": 45,
+          "carbs": 35,
+          "fat": 5.5,
+          "fiber": null,
+          "sodium": null,
+          "note": "The recipe creator’s estimate per bowl. Brands and scoop sizes change these numbers."
+        },
+        "nutritionServings": {
+          "count": 1,
+          "label": "bowl"
+        }
+      },
+      {
+        "id": "biscoff-cheesecake",
+        "ingredients": [
+          [
+            "200g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey protein"
+          ],
+          [
+            "10g",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "1 tbsp / 15g",
+            "low-fat cream cheese"
+          ],
+          [
+            "1 tbsp / 15g",
+            "Fairlife fat-free milk"
+          ],
+          [
+            "½ tsp",
+            "monk fruit sweetener"
+          ],
+          [
+            "1 tbsp / 15g",
+            "Biscoff cookie butter"
+          ],
+          [
+            "1",
+            "Biscoff cookie, crushed"
+          ],
+          [
+            "1 tsp, optional",
+            "extra Biscoff cookie butter for topping"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, dry cheesecake pudding, cream cheese, milk, and monk fruit until smooth.",
+          "Warm the cookie butter for 10–15 seconds, swirl into the bowl, and top with the crushed cookie.",
+          "Chill 20–30 minutes or freeze 10–15 minutes."
+        ],
+        "notes": [
+          "For the documented 400g batch, double the 200g ingredients: 2 scoops whey, 20g pudding, 2 tbsp each cream cheese and milk, 1 tsp monk fruit, 30g cookie butter, and 2 cookies.",
+          "Cookies and cream cheese were omitted in some requested versions; their replacement ratios were not recovered."
+        ],
+        "servings": "1 bowl",
+        "time": "20–30 minutes chilling or 10–15 minutes freezing",
+        "nutrition": "Creator’s estimate: 395 calories · 45g protein · 33g carbs · 8g fat per bowl. Brands, scoop sizes, and optional toppings change these numbers.",
+        "source": "https://www.instagram.com/reel/Db05yhrM7M0/",
+        "label": "Biscoff protein cheesecake bowl",
+        "default": false,
+        "nutritionEstimate": {
+          "label": "Creator’s estimate",
+          "calories": 395,
+          "protein": 45,
+          "carbs": 33,
+          "fat": 8,
+          "fiber": null,
+          "sodium": null,
+          "note": "The recipe creator’s estimate per bowl. Brands, scoop sizes, and optional toppings change these numbers."
+        },
+        "nutritionServings": {
+          "count": 1,
+          "label": "bowl"
+        }
+      },
+      {
+        "id": "mixed-berry-cheesecake",
+        "ingredients": [
+          [
+            "200g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "reduced-fat cream cheese"
+          ],
+          [
+            "1 tbsp",
+            "milk"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "½ tsp",
+            "monk fruit"
+          ],
+          [
+            "80–100g",
+            "frozen mixed berries"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "1–2, optional",
+            "vanilla wafers"
+          ]
+        ],
+        "steps": [
+          "Microwave berries 30–45 seconds, mash, and cool.",
+          "Mix the yogurt, whey, dry pudding, cream cheese, milk, vanilla, monk fruit, and salt until smooth. Swirl in the berries and top with optional wafers."
+        ],
+        "notes": [],
+        "servings": "1 bowl",
+        "time": "Mix, then chill",
+        "label": "Mixed berry cheesecake",
+        "default": false
+      },
+      {
+        "id": "nutella-strawberry-banana",
+        "ingredients": [
+          [
+            "900g",
+            "plain Greek yogurt"
+          ],
+          [
+            "225–260g",
+            "frozen strawberry-banana fruit"
+          ],
+          [
+            "4½ tbsp",
+            "Nutella"
+          ],
+          [
+            "2¼ tbsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "1½–2¼ scoops",
+            "vanilla whey"
+          ],
+          [
+            "2–4 tbsp",
+            "milk"
+          ],
+          [
+            "1 tsp",
+            "vanilla extract"
+          ],
+          [
+            "¼ tsp",
+            "salt"
+          ]
+        ],
+        "steps": [
+          "Soften and mash the frozen fruit. Mix yogurt, whey, dry pudding, milk, vanilla, and salt until smooth.",
+          "Warm Nutella until easy to swirl, then layer or swirl with the fruit and yogurt. Chill 20–30 minutes."
+        ],
+        "notes": [],
+        "servings": "900g yogurt batch",
+        "time": "20–30 minutes chilling",
+        "label": "Nutella strawberry-banana cheesecake",
+        "default": false
+      },
+      {
+        "id": "ferrero-rocher",
+        "ingredients": [
+          [
+            "400g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "2 scoops",
+            "chocolate whey"
+          ],
+          [
+            "2 tbsp",
+            "sugar-free instant chocolate-fudge pudding mix, dry"
+          ],
+          [
+            "2 tbsp",
+            "Nutella"
+          ],
+          [
+            "2 tbsp",
+            "milk"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "To taste",
+            "sweetener"
+          ],
+          [
+            "2 tbsp",
+            "roasted hazelnuts, chopped"
+          ],
+          [
+            "2",
+            "wafers, crushed"
+          ],
+          [
+            "Optional",
+            "Ferrero Rocher for topping"
+          ],
+          [
+            "2 tsp, optional",
+            "Nutella for drizzle"
+          ],
+          [
+            "About 2 tsp, optional",
+            "milk for drizzle"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, dry pudding, Nutella, milk, vanilla, salt, and sweetener until smooth. Fold in half the nuts and wafers.",
+          "Chill 15–30 minutes. Top with the remaining nuts and wafers and optional Ferrero. For the optional drizzle, mix the extra Nutella and milk."
+        ],
+        "notes": [],
+        "servings": "400g yogurt batch",
+        "time": "15–30 minutes chilling",
+        "label": "Ferrero Rocher",
+        "default": false
+      },
+      {
+        "id": "berry-chantilly",
+        "ingredients": [
+          [
+            "800g",
+            "plain Greek yogurt"
+          ],
+          [
+            "4 scoops",
+            "vanilla whey"
+          ],
+          [
+            "3 tbsp to start; up to 4 tbsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "1½ tbsp to start; up to 2 tbsp",
+            "sugar-free instant white-chocolate pudding mix, dry"
+          ],
+          [
+            "4 tbsp",
+            "reduced-fat cream cheese"
+          ],
+          [
+            "¼–⅓ cup",
+            "milk"
+          ],
+          [
+            "2 tsp",
+            "vanilla extract"
+          ],
+          [
+            "½ tsp",
+            "almond extract"
+          ],
+          [
+            "About 400g",
+            "frozen mixed berries"
+          ],
+          [
+            "To taste",
+            "sweetener"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "1 tbsp + 1 tsp, optional",
+            "jam or preserves"
+          ]
+        ],
+        "steps": [
+          "Warm and mash about {300g} of the berries; reserve the remaining {100g}. Mix in the optional jam.",
+          "Mix yogurt, whey, cream cheese, milk, extracts, salt, and sweetener. Start with {3 tbsp} cheesecake and {1½ tbsp} white-chocolate dry pudding; adjust toward {4 tbsp} and {2 tbsp} if needed.",
+          "Layer with the mashed and reserved berries."
+        ],
+        "notes": [
+          "Use the smaller starting pudding quantities first; they are the latest recovered adjustment. The final chill duration was not recovered."
+        ],
+        "servings": "800g yogurt batch",
+        "time": "Mix, then chill",
+        "label": "Berry Chantilly",
+        "default": false
+      },
+      {
+        "id": "peanut-banana-pie",
+        "ingredients": [
+          [
+            "900g",
+            "plain Greek yogurt"
+          ],
+          [
+            "Amount not recovered",
+            "frozen banana and strawberries"
+          ],
+          [
+            "1 scoop",
+            "chocolate-peanut whey"
+          ],
+          [
+            "1 scoop, optional",
+            "vanilla whey"
+          ],
+          [
+            "2 tbsp",
+            "sugar-free instant banana-cream pudding mix, dry"
+          ],
+          [
+            "1½ tbsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "3 tbsp",
+            "reduced-fat cream cheese"
+          ],
+          [
+            "1–2 tbsp",
+            "peanut butter"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "2–4 tbsp, as needed",
+            "milk"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "Optional",
+            "graham crackers or vanilla wafers"
+          ]
+        ],
+        "steps": [
+          "Partially thaw and mash the fruit. Smooth the whey with the cream cheese and milk.",
+          "Stir in dry pudding mixes, peanut butter, vanilla, salt, and yogurt, then combine with the fruit. Refrigerate 30 minutes; add optional toppings."
+        ],
+        "notes": [
+          "Fruit quantity was not recovered; the source discussion began with fruit already in the bowl. The chocolate-peanut whey was described as chalky. The recovered suggestion used 2 tbsp peanut butter and both whey scoops."
+        ],
+        "servings": "900g yogurt batch",
+        "time": "30 minutes chilling",
+        "label": "Peanut banana cream pie",
+        "default": false
+      }
+    ],
+    "gaps": [
+      "Fairlife/no-whey Biscoff: 250g yogurt, half a Fairlife shake, and 15g cheesecake pudding were recovered; the remaining quantities and complete method were not.",
+      "White-chocolate berry, chocolate-covered berry, berry banana pudding, and berry pistachio were ideas; full ratios were not recovered."
+    ],
+    "familyVariants": true,
+    "variantLegend": "Flavor",
+    "variantParam": "flavor"
+  },
+  {
+    "slug": "protein-overnight-oats",
+    "title": "Protein overnight oats",
+    "category": "Breakfast",
+    "description": "A shared oats, yogurt, whey, and chia base with documented flavor variations.",
+    "servings": "1 portion",
+    "time": "Overnight chilling",
+    "ingredients": [],
+    "steps": [],
+    "notes": [
+      "The base is shared, but each variant lists its complete quantities. Do not add the plain base ingredients a second time.",
+      "Pudding flavors are added as dry instant-pudding powder."
+    ],
+    "variants": [
+      {
+        "id": "plain",
+        "ingredients": [
+          [
+            "50g",
+            "rolled oats"
+          ],
+          [
+            "150g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey"
+          ],
+          [
+            "100–120g",
+            "milk"
+          ],
+          [
+            "8g",
+            "chia seeds"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "To taste",
+            "sweetener"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, milk, vanilla, sweetener, and salt. Stir in oats and chia. Refrigerate overnight.",
+          "Stir in {10–30g} more milk the next morning as needed."
+        ],
+        "notes": [],
+        "servings": "1 portion",
+        "time": "Overnight chilling",
+        "label": "Shared oats base",
+        "default": true
+      },
+      {
+        "id": "pistachio-cardamom",
+        "ingredients": [
+          [
+            "50g",
+            "rolled oats"
+          ],
+          [
+            "150g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey"
+          ],
+          [
+            "110g",
+            "milk"
+          ],
+          [
+            "8g",
+            "chia seeds"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "To taste",
+            "sweetener"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant pistachio pudding mix, dry"
+          ],
+          [
+            "⅛ tsp",
+            "cardamom"
+          ],
+          [
+            "10–15g, optional",
+            "pistachios"
+          ],
+          [
+            "To taste, optional",
+            "honey or rose water"
+          ]
+        ],
+        "steps": [
+          "Mix the shared base with the dry pistachio pudding and cardamom. Refrigerate overnight.",
+          "Stir and thin with {10–30g} milk the next morning as needed. Top with optional pistachios, honey, or rose water."
+        ],
+        "notes": [],
+        "servings": "1 portion",
+        "time": "Overnight chilling",
+        "label": "Pistachio cardamom",
+        "default": false
+      },
+      {
+        "id": "strawberry-banana-nutella",
+        "ingredients": [
+          [
+            "60g",
+            "rolled oats"
+          ],
+          [
+            "200g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop / about 30g",
+            "vanilla whey"
+          ],
+          [
+            "120g",
+            "frozen strawberry-banana fruit"
+          ],
+          [
+            "1 tbsp / about 12g",
+            "chia seeds"
+          ],
+          [
+            "2 tsp",
+            "sugar-free instant banana-cream pudding mix, dry"
+          ],
+          [
+            "1 tsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "Nutella"
+          ],
+          [
+            "90–120ml",
+            "water"
+          ],
+          [
+            "To taste",
+            "vanilla extract and salt"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, water, dry pudding mixes, vanilla, and salt. Stir in oats, chia, fruit, and Nutella.",
+          "Refrigerate at least 6 hours."
+        ],
+        "notes": [],
+        "servings": "1 portion",
+        "time": "At least 6 hours chilling",
+        "label": "Strawberry banana Nutella cheesecake",
+        "default": false
+      },
+      {
+        "id": "pb-and-j",
+        "ingredients": [
+          [
+            "400g",
+            "plain Greek yogurt"
+          ],
+          [
+            "60g",
+            "chocolate-peanut whey"
+          ],
+          [
+            "120g",
+            "rolled oats"
+          ],
+          [
+            "20g",
+            "chia seeds"
+          ],
+          [
+            "1 tbsp",
+            "Aldi chocolate instant pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "Jell-O chocolate-fudge instant pudding mix, dry"
+          ],
+          [
+            "200ml",
+            "water"
+          ],
+          [
+            "200g",
+            "frozen mixed berries"
+          ],
+          [
+            "40g",
+            "peanut butter"
+          ],
+          [
+            "20g",
+            "Nutella"
+          ],
+          [
+            "To taste",
+            "vanilla extract and salt"
+          ]
+        ],
+        "steps": [
+          "Microwave and mash the mixed berries. Mix yogurt, whey, water, both dry pudding powders, vanilla, and salt; stir in oats and chia.",
+          "Thin peanut butter as needed for layering. Layer base, berries, and peanut butter in {2} jars; top with Nutella. Refrigerate 6–8 hours."
+        ],
+        "notes": [
+          "The final recovered two-portion recipe uses a 1:1 ratio of Aldi chocolate and Jell-O chocolate-fudge pudding. It includes Nutella despite the PB&J name."
+        ],
+        "servings": "2 portions",
+        "time": "6–8 hours chilling",
+        "label": "Chocolate PB&J",
+        "default": false
+      }
+    ],
+    "gaps": [
+      "Cinnamon roll was made and liked; its exact spice and pudding ratios were not recovered.",
+      "Reese’s Fudge Brownie was discussed; its full quantities and steps were not recovered.",
+      "Banana cream, white chocolate, butterscotch, and Biscoff white-chocolate cheesecake were discussed as ideas or flavors; separate complete recipes were not recovered."
+    ],
+    "familyVariants": true,
+    "variantLegend": "Flavor",
+    "variantParam": "flavor"
+  },
+  {
+    "slug": "avocado-yogurt-spread",
+    "title": "Garlic-lime avocado yogurt spread",
+    "description": "A universal spread for eggs, breakfast, and beef with sweet potatoes.",
+    "ingredients": [
+      [
+        "6 mini / 350–400g flesh",
+        "avocados"
+      ],
+      [
+        "300g",
+        "plain nonfat Greek yogurt"
+      ],
+      [
+        "2½ tbsp",
+        "lime juice"
+      ],
+      [
+        "1¼ tsp",
+        "garlic powder"
+      ],
+      [
+        "½ tsp",
+        "onion powder"
+      ],
+      [
+        "½ tsp",
+        "cumin"
+      ],
+      [
+        "½ tsp",
+        "smoked paprika"
+      ],
+      [
+        "½ tsp",
+        "salt"
+      ],
+      [
+        "½ tsp",
+        "black pepper"
+      ],
+      [
+        "¼ tsp, optional",
+        "cayenne"
+      ],
+      [
+        "2 tsp, optional",
+        "olive oil"
+      ],
+      [
+        "1–2 tbsp, as needed",
+        "water or milk"
+      ]
+    ],
+    "steps": [
+      "Mash avocados. Mix in yogurt and lime juice. Stir in the seasonings and optional olive oil.",
+      "Taste and adjust; thin with water or milk if too thick. Refrigerate airtight with plastic wrap touching the surface."
+    ],
+    "notes": [
+      "A universal spread for eggs, breakfast, and beef with sweet potatoes."
+    ],
+    "servings": "6 mini avocado batch",
+    "time": "Mix until smooth",
+    "category": "Sauce"
+  },
+  {
+    "slug": "greek-yogurt-ranch",
+    "title": "Greek yogurt ranch",
+    "description": "Greek yogurt ranch for pizza, dipping, or bowls.",
+    "ingredients": [
+      [
+        "250g",
+        "plain Greek yogurt, 2% preferred"
+      ],
+      [
+        "1 tbsp",
+        "mayonnaise"
+      ],
+      [
+        "1 tbsp",
+        "lemon juice"
+      ],
+      [
+        "1 tsp",
+        "white vinegar"
+      ],
+      [
+        "½ tsp",
+        "garlic powder"
+      ],
+      [
+        "½ tsp",
+        "onion powder"
+      ],
+      [
+        "1 tsp",
+        "dried dill"
+      ],
+      [
+        "1 tsp",
+        "dried parsley"
+      ],
+      [
+        "½ tsp, optional",
+        "dried chives"
+      ],
+      [
+        "¼ tsp",
+        "black pepper"
+      ],
+      [
+        "¼–½ tsp",
+        "salt"
+      ],
+      [
+        "2–4 tbsp",
+        "milk"
+      ]
+    ],
+    "steps": [
+      "Mix yogurt and mayonnaise. Stir in the remaining ingredients and thin with milk.",
+      "Refrigerate 20–30 minutes."
+    ],
+    "notes": [
+      "Greek yogurt ranch for pizza, dipping, or bowls."
+    ],
+    "servings": "About 1¼ cups",
+    "time": "20–30 minutes chilling",
+    "category": "Sauce"
+  },
+  {
+    "slug": "garlic-lemon-yogurt-sauce",
+    "title": "Garlic-lemon yogurt sauce",
+    "description": "A garlic and lemon Greek yogurt sauce for rice bowls.",
+    "ingredients": [
+      [
+        "200g",
+        "plain nonfat Greek yogurt"
+      ],
+      [
+        "½ tsp",
+        "salt"
+      ],
+      [
+        "1–2 cloves or ½ tsp powder",
+        "garlic"
+      ],
+      [
+        "1 tbsp lemon juice or 2 tsp vinegar",
+        "lemon juice or vinegar"
+      ],
+      [
+        "½ tsp",
+        "cumin"
+      ],
+      [
+        "¼ tsp",
+        "black pepper"
+      ],
+      [
+        "½ tsp, optional",
+        "dried dill or parsley"
+      ],
+      [
+        "1–3 tbsp",
+        "water"
+      ]
+    ],
+    "steps": [
+      "Stir all ingredients together and thin with water. Rest 5–10 minutes.",
+      "Adjust to a salty, garlicky, tangy, drizzleable consistency."
+    ],
+    "notes": [
+      "A garlic and lemon Greek yogurt sauce for rice bowls."
+    ],
+    "servings": "2–3 servings",
+    "time": "5–10 minutes resting",
+    "category": "Sauce"
+  },
+  {
+    "slug": "sausage-breakfast-burritos",
+    "title": "Chicken and Gouda sausage breakfast burritos",
+    "description": "Freezer breakfast burritos using chicken and Gouda sausage.",
+    "ingredients": [
+      [
+        "10",
+        "flour tortillas"
+      ],
+      [
+        "8",
+        "eggs"
+      ],
+      [
+        "About 10 oz",
+        "chicken and Gouda sausage"
+      ],
+      [
+        "12 oz",
+        "frozen potato-pepper-onion mix"
+      ],
+      [
+        "1 cup",
+        "cheddar cheese"
+      ],
+      [
+        "¾ cup",
+        "salsa verde"
+      ]
+    ],
+    "steps": [
+      "Cook the sausage, eggs, and potato-pepper-onion mixture. Combine with cheese and salsa verde and let the filling cool.",
+      "Divide among {10} tortillas, roll, wrap, and freeze. Microwave a burrito 2–3 minutes to reheat."
+    ],
+    "notes": [
+      "Freezer breakfast burritos using chicken and Gouda sausage.",
+      "The original discussion used a 10-pack of tortillas; 5-inch tortillas were mentioned in a later quesadilla discussion and are not assumed to fit this burrito filling.",
+      "The recovered method does not specify pan temperatures, individual filling cooking times, or package preparation requirements; follow the ingredient packaging."
+    ],
+    "servings": "10 burritos",
+    "time": "Cook, cool, assemble, and freeze",
+    "category": "Breakfast"
   }
 ]

@@ -119,3 +119,9 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--fg);flex-shrink:0
   .split{grid-template-columns:1fr;break-inside:avoid}.recipe-body{gap:24px}.steps li,.variations div{break-inside:avoid}
   a{text-decoration:none}.grocery-row{grid-template-columns:1fr;padding:8px 0}.grocery-group{margin-bottom:16px}.grocery-check{min-height:0}
 }
+
+[hidden]{display:none!important}
+.recipe-search{max-width:36rem;margin-top:1.5rem}
+@media print{.history-gaps,.recipe-search{display:none!important}}
+
+.choice-options label{max-width:100%;min-width:0}.choice-options label span{min-width:0;overflow-wrap:anywhere}.choice-options input{flex-shrink:0}

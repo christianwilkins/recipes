@@ -121,3 +121,18 @@ if (activePrompt()) {
     });
   }
 }
+
+const search = document.querySelector('#recipe-search');
+if (search) {
+  search.closest('.recipe-search').hidden = false;
+  search.addEventListener('input', () => {
+    const query = search.value.toLowerCase().trim();
+    let count = 0;
+    for (const card of document.querySelectorAll('[data-search]')) {
+      card.hidden = !card.dataset.search.includes(query);
+      if (!card.hidden) count++;
+    }
+    for (const group of document.querySelectorAll('.recipe-category')) group.hidden = !group.querySelector('article:not([hidden])');
+    document.querySelector('#search-status').textContent = count ? `${count} recipes found.` : 'No recipes match. Try another ingredient or flavor.';
+  });
+}

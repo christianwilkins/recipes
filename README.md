@@ -45,3 +45,9 @@ The original collection was forked from [keshavbabu/recipes](https://github.com/
 - [Smoothie](smoothie.md)
 
 Original contribution note: if you make a PR, add a picture of the final product.
+
+## Recipe families
+
+Greek yogurt pudding and overnight oats each use one canonical page with flavor variants. `familyVariants` means each variant contains its full ingredient list; the parent ingredient and step arrays are empty. Variant servings, time, notes, and creator nutrition override their respective defaults. Family grocery additions keep separate flavor sources and update existing amounts when the same flavor is added again. Legacy dessert pages use `family` and `familyVariant` to link to the canonical family. The history audit records recovered recipes and remaining gaps.
+
+Run `node scripts/check-links.mjs` after the build to check all generated internal links.

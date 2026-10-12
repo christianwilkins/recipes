@@ -34,7 +34,7 @@ test('recipe variants add their own filling and share the base ingredients',asyn
  const db=database();
  const chicken=await request(db,'/recipe','POST',{slug:'quesadillas'});assert.equal(chicken.status,200);
  const filling=chicken.items.find(i=>i.name==='Cooked chipotle chicken');assert.match(filling.sources[0].title,/\(chipotle chicken\)/);assert.match(filling.sources[0].amount,/200–250g/);
- assert.ok(!chicken.items.some(i=>/^smoked paprika$/i.test(i.name)));
+ assert.ok(chicken.items.some(i=>/^smoked paprika$/i.test(i.name)));
  const beans=await request(db,'/recipe','POST',{slug:'quesadillas',variant:'black-bean'});assert.equal(beans.status,200);
  const canned=beans.items.find(i=>i.name==='Canned black beans');assert.match(canned.sources[0].title,/\(black bean\)/);assert.match(canned.sources[0].amount,/Cuban-style black beans, or canned/);
  assert.ok(beans.items.find(i=>/^smoked paprika$/i.test(i.name)));assert.ok(!beans.items.some(i=>/^water/i.test(i.name)));
@@ -79,4 +79,31 @@ test('recipe addition rolls back fully when the list capacity is reached',async(
  const before=await readList(db);
  const result=await request(db,'/recipe','POST',{slug:'cuban-style-black-beans'});assert.equal(result.status,409);
  assert.deepEqual(await readList(db),before);
+});
+
+
+test('family variants preserve exact quantities, independent flavors, and scaled re-adds',async()=>{
+ const db=database();
+ const add=await request(db,'/recipe','POST',{slug:'protein-overnight-oats',variant:'pb-and-j',scale:2});
+ assert.equal(add.status,200);
+ const yogurt=add.items.find(i=>i.name==='Plain Greek yogurt');
+ assert.equal(yogurt.sources[0].amount,'800g plain Greek yogurt');
+ assert.equal(yogurt.sources[0].slug,'protein-overnight-oats/?flavor=pb-and-j');
+ const repeat=await request(db,'/recipe','POST',{slug:'protein-overnight-oats',variant:'pb-and-j'});
+ assert.equal(repeat.items.length,add.items.length);
+ assert.equal(repeat.items.find(i=>i.name==='Plain Greek yogurt').sources[0].amount,'400g plain Greek yogurt');
+ await request(db,'/recipe','POST',{slug:'protein-overnight-oats',variant:'plain'});
+ await request(db,'/recipe','POST',{slug:'greek-yogurt-pudding',variant:'ferrero-rocher'});
+ const list=await readList(db);
+ assert.equal(list.find(i=>i.name==='Plain Greek yogurt').sources.length,3);
+ for(const name of ['Vanilla whey protein','Chocolate whey protein','Chocolate-peanut whey protein']) assert.ok(list.some(i=>i.name===name),name);
+ assert.equal((await request(db,'/recipe','POST',{slug:'protein-overnight-oats',variant:'missing'})).status,404);
+});
+test('every family variant adds only its own ingredients',async()=>{
+ const recipes=JSON.parse(await readFile(new URL('../data/recipes.json',import.meta.url)));
+ for(const r of recipes.filter(r=>r.familyVariants)) for(const v of r.variants){
+  const result=await request(database(),'/recipe','POST',{slug:r.slug,variant:v.id});
+  assert.equal(result.status,200);
+  assert.ok(result.items.flatMap(i=>i.sources).every(s=>s.slug===`${r.slug}/?flavor=${v.id}`));
+ }
 });
