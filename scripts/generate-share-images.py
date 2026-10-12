@@ -46,37 +46,34 @@ def wrap(draw, text, font, width):
             lines.append(word)
     return lines
 
-def card(filename, title, category, detail):
+def card(filename, title):
     image = Image.new('RGB', (1200, 630), color('bg'))
     draw = ImageDraw.Draw(image)
-    sans = font(args.sans, 28)
-    small = font(args.sans, 25)
-    brand = font(args.serif, 40, 700)
-    draw.text((72, 40), 'Christian Wilkins', font=brand, fill=color('fg'))
-    brand_width = draw.textlength('Christian Wilkins', font=brand)
-    draw.text((72 + brand_width + 36, 40), 'Recipes', font=font(args.serif, 40), fill=color('fg'))
-    draw.line((72, 106, 1128, 106), fill=color('line'), width=2)
-    draw.text((72, 134), category.upper(), font=small, fill=color('muted'))
-    for size in range(76, 37, -2):
+    for size in range(92, 47, -2):
         serif = font(args.serif, size, 700)
         lines = wrap(draw, title, serif, 1056)
         if len(lines) <= 3:
             break
-    y = 185
+    y = (550 - len(lines) * (size + 8)) / 2
     for line in lines:
-        draw.text((69, y), line, font=serif, fill=color('fg'))
-        y += size + 9
-    details = wrap(draw, detail, sans, 1056)
-    draw.text((72, 475), details[0] if details else '', font=sans, fill=color('muted'))
-    draw.line((72, 538, 1128, 538), fill=color('line'), width=2)
-    draw.text((72, 560), 'recipes.chriswiki.com', font=small, fill=color('muted'))
-    draw.text((811, 560), 'Make it your own.', font=small, fill=color('muted'))
+        draw.text((72, y), line, font=serif, fill=color('fg'), anchor='lt')
+        y += size + 8
+    draw.text((72, 550), 'recipes.chriswiki.com', font=font(args.sans, 28), fill=color('muted'), anchor='lt')
     image.save(out / f'{filename}.png', optimize=True)
 
-card('recipes', 'Good things to make', 'The recipe notebook', 'Pick a flavor. Scale a batch. Make it your own.')
+card('recipes', 'Recipes')
 for recipe in recipes:
-    card(recipe['slug'], recipe['title'], recipe.get('category', 'Recipe'),
-         f"{len(recipe['variants'])} flavors and variations" if recipe.get('variants') else recipe['servings'])
+    title = 'Quesadillas' if recipe['slug'] == 'quesadillas' else recipe['title']
+    card(recipe['slug'], title)
     for variant in recipe.get('variants', []):
-        card(f"{recipe['slug']}-{variant['id']}", variant['label'], recipe['title'], variant.get('servings', recipe['servings']))
+        title = variant['label']
+        if recipe['slug'] == 'quesadillas':
+            title += ' quesadillas'
+        elif recipe['slug'] == 'protein-overnight-oats':
+            title = 'Overnight oats' if variant['id'] == 'plain' else title + ' oats'
+        elif recipe['slug'] == 'greek-yogurt-pudding':
+            title = title.replace('Protein ', '').replace('protein ', '').removesuffix(' bowl') + ' yogurt'
+        elif recipe['slug'] == 'cuban-style-black-beans':
+            title = 'Cuban-style black beans'
+        card(f"{recipe['slug']}-{variant['id']}", title)
 print(f'Generated {1 + len(recipes) + sum(len(r.get("variants", [])) for r in recipes)} share images.')
