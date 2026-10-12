@@ -26,9 +26,33 @@ test('seed loads once and recipe adds are idempotent with shared quantities reta
 });
 test('all published recipes can be added, including shared dessert ingredients',async()=>{
  const db=database();
- for(const slug of ['protein-banana-pudding','biscoff-protein-cheesecake-bowl','cuban-style-black-beans','beef-stuffed-sweet-potatoes','chicken-satay-rice-bowls']) assert.equal((await request(db,'/recipe','POST',{slug})).status,200);
- const list=await readList(db); const yogurt=list.filter(i=>i.name==='Plain Greek yogurt');assert.equal(yogurt.length,1);assert.equal(yogurt[0].sources.length,3);
+ for(const slug of ['protein-banana-pudding','biscoff-protein-cheesecake-bowl','cuban-style-black-beans','beef-stuffed-sweet-potatoes','chicken-satay-rice-bowls','quesadillas']) assert.equal((await request(db,'/recipe','POST',{slug})).status,200);
+ const list=await readList(db); const yogurt=list.filter(i=>i.name==='Plain Greek yogurt');assert.equal(yogurt.length,1);assert.equal(yogurt[0].sources.length,4);
  assert.ok(list.find(i=>i.name==='Dried black beans'));assert.ok(list.find(i=>i.name==='Canned black beans'));
+});
+test('recipe variants add their own filling and share the base ingredients',async()=>{
+ const db=database();
+ const chicken=await request(db,'/recipe','POST',{slug:'quesadillas'});assert.equal(chicken.status,200);
+ const filling=chicken.items.find(i=>i.name==='Cooked chipotle chicken');assert.match(filling.sources[0].title,/\(chipotle chicken\)/);assert.match(filling.sources[0].amount,/200–250g/);
+ assert.ok(!chicken.items.some(i=>/^smoked paprika$/i.test(i.name)));
+ const beans=await request(db,'/recipe','POST',{slug:'quesadillas',variant:'black-bean'});assert.equal(beans.status,200);
+ const canned=beans.items.find(i=>i.name==='Canned black beans');assert.match(canned.sources[0].title,/\(black bean\)/);assert.match(canned.sources[0].amount,/Cuban-style black beans, or canned/);
+ assert.ok(beans.items.find(i=>/^smoked paprika$/i.test(i.name)));assert.ok(!beans.items.some(i=>/^water/i.test(i.name)));
+ for(const name of ['Tortillas','Shredded cheese','Plain Greek yogurt','Jalapeños']){const rows=beans.items.filter(i=>i.name===name);assert.equal(rows.length,1);assert.equal(rows[0].sources.length,1);assert.doesNotMatch(rows[0].sources[0].title,/\(/);}
+ assert.equal((await request(db,'/recipe','POST',{slug:'quesadillas',variant:'tofu'})).status,404);
+ assert.equal((await request(db,'/recipe','POST',{slug:'quesadillas',variant:7})).status,400);
+ assert.equal((await request(db,'/recipe','POST',{slug:'cuban-style-black-beans',variant:'black-bean'})).status,404);
+});
+test('batch size scales grocery amounts and a re-add updates them',async()=>{
+ const db=database();
+ const doubled=await request(db,'/recipe','POST',{slug:'cuban-style-black-beans',variant:'canned',scale:2});assert.equal(doubled.status,200);
+ let beans=doubled.items.find(i=>i.name==='Canned black beans');assert.match(beans.sources[0].amount,/^16 cans \(15 oz each\)/);assert.match(beans.sources[0].title,/canned beans, 2× batch/);
+ const single=await request(db,'/recipe','POST',{slug:'cuban-style-black-beans',variant:'canned'});
+ beans=single.items.find(i=>i.name==='Canned black beans');assert.equal(beans.sources.length,1);assert.match(beans.sources[0].amount,/^8 cans/);
+ const dried=await request(db,'/recipe','POST',{slug:'cuban-style-black-beans',scale:0.5});
+ assert.match(dried.items.find(i=>i.name==='Dried black beans').sources[0].amount,/^1 lb/);
+ assert.equal((await request(db,'/recipe','POST',{slug:'cuban-style-black-beans',scale:7})).status,400);
+ assert.equal((await request(db,'/recipe','POST',{slug:'cuban-style-black-beans',scale:'2'})).status,400);
 });
 test('independent edits preserve other fields; remove and undo preserve requirements',async()=>{
  const db=database();await request(db,'/recipe','POST',{slug:'chicken-satay-rice-bowls'});
