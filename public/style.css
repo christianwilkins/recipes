@@ -48,6 +48,8 @@ p{margin:0 0 1rem;max-width:65ch}
 button:disabled{opacity:.55;cursor:wait}
 .actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:1.25rem}.actions>a{font-size:.875rem}
 .action-status:empty,.recipe-add-status:empty,.choice-status:empty,.prompt-status:empty{display:none}
+.share-status:empty{display:none}.share-status{margin-top:1rem}.manual-link{margin-top:1rem}
+.flavor-links{font-size:.85rem;line-height:1.9}.cooking-guidance{max-width:70ch}
 .back{margin:0 0 1.5rem;font-size:.875rem}.back a{text-decoration:none}.back a:hover{text-decoration:underline}
 
 /* Option pickers: native radios styled as segmented choices. */
@@ -114,7 +116,7 @@ input[type=checkbox]{width:18px;height:18px;accent-color:var(--fg);flex-shrink:0
 @media print{
   :root{--bg:white;--fg:black;--muted:#444;--line:#bbb;--surface:white;--accent:white;color-scheme:light}
   body{font-size:11pt;display:block}.content{max-width:none;padding:0}
-  .site-header,.site-footer,.back,.actions,.choices,.choice-status,.skip,.recipe-prompt,.grocery-add,.grocery-toolbar button,.grocery-feedback,.grocery-row-actions,.grocery-help{display:none!important}
+  .site-header,.site-footer,.back,.actions,.choices,.choice-status,.share-status,.manual-link,.skip,.recipe-prompt,.grocery-add,.grocery-toolbar button,.grocery-feedback,.grocery-row-actions,.grocery-help{display:none!important}
   .print-only{display:block;font-weight:600}h1{font-size:24pt}.lead{font-size:11pt}
   .split{grid-template-columns:1fr;break-inside:avoid}.recipe-body{gap:24px}.steps li,.variations div{break-inside:avoid}
   a{text-decoration:none}.grocery-row{grid-template-columns:1fr;padding:8px 0}.grocery-group{margin-bottom:16px}.grocery-check{min-height:0}
