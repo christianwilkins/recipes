@@ -215,7 +215,8 @@
           "Option A — Soaked Beans: Cover the beans generously with water and soak for 8–12 hours or overnight. Drain and discard the soaking water. Add the beans to a large pot with {about 14 cups} fresh water. Add the bay leaves, {1½ tbsp} salt, {1 tsp} black pepper, {1 tsp} cumin, and {1 tsp} oregano. Bring to a boil, then reduce to a gentle simmer and partially cover. Cook approximately 60–90 minutes, until the beans are completely tender.",
           "Option B — No-Soak / Straight From Dry: Place the rinsed dry beans directly into a large pot. Add {about 16 cups} water, the bay leaves, {1½ tbsp} salt, {1 tsp} black pepper, {1 tsp} cumin, and {1 tsp} oregano. Bring to a full boil. Boil for about 10 minutes, then reduce to a gentle simmer and partially cover. Cook approximately 1¾–2½ hours, or until the beans are completely tender. Check periodically and add additional hot water if the beans are no longer comfortably submerged. Older beans may require additional cooking time.",
           "Regardless of which method you use, do not drain the beans once cooked. Keep the cooking liquid because it becomes the base of the sauce."
-        ]
+        ],
+        "notes": []
       },
       {
         "id": "canned",
@@ -689,7 +690,8 @@
         ],
         "steps": [
           "Warm the chicken: chop or shred {200–250g} fully cooked chipotle chicken. Heat in a skillet over medium heat with {1–2 tsp} water for about 2–3 minutes, until thoroughly heated to 165°F. Set aside."
-        ]
+        ],
+        "notes": []
       },
       {
         "id": "black-bean",
@@ -734,7 +736,8 @@
         "steps": [
           "Using Cuban-style black beans: lift {200–250g} of the beans out with a slotted spoon so most of the cooking liquid stays behind, because extra liquid makes the tortillas soggy. Warm them in a skillet and lightly mash some of the beans so the filling holds together.",
           "Quick alternative with canned beans: warm {200–250g} canned black beans, drained and rinsed, in a skillet with smoked paprika, cumin, chili powder, garlic powder, and a splash of water. Stir until heated through and the water has mostly cooked off, then lightly mash some of the beans so the filling holds together."
-        ]
+        ],
+        "notes": []
       }
     ],
     "steps": [
@@ -778,14 +781,15 @@
     "slug": "greek-yogurt-pudding",
     "title": "Greek yogurt pudding bowls",
     "category": "Dessert",
-    "description": "One yogurt and dry instant-pudding base, with seven documented flavor variations.",
+    "description": "Greek yogurt and dry pudding mix, with eleven ways to make it. Pick a flavor, use the amounts as a starting point, and adjust until it tastes right.",
     "servings": "1 bowl",
     "time": "10 minutes in the freezer, plus mixing",
     "ingredients": [],
     "steps": [],
     "notes": [
-      "Common method: stir dry instant pudding into Greek yogurt; do not make the pudding using the package milk instructions. Whey, liquid, additions, and chilling differ by variant.",
-      "These are flavored protein bowls, not entirely sugar-free desserts: fruit, Nutella, cookie butter, and toppings add sugar."
+      "Stir instant pudding powder straight into the yogurt. No need to make a separate batch of pudding first.",
+      "Mix the base, give it a little time to thicken, then decide whether it needs more milk, sweetness, or topping. A spoonable, creamy texture is the goal.",
+      "Use whichever milk and yogurt you like. Swapping brands, whey, or toppings will change any nutrition estimate shown."
     ],
     "variants": [
       {
@@ -905,8 +909,8 @@
           "Chill 20–30 minutes or freeze 10–15 minutes."
         ],
         "notes": [
-          "For the documented 400g batch, double the 200g ingredients: 2 scoops whey, 20g pudding, 2 tbsp each cream cheese and milk, 1 tsp monk fruit, 30g cookie butter, and 2 cookies.",
-          "Cookies and cream cheese were omitted in some requested versions; their replacement ratios were not recovered."
+          "Want a simpler bowl? The chat version also left out the cookies and cream cheese, keeping the yogurt, whey, pudding, milk, sweetener, and cookie butter. There was no replacement ingredient.",
+          "Swirl some cookie butter on top instead of mixing it all in for more flavor in each bite. Taste before adding the full amount of sweetener."
         ],
         "servings": "1 bowl",
         "time": "20–30 minutes chilling or 10–15 minutes freezing",
@@ -1150,10 +1154,11 @@
         "steps": [
           "Warm and mash about {300g} of the berries; reserve the remaining {100g}. Mix in the optional jam.",
           "Mix yogurt, whey, cream cheese, milk, extracts, salt, and sweetener. Start with {3 tbsp} cheesecake and {1½ tbsp} white-chocolate dry pudding; adjust toward {4 tbsp} and {2 tbsp} if needed.",
-          "Layer with the mashed and reserved berries."
+          "Layer with the mashed and reserved berries.",
+          "Chill until you like the texture, or try about 10 minutes in the freezer as suggested for the original bowl. A large batch may need longer; check it rather than freezing it solid."
         ],
         "notes": [
-          "Use the smaller starting pudding quantities first; they are the latest recovered adjustment. The final chill duration was not recovered."
+          "Keep cheesecake as the main pudding flavor, with roughly half as much white chocolate. Start with the smaller quantities and taste before adding more. Go gently with the almond extract."
         ],
         "servings": "800g yogurt batch",
         "time": "Mix, then chill",
@@ -1168,7 +1173,7 @@
             "plain Greek yogurt"
           ],
           [
-            "Amount not recovered",
+            "To taste",
             "frozen banana and strawberries"
           ],
           [
@@ -1217,34 +1222,227 @@
           "Stir in dry pudding mixes, peanut butter, vanilla, salt, and yogurt, then combine with the fruit. Refrigerate 30 minutes; add optional toppings."
         ],
         "notes": [
-          "Fruit quantity was not recovered; the source discussion began with fruit already in the bowl. The chocolate-peanut whey was described as chalky. The recovered suggestion used 2 tbsp peanut butter and both whey scoops."
+          "The original batch started with fruit already in the bowl, so there was no measured fruit amount. Use as much as you like and hold back the milk until the fruit softens.",
+          "Start with one scoop of the chocolate peanut whey. If it tastes chalky, smooth it with the cream cheese and a little liquid before mixing into the yogurt. Vanilla whey is optional; more powder is not always better."
         ],
         "servings": "900g yogurt batch",
         "time": "30 minutes chilling",
         "label": "Peanut banana cream pie",
         "default": false
+      },
+      {
+        "id": "pistachio",
+        "label": "Pistachio pudding",
+        "ingredients": [
+          [
+            "200g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey"
+          ],
+          [
+            "10g",
+            "sugar-free instant pistachio pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "skim milk"
+          ],
+          [
+            "½ tsp, to taste",
+            "monk fruit sweetener"
+          ],
+          [
+            "¼ tsp, optional",
+            "almond extract"
+          ],
+          [
+            "5–10g, optional",
+            "chopped pistachios"
+          ],
+          [
+            "1 tsp, optional",
+            "pistachio butter"
+          ]
+        ],
+        "steps": [
+          "Stir the yogurt, whey, dry pudding, milk, sweetener, and optional almond extract until smooth. Taste before adding more sweetener.",
+          "Top with chopped pistachios if you want crunch. Try about 10 minutes in the freezer for a thicker pudding texture; add optional pistachio butter for richness."
+        ],
+        "notes": [],
+        "servings": "1 bowl",
+        "time": "About 10 minutes in the freezer, plus mixing",
+        "default": false
+      },
+      {
+        "id": "biscoff-fairlife",
+        "label": "Biscoff with Fairlife, no whey",
+        "ingredients": [
+          [
+            "250g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "½ bottle / about 5–6 fl oz",
+            "vanilla Fairlife protein shake"
+          ],
+          [
+            "15g",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "½ tsp, to taste",
+            "monk fruit sweetener"
+          ],
+          [
+            "15g",
+            "Biscoff cookie butter"
+          ],
+          [
+            "Optional",
+            "crushed Biscoff cookie"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, protein shake, dry pudding powder, and sweetener until smooth. Swirl in the cookie butter.",
+          "Freeze for about 15–20 minutes, checking for the texture you want. Add the optional crushed cookie just before eating."
+        ],
+        "notes": [
+          "The shake supplies the liquid, so skip the extra milk from the whey version. If too thin, try another 3–5g pudding powder; if too thick, add a splash of shake. Bottle sizes vary: the original half bottle was about 5–6 fl oz."
+        ],
+        "servings": "1 bowl",
+        "time": "About 15–20 minutes in the freezer",
+        "default": false
+      },
+      {
+        "id": "chocolate-peanut-cheesecake",
+        "label": "Chocolate peanut cheesecake",
+        "ingredients": [
+          [
+            "900g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "chocolate-peanut whey"
+          ],
+          [
+            "1 scoop, optional",
+            "vanilla whey"
+          ],
+          [
+            "2 tbsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "2 tbsp",
+            "sugar-free instant chocolate-fudge pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "unsweetened cocoa powder"
+          ],
+          [
+            "3 tbsp",
+            "reduced-fat cream cheese"
+          ],
+          [
+            "4–6 tbsp, as needed",
+            "milk"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "¼ tsp",
+            "salt"
+          ],
+          [
+            "1–2 tbsp, optional",
+            "Nutella or peanut butter"
+          ]
+        ],
+        "steps": [
+          "Soften the cream cheese and mix with a little milk. Stir in the whey until smooth, then add yogurt, dry pudding mixes, cocoa, vanilla, and salt.",
+          "Add milk gradually until creamy. Swirl in Nutella or peanut butter if you want more richness. Refrigerate 30–60 minutes, then taste and adjust."
+        ],
+        "notes": [
+          "The source recommends one scoop of chocolate peanut whey for the whole batch, with optional vanilla whey. Keep it there to start if your chocolate whey tastes chalky."
+        ],
+        "servings": "4–5 servings",
+        "time": "30–60 minutes chilling",
+        "default": false
+      },
+      {
+        "id": "snickers",
+        "label": "Snickers pudding",
+        "ingredients": [
+          [
+            "400g",
+            "plain Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "chocolate-peanut whey"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant butterscotch pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant chocolate-fudge pudding mix, dry"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "As needed",
+            "milk"
+          ],
+          [
+            "To taste, optional",
+            "crushed salted peanuts and caramel sauce"
+          ]
+        ],
+        "steps": [
+          "Stir yogurt, whey, both dry pudding mixes, and salt together. Add milk a splash at a time until creamy.",
+          "Taste, then add crushed salted peanuts and a little caramel sauce if you have them. Chill until you like the texture."
+        ],
+        "notes": [
+          "This was a loose flavor suggestion in the chat. Milk and toppings were deliberately left to taste; butterscotch supplies the caramel direction."
+        ],
+        "servings": "400g yogurt batch",
+        "time": "Mix, then chill",
+        "default": false
       }
     ],
     "gaps": [
-      "Fairlife/no-whey Biscoff: 250g yogurt, half a Fairlife shake, and 15g cheesecake pudding were recovered; the remaining quantities and complete method were not.",
-      "White-chocolate berry, chocolate-covered berry, berry banana pudding, and berry pistachio were ideas; full ratios were not recovered."
+      "More flavor ideas from the chats: white chocolate berry, chocolate-covered berry, berry banana pudding, and berry pistachio. Try them as swaps, adding powder gradually and tasting as you go; these were not separate measured batches."
     ],
     "familyVariants": true,
     "variantLegend": "Flavor",
-    "variantParam": "flavor"
+    "variantParam": "flavor",
+    "guidance": "Start here, then taste. Pudding mix and whey thicken differently by brand, so add liquid a little at a time. Sweetener, fruit, and toppings are flexible; the quantities below give you a batch to work from.",
+    "gapsTitle": "More ways to mix it up"
   },
   {
     "slug": "protein-overnight-oats",
     "title": "Protein overnight oats",
     "category": "Breakfast",
-    "description": "A shared oats, yogurt, whey, and chia base with documented flavor variations.",
+    "description": "A creamy oats, yogurt, whey, and chia base. Choose a flavor and make it as thick, sweet, or loaded with toppings as you like.",
     "servings": "1 portion",
     "time": "Overnight chilling",
     "ingredients": [],
     "steps": [],
     "notes": [
-      "The base is shared, but each variant lists its complete quantities. Do not add the plain base ingredients a second time.",
-      "Pudding flavors are added as dry instant-pudding powder."
+      "Each flavor lists everything for its batch, so you do not need to add the plain base again.",
+      "Use dry instant pudding powder. Taste before adding sweetener, and add crunchy toppings just before eating.",
+      "Frozen fruit releases liquid as it thaws. Hold some liquid back at first; add a splash in the morning if the oats are too thick."
     ],
     "variants": [
       {
@@ -1341,15 +1539,21 @@
             "pistachios"
           ],
           [
-            "To taste, optional",
-            "honey or rose water"
+            "½–1 tsp, optional",
+            "honey"
+          ],
+          [
+            "1–2 drops, optional",
+            "rose water"
           ]
         ],
         "steps": [
           "Mix the shared base with the dry pistachio pudding and cardamom. Refrigerate overnight.",
           "Stir and thin with {10–30g} milk the next morning as needed. Top with optional pistachios, honey, or rose water."
         ],
-        "notes": [],
+        "notes": [
+          "Start with the small amount of cardamom listed. Rose water is optional and only needs a drop or two."
+        ],
         "servings": "1 portion",
         "time": "Overnight chilling",
         "label": "Pistachio cardamom",
@@ -1395,13 +1599,17 @@
             "water"
           ],
           [
-            "To taste",
-            "vanilla extract and salt"
+            "¼ tsp",
+            "vanilla extract"
+          ],
+          [
+            "Pinch",
+            "salt"
           ]
         ],
         "steps": [
-          "Mix yogurt, whey, water, dry pudding mixes, vanilla, and salt. Stir in oats, chia, fruit, and Nutella.",
-          "Refrigerate at least 6 hours."
+          "Mix yogurt, whey, both dry pudding powders, vanilla, salt, and the lower amount of water until smooth. Stir in oats and chia.",
+          "Fold in the frozen fruit without thawing. Warm Nutella for 5–10 seconds and swirl it through, leaving some streaks. Refrigerate at least 6 hours, then stir and adjust the texture."
         ],
         "notes": [],
         "servings": "1 portion",
@@ -1437,7 +1645,7 @@
             "Jell-O chocolate-fudge instant pudding mix, dry"
           ],
           [
-            "200ml",
+            "200–280ml",
             "water"
           ],
           [
@@ -1453,8 +1661,12 @@
             "Nutella"
           ],
           [
-            "To taste",
-            "vanilla extract and salt"
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "2 small pinches",
+            "salt"
           ]
         ],
         "steps": [
@@ -1462,22 +1674,302 @@
           "Thin peanut butter as needed for layering. Layer base, berries, and peanut butter in {2} jars; top with Nutella. Refrigerate 6–8 hours."
         ],
         "notes": [
-          "The final recovered two-portion recipe uses a 1:1 ratio of Aldi chocolate and Jell-O chocolate-fudge pudding. It includes Nutella despite the PB&J name."
+          "Keep the berries in their own jammy layer, and swirl the peanut butter and Nutella over the top. Start with the lower water amount; you can loosen the oats later.",
+          "The two pudding mixes are equal parts. Start with the listed amount: whey, chia, and oats already do plenty of thickening."
         ],
         "servings": "2 portions",
         "time": "6–8 hours chilling",
         "label": "Chocolate PB&J",
         "default": false
+      },
+      {
+        "id": "cinnamon-roll",
+        "label": "Cinnamon roll",
+        "ingredients": [
+          [
+            "50g",
+            "rolled oats"
+          ],
+          [
+            "150g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey"
+          ],
+          [
+            "110g",
+            "milk"
+          ],
+          [
+            "8g",
+            "chia seeds"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "To taste",
+            "sweetener"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant cheesecake or vanilla pudding mix, dry"
+          ],
+          [
+            "½–1 tsp",
+            "cinnamon"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, milk, dry pudding, vanilla, and salt until smooth. Stir in oats, chia, and the remaining flavorings. Taste before adding sweetener.",
+          "Cover and refrigerate overnight. Stir in a splash more milk in the morning if you want it looser."
+        ],
+        "notes": [
+          "Start with the lower cinnamon amount and taste. Banana or berries work as an optional morning topping. This is the version reported made and liked in the chat."
+        ],
+        "servings": "1 portion",
+        "time": "Overnight chilling",
+        "default": false
+      },
+      {
+        "id": "banana-pudding",
+        "label": "Banana pudding",
+        "ingredients": [
+          [
+            "50g",
+            "rolled oats"
+          ],
+          [
+            "150g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey"
+          ],
+          [
+            "100–120g",
+            "milk"
+          ],
+          [
+            "8g",
+            "chia seeds"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "To taste",
+            "sweetener"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant banana-cream pudding mix, dry"
+          ],
+          [
+            "1",
+            "banana, half mashed and half sliced"
+          ],
+          [
+            "2–3",
+            "vanilla wafers"
+          ],
+          [
+            "Optional",
+            "whipped topping"
+          ]
+        ],
+        "steps": [
+          "Mix the yogurt, whey, milk, dry pudding, vanilla, salt, and sweetener. Stir in oats, chia, and half the banana, mashed. Refrigerate overnight.",
+          "In the morning, loosen with milk as needed and top with the remaining banana slices and crushed wafers. Add whipped topping if you like."
+        ],
+        "notes": [],
+        "servings": "1 portion",
+        "time": "Overnight chilling",
+        "default": false
+      },
+      {
+        "id": "biscoff-cheesecake",
+        "label": "Biscoff cheesecake",
+        "ingredients": [
+          [
+            "50g",
+            "rolled oats"
+          ],
+          [
+            "150g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop",
+            "vanilla whey"
+          ],
+          [
+            "100–120g",
+            "milk"
+          ],
+          [
+            "8g",
+            "chia seeds"
+          ],
+          [
+            "½ tsp",
+            "vanilla extract"
+          ],
+          [
+            "To taste",
+            "sweetener"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ],
+          [
+            "1 tbsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "15g",
+            "Biscoff cookie butter"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, milk, dry pudding, vanilla, and salt until smooth. Stir in oats, chia, and the remaining flavorings. Taste before adding sweetener.",
+          "Warm cookie butter for about 10 seconds and swirl it through. Try half mixed in and half on top. Cover and refrigerate overnight; loosen with milk in the morning if needed."
+        ],
+        "notes": [
+          "A crushed cookie is optional. The cookie butter supplies most of the Biscoff flavor."
+        ],
+        "servings": "1 portion",
+        "time": "Overnight chilling",
+        "default": false
+      },
+      {
+        "id": "reeses-fudge-brownie",
+        "label": "Reese’s fudge brownie",
+        "ingredients": [
+          [
+            "60g",
+            "rolled oats"
+          ],
+          [
+            "170g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "1 scoop / about 30g",
+            "chocolate-peanut whey"
+          ],
+          [
+            "120–160ml",
+            "water"
+          ],
+          [
+            "1 tbsp",
+            "chia seeds"
+          ],
+          [
+            "2 tsp",
+            "sugar-free instant chocolate-fudge pudding mix, dry"
+          ],
+          [
+            "1 tbsp",
+            "peanut butter"
+          ],
+          [
+            "1 tsp",
+            "Nutella"
+          ],
+          [
+            "Pinch",
+            "salt"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, dry pudding, peanut butter, and the lower amount of water until smooth. Stir in oats, chia, and salt. Add more water until slightly looser than your preferred finished texture.",
+          "Warm Nutella briefly and swirl it over the top. Cover and refrigerate 6–8 hours. Stir before eating and loosen with water as needed."
+        ],
+        "notes": [
+          "Recovered from the explicit swaps for the Nutella banana base: chocolate peanut whey, chocolate fudge pudding, peanut butter, and a smaller Nutella swirl."
+        ],
+        "servings": "1 portion",
+        "time": "6–8 hours chilling",
+        "default": false
+      },
+      {
+        "id": "mixed-berry-white-chocolate",
+        "label": "Mixed berry white chocolate cheesecake",
+        "ingredients": [
+          [
+            "60g",
+            "rolled oats"
+          ],
+          [
+            "170g",
+            "plain nonfat Greek yogurt"
+          ],
+          [
+            "30g",
+            "vanilla whey"
+          ],
+          [
+            "120g",
+            "frozen mixed berries"
+          ],
+          [
+            "10g",
+            "chia seeds"
+          ],
+          [
+            "2 tsp",
+            "sugar-free instant cheesecake pudding mix, dry"
+          ],
+          [
+            "1 tsp",
+            "sugar-free instant white-chocolate pudding mix, dry"
+          ],
+          [
+            "90–120ml",
+            "water"
+          ],
+          [
+            "To taste, optional",
+            "vanilla extract and salt"
+          ]
+        ],
+        "steps": [
+          "Mix yogurt, whey, dry pudding powders, optional vanilla and salt, and the lower water amount until smooth. Stir in oats, chia, and frozen berries.",
+          "Refrigerate 6–8 hours. Stir and add a little water if it needs loosening."
+        ],
+        "notes": [
+          "This is the berry swap from the earlier 170g yogurt base. Skip the Nutella and peanut butter to keep the berry and cheesecake flavors clear."
+        ],
+        "servings": "1 portion",
+        "time": "6–8 hours chilling",
+        "default": false
       }
     ],
     "gaps": [
-      "Cinnamon roll was made and liked; its exact spice and pudding ratios were not recovered.",
-      "Reese’s Fudge Brownie was discussed; its full quantities and steps were not recovered.",
-      "Banana cream, white chocolate, butterscotch, and Biscoff white-chocolate cheesecake were discussed as ideas or flavors; separate complete recipes were not recovered."
+      "For salted butterscotch apple, use the plain base with about 1 tbsp butterscotch pudding. Microwave diced apple with cinnamon for 30–60 seconds, cool, and stir it in; salt and optional caramel go to taste. This was a flavor suggestion, not a measured apple batch.",
+      "Biscoff white chocolate cheesecake was suggested as a future combination. Keep cheesecake dominant and add white chocolate gradually; no separate ratio was specified."
     ],
     "familyVariants": true,
     "variantLegend": "Flavor",
-    "variantParam": "flavor"
+    "variantParam": "flavor",
+    "guidance": "Use these amounts as a starting point. Mix it a little looser than you want to eat it: oats, chia, whey, and pudding all thicken as they sit. Start at the low end of the liquid range, then loosen it up in the morning.",
+    "gapsTitle": "More ways to mix it up"
   },
   {
     "slug": "avocado-yogurt-spread",
