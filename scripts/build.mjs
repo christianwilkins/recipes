@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile, cp, rm } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, cp, rm, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { categories } from '../lib/groceries.mjs';
 import { scaleFactors, scaleText } from '../lib/scale.mjs';
@@ -6,6 +6,10 @@ import { recipeNutrition, nutrients } from '../lib/nutrition.mjs';
 
 const recipes = JSON.parse(await readFile(new URL('../data/recipes.json', import.meta.url)));
 const root = new URL('../dist/', import.meta.url);
+const socialVersions = {};
+for (const name of await readdir(new URL('../public/social/', import.meta.url))) {
+  if (name.endsWith('.png')) socialVersions[`/social/${name}`] = createHash('sha256').update(await readFile(new URL(`../public/social/${name}`, import.meta.url))).digest('hex').slice(0, 12);
+}
 // The browser bundle includes the same scaling code the build and grocery API use.
 const scaleSource = (await readFile(new URL('../lib/scale.mjs', import.meta.url), 'utf8')).replace(/^export /gm, '');
 const sources = {
@@ -23,6 +27,7 @@ const e = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt
 // Same font files as chriswiki.com, so the subdomain reads as part of the main site.
 const fonts = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap';
 function socialTags(title, description, path, image) {
+  image = `${image}?v=${socialVersions[image]}`;
   return `<meta property="og:title" content="${e(title)}"><meta property="og:description" content="${e(description)}"><meta property="og:type" content="website"><meta property="og:site_name" content="Christian Wilkins · Recipes"><meta property="og:url" content="https://recipes.chriswiki.com${e(path)}"><meta property="og:image" content="https://recipes.chriswiki.com${e(image)}"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="${e(title)} recipe card"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(title)}"><meta name="twitter:description" content="${e(description)}"><meta name="twitter:image" content="https://recipes.chriswiki.com${e(image)}">`;
 }
 const sharePath = (r, v) => v ? `/${r.slug}/${v.id}/` : `/${r.slug}/`;
@@ -108,7 +113,7 @@ ${[['Breakfast','breakfast','Breakfast'], ['Dinner','dinners','Dinners'], ['Dess
 const variantAttr = v => v ? ` data-variant="${e(v.id)}"` : '';
 function variantPicker(r) {
   if (!r.variants) return '';
-  return `<fieldset class="choice" data-param="${e(r.variantParam)}"><legend>${e(r.variantLegend)}</legend><div class="choice-options">${r.variants.map(v=>`<label><input type="radio" name="variant" id="variant-${e(v.id)}" value="${e(v.id)}"${v.default ? ' checked' : ''}><span>${e(variantName(v))}</span></label>`).join('')}</div>${r.variants.filter(v=>v.vegetarian).map(v=>`<p class="small"${variantAttr(v)}>${e(v.vegetarian)}</p>`).join('')}</fieldset>`;
+  return `<fieldset class="choice" data-param="${e(r.variantParam)}"><legend>${e(r.variantLegend)}</legend><div class="choice-options">${r.variants.map(v=>`<label><input type="radio" name="variant" id="variant-${e(v.id)}" data-share-version="${socialVersions[`/social/${r.slug}-${v.id}.png`]}" value="${e(v.id)}"${v.default ? ' checked' : ''}><span>${e(variantName(v))}</span></label>`).join('')}</div>${r.variants.filter(v=>v.vegetarian).map(v=>`<p class="small"${variantAttr(v)}>${e(v.vegetarian)}</p>`).join('')}</fieldset>`;
 }
 // Scaling rewrites text, so the control only appears once JavaScript is running.
 const scalePicker = () => `<fieldset class="choice scale-choice" hidden><legend>Batch size</legend><div class="choice-options">${scaleFactors.map(f=>`<label><input type="radio" name="scale" value="${f}"${f === 1 ? ' checked' : ''}><span>${factorLabel(f)}</span></label>`).join('')}</div></fieldset>`;
@@ -129,7 +134,7 @@ for (const r of recipes) {
  const times = r.variants?.some(v=>v.time) ? r.variants.map(v=>`<span${variantAttr(v)}>${e(v.time ?? r.time)}</span>`).join('') : e(r.time);
  const variantPrint = (r.variants ?? []).map(v=>`<span${variantAttr(v)}>${e(r.variantLegend)}: ${e(variantName(v))}. </span>`).join('');
  const recipeHtml = page(r.title,r.description,`/${r.slug}/`,`
-<p class="back"><a href="/">← All recipes</a></p>${r.family ? `<p>This recipe is part of <a href="/${e(r.family)}/?flavor=${e(r.familyVariant)}">Greek yogurt pudding bowls</a>, with all the flavor variations.</p>` : ''}<section class="recipe-heading" data-recipe-slug="${e(r.slug)}"><h1>${e(r.title)}</h1><p class="lead">${e(r.description)}</p><p class="meta">${servings} · ${times}</p>${r.guidance ? `<p class="small cooking-guidance">${e(r.guidance)}</p>` : ''}<p class="print-only">${variantPrint}<span class="batch-print">Batch: 1×</span></p><div class="choices">${variantPicker(r)}${scalePicker()}</div><p class="choice-status small" role="status" aria-live="polite"></p><div class="actions">${addButton(r)}<a href="/shopping/">View grocery list</a><button class="secondary print" hidden>Print recipe</button><button class="secondary" data-copy-link hidden>Copy recipe link</button><button class="secondary" data-share-link hidden>Share recipe…</button>${r.source ? `<a href="${e(r.source)}">${e(r.sourceLabel ?? 'Prep with Drew’s reel')} ↗</a>` : ''}</div><p class="action-status small" role="status" aria-live="polite"></p><p class="share-status small" role="status" aria-live="polite"></p><div class="field manual-link" hidden><label for="recipe-share-url">Recipe link</label><input id="recipe-share-url" readonly></div></section>
+<p class="back"><a href="/">← All recipes</a></p>${r.family ? `<p>This recipe is part of <a href="/${e(r.family)}/?flavor=${e(r.familyVariant)}">Greek yogurt pudding bowls</a>, with all the flavor variations.</p>` : ''}<section class="recipe-heading" data-recipe-slug="${e(r.slug)}" data-share-version="${socialVersions[`/social/${r.slug}.png`]}"><h1>${e(r.title)}</h1><p class="lead">${e(r.description)}</p><p class="meta">${servings} · ${times}</p>${r.guidance ? `<p class="small cooking-guidance">${e(r.guidance)}</p>` : ''}<p class="print-only">${variantPrint}<span class="batch-print">Batch: 1×</span></p><div class="choices">${variantPicker(r)}${scalePicker()}</div><p class="choice-status small" role="status" aria-live="polite"></p><div class="actions">${addButton(r)}<a href="/shopping/">View grocery list</a><button class="secondary print" hidden>Print recipe</button><button class="secondary" data-copy-link hidden>Copy recipe link</button><button class="secondary" data-share-link hidden>Share recipe…</button>${r.source ? `<a href="${e(r.source)}">${e(r.sourceLabel ?? 'Prep with Drew’s reel')} ↗</a>` : ''}</div><p class="action-status small" role="status" aria-live="polite"></p><p class="share-status small" role="status" aria-live="polite"></p><div class="field manual-link" hidden><label for="recipe-share-url">Recipe link</label><input id="recipe-share-url" readonly></div></section>
 
 <div class="recipe-body"><section><h2>Ingredients</h2><p class="small">${r.unrecorded ? 'Check off as you cook.' : `For ${servings}. Check off as you cook.`}</p>${r.sauceStart != null ? '<h3>Quesadillas</h3>' : ''}<ul class="ingredients">${variantIngredients}${r.ingredients.map(([amount,name],i)=>(i === r.sauceStart ? '</ul><h3>Creamy jalapeño sauce — extra for later</h3><ul class="ingredients">' : '') + ingredientRow(amount, name, `${r.slug}-${i}`)).join('')}</ul>${variantLinks}${r.unrecorded ? `<p class="small unrecorded">Not recorded yet: ${e(r.unrecorded.join('; '))}. These are left blank rather than estimated.</p>` : ''}</section><section><h2>How I’d make it</h2><ol class="steps">${(r.prepSteps??[]).map(s=>`<li>${qty(s)}</li>`).join('')}${variantSteps}${r.steps.map(s=>`<li>${qty(s)}</li>`).join('')}</ol>${r.methodNote ? `<p class="small">${e(r.methodNote)}</p>` : ''}<div class="notes"><h3>A few useful notes</h3>${r.notes.map(n=>`<p>${e(n)}</p>`).join('')}${(r.variants??[]).map(v=>(v.notes??[]).map(n=>`<p${variantAttr(v)}>${e(n)}</p>`).join('')).join('')}</div>${r.related ? `<div class="notes"><h3>Use it in</h3>${r.related.map(x=>`<p><a href="${e(relatedPath(x))}">${e(x.text)}</a>. ${e(x.note)}</p>`).join('')}</div>` : ''}</section></div>
 ${variants.map(v=>nutritionPanel(r, v)).join('')}${r.gaps ? `<section class="split history-gaps"><h2>${e(r.gapsTitle ?? 'Still to fill in')}</h2><ul>${r.gaps.map(g=>`<li>${e(g)}</li>`).join('')}</ul></section>` : ''}
@@ -144,7 +149,7 @@ ${r.customization ? `<section class="split variations" aria-labelledby="variatio
    .replace(`<title>${e(r.title)} · Christian Wilkins</title>`, `<title>${e(title)} · Christian Wilkins</title>`)
    .replace(socialTags(r.title,r.description,`/${r.slug}/`,`/social/${r.slug}.png`), socialTags(title,r.description,path,`/social/${r.slug}-${v.id}.png`))
    .replace(/(<input type="radio" name="variant"[^>]*?) checked/g, '$1')
-   .replace(`id="variant-${v.id}" value="${v.id}"`, `id="variant-${v.id}" value="${v.id}" checked`);
+   .replace(`value="${v.id}"`, `value="${v.id}" checked`);
   await output(path.slice(1), html);
  }
 
