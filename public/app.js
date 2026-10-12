@@ -111,11 +111,11 @@ if (recipeHeading) {
     input.focus(); input.select();
     status.textContent = 'Copy the selected link and paste it into Messages.';
   };
-  copy.hidden = false;
+  copy.hidden = typeof navigator.share === 'function';
   copy.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(linkData().url);
-      status.textContent = 'Recipe link copied. Paste it into Messages to share this version.';
+      status.textContent = 'Link copied. Ready to paste into Messages.';
     } catch { manualCopy(); }
   });
   if (typeof navigator.share === 'function') {
