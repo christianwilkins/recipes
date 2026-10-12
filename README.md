@@ -1,14 +1,18 @@
 # Recipes
 
-A public recipe notebook and shared [grocery list](https://recipes.chriswiki.com/shopping/) at [recipes.chriswiki.com](https://recipes.chriswiki.com).
+A public recipe notebook and shared [grocery list](https://recipes.chriswiki.com/shopping/) at [recipes.chriswiki.com](https://recipes.chriswiki.com). It is a subdomain of [chriswiki.com](https://chriswiki.com) and uses the main site's default look.
 
-Each recipe has an **Add ingredients** button. Ingredients shared by recipes use one grocery row, with each recipe’s required amount shown separately. The editable buy quantity stays independent so unlike units are never silently summed. Adding the same recipe again does not duplicate its requirements. Removed ingredients return when that recipe is added again; existing checked items stay checked.
+Each recipe has an **Add ingredients** button. Ingredients shared by recipes use one grocery row, with each recipe’s required amount shown separately. The editable buy quantity stays independent so unlike units are never silently summed. Adding the same recipe again does not duplicate its requirements; it updates them to the batch size you picked. Removed ingredients return when that recipe is added again; existing checked items stay checked.
 
 Anyone can add, edit, check off, remove, or undo the most recent removal without signing in. The list is stored in Cloudflare D1 and refreshes across devices when focused or every 15 seconds while visible. Cooking checkboxes on recipe pages stay local to the browser. The initial shared list contains the Trader Joe’s trip, including satay ingredients and skincare; beef and cheese already at home are omitted from that seed.
 
 ## Editing and previewing
 
-Recipe content lives in `data/recipes.json`. The build generates static pages in `dist/`; Pages Functions serve `/api/groceries`. The original trip data and dessert shopping estimates remain in `data/trader-joes.json` and `data/shopping.json` for reference. `/trader-joes/` redirects to the shared grocery list.
+Recipe content lives in `data/recipes.json`. A recipe can list `variants`, such as the quesadilla fillings or dried and canned Cuban beans. Each variant adds its own ingredients and steps ahead of the shared ones, and exactly one is the default. `variantLegend` names the picker and `variantParam` names its URL parameter (`?filling=`, `?beans=`).
+
+Every recipe can be scaled to ½×, 1×, 1½×, 2×, or 3× (`?batch=2`). Ingredient amounts scale automatically; quantities inside method text scale only when wrapped in braces, such as `Add {2 tbsp} vinegar`. Leave per serving amounts, times, and temperatures unbraced. Text in parentheses, such as `8 cans (15 oz each)`, is never scaled. The picker, links, recipe prompt, print view, and **Add ingredients** all follow the selected options.
+
+Nutrition estimates come from USDA FoodData Central values in `data/nutrition.json`. An ingredient row can add a third field, `{"food": "onion", "g": 110}`, naming the food and its grams at 1×; `nutritionServings` sets the per serving split. Each page lists the assumptions and the ingredients it leaves out. Recipes with a published creator estimate keep it in `nutritionEstimate`. The satay bowls have no estimate yet because the USDA records for raw chicken thigh and powdered peanut butter are still missing. The build generates static pages in `dist/`; Pages Functions serve `/api/groceries`. The original trip data and dessert shopping estimates remain in `data/trader-joes.json` and `data/shopping.json` for reference. `/trader-joes/` redirects to the shared grocery list.
 
 Use Node.js 24 or newer:
 
