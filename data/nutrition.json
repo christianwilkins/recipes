@@ -1,0 +1,548 @@
+{
+  "source": "USDA FoodData Central",
+  "retrieved": "2026-10-12",
+  "foods": {
+    "black-beans-dried": {
+      "fdcId": 173734,
+      "description": "Beans, black, mature seeds, raw",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 341,
+        "protein": 21.6,
+        "carbs": 62.4,
+        "fat": 1.4,
+        "fiber": 15.5,
+        "sodium": 5
+      },
+      "portions": {
+        "1 cup": 194,
+        "1 tbsp": 12.1
+      }
+    },
+    "black-beans-canned": {
+      "fdcId": 175188,
+      "description": "Beans, black turtle, mature seeds, canned",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 91,
+        "protein": 6,
+        "carbs": 16.6,
+        "fat": 0.3,
+        "fiber": 6.9,
+        "sodium": 384
+      },
+      "portions": {
+        "1 cup": 240
+      },
+      "notes": "Closest SR Legacy match. SR Legacy has no plain 'Beans, black, mature seeds, canned' regular pack record; black turtle beans are the common grocery black bean. The only other SR canned black bean record is 175238 'Beans, black, mature seeds, canned, low sodium'."
+    },
+    "black-beans-canned-drained": {
+      "fdcId": 2644285,
+      "description": "Beans, black, canned, sodium added, drained and rinsed",
+      "dataType": "Foundation",
+      "per100g": {
+        "calories": 118.4,
+        "protein": 6.9,
+        "carbs": 19.8,
+        "fat": 1.3,
+        "fiber": null,
+        "sodium": 217.9
+      },
+      "energySource": "2047 Energy (Atwater General Factors); 2048 Atwater Specific = 115.3 kcal",
+      "portions": {
+        "1 RACC": 130
+      },
+      "notes": "Foundation record for drained and rinsed canned black beans. No 1008 Energy, so calories use 2047. Fiber 1079 is absent; the record reports 2033 Total dietary fiber (AOAC 2011.25) = 6.7 g per 100 g. No cup portion in FDC; only 1 RACC = 130 g."
+    },
+    "salt": {
+      "fdcId": 173468,
+      "description": "Salt, table",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 0,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sodium": 38758
+      },
+      "portions": {
+        "1 cup": 292,
+        "1 tsp": 6,
+        "1 tbsp": 18,
+        "1 dash": 0.4
+      }
+    },
+    "black-pepper": {
+      "fdcId": 170931,
+      "description": "Spices, pepper, black",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 251,
+        "protein": 10.4,
+        "carbs": 64,
+        "fat": 3.3,
+        "fiber": 25.3,
+        "sodium": 20
+      },
+      "portions": {
+        "1 tbsp, ground": 6.9,
+        "1 dash": 0.1,
+        "1 tsp, ground": 2.3,
+        "1 tsp, whole": 2.9
+      }
+    },
+    "cumin": {
+      "fdcId": 170923,
+      "description": "Spices, cumin seed",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 375,
+        "protein": 17.8,
+        "carbs": 44.2,
+        "fat": 22.3,
+        "fiber": 10.5,
+        "sodium": 168
+      },
+      "portions": {
+        "1 tsp, whole": 2.1,
+        "1 tbsp, whole": 6
+      },
+      "notes": "FDC portions are for whole seed only; no ground cumin portion."
+    },
+    "oregano": {
+      "fdcId": 171328,
+      "description": "Spices, oregano, dried",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 265,
+        "protein": 9,
+        "carbs": 68.9,
+        "fat": 4.3,
+        "fiber": 42.5,
+        "sodium": 25
+      },
+      "portions": {
+        "1 tsp, leaves": 1,
+        "1 tsp, ground": 1.8
+      }
+    },
+    "olive-oil": {
+      "fdcId": 171413,
+      "description": "Oil, olive, salad or cooking",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 884,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 100,
+        "fiber": 0,
+        "sodium": 2
+      },
+      "portions": {
+        "1 tablespoon": 13.5,
+        "1 tsp": 4.5,
+        "1 cup": 216
+      }
+    },
+    "onion": {
+      "fdcId": 170000,
+      "description": "Onions, raw",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 40,
+        "protein": 1.1,
+        "carbs": 9.3,
+        "fat": 0.1,
+        "fiber": 1.7,
+        "sodium": 4
+      },
+      "portions": {
+        "1 cup, chopped": 160,
+        "1 slice, medium (1/8\" thick)": 14,
+        "1 medium (2-1/2\" dia)": 110,
+        "1 large": 150,
+        "10 rings": 60,
+        "1 tbsp chopped": 10,
+        "1 cup, sliced": 115,
+        "1 slice, thin": 9,
+        "1 small": 70,
+        "1 slice, large (1/4\" thick)": 38
+      }
+    },
+    "green-bell-pepper": {
+      "fdcId": 170427,
+      "description": "Peppers, sweet, green, raw",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 20,
+        "protein": 0.9,
+        "carbs": 4.6,
+        "fat": 0.2,
+        "fiber": 1.7,
+        "sodium": 3
+      },
+      "portions": {
+        "1 cup, chopped": 149,
+        "1 cup, sliced": 92,
+        "1 ring (3\" dia, 1/4\" thick)": 10,
+        "10 strips": 27,
+        "1 large (2-1/4 per lb, approx 3-3/4\" long, 3\" dia)": 164,
+        "1 medium (approx 2-3/4\" long, 2-1/2\" dia)": 119,
+        "1 small": 74,
+        "1 tbsp": 9.3
+      }
+    },
+    "garlic": {
+      "fdcId": 169230,
+      "description": "Garlic, raw",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 149,
+        "protein": 6.4,
+        "carbs": 33.1,
+        "fat": 0.5,
+        "fiber": 2.1,
+        "sodium": 17
+      },
+      "portions": {
+        "1 tsp": 2.8,
+        "1 clove": 3,
+        "3 cloves": 9,
+        "1 cup": 136
+      }
+    },
+    "white-vinegar": {
+      "fdcId": 172237,
+      "description": "Vinegar, distilled",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 18,
+        "protein": 0,
+        "carbs": 0,
+        "fat": 0,
+        "fiber": 0,
+        "sodium": 2
+      },
+      "portions": {
+        "1 tbsp": 14.9,
+        "1 tsp": 5,
+        "1 cup": 238
+      }
+    },
+    "sugar": {
+      "fdcId": 169655,
+      "description": "Sugars, granulated",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 387,
+        "protein": 0,
+        "carbs": 100,
+        "fat": 0,
+        "fiber": 0,
+        "sodium": 1
+      },
+      "portions": {
+        "1 cup": 200,
+        "1 serving 1 cube": 2.3,
+        "1 tsp": 4.2,
+        "1 serving packet": 2.8
+      }
+    },
+    "sweet-potato": {
+      "fdcId": 168482,
+      "description": "Sweet potato, raw, unprepared (Includes foods for USDA's Food Distribution Program)",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 86,
+        "protein": 1.6,
+        "carbs": 20.1,
+        "fat": 0.1,
+        "fiber": 3,
+        "sodium": 55
+      },
+      "portions": {
+        "1 cup, cubes": 133,
+        "1 sweetpotato, 5\" long": 130
+      },
+      "notes": "No 'medium' portion in FDC; closest is 1 sweetpotato, 5\" long = 130 g."
+    },
+    "ground-beef-85": {
+      "fdcId": 171796,
+      "description": "Beef, ground, 85% lean meat / 15% fat, raw (Includes foods for USDA's Food Distribution Program)",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 215,
+        "protein": 18.6,
+        "carbs": 0,
+        "fat": 15,
+        "fiber": 0,
+        "sodium": 66
+      },
+      "portions": {
+        "4 oz": 113
+      }
+    },
+    "cheddar": {
+      "fdcId": 173414,
+      "description": "Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 403,
+        "protein": 22.9,
+        "carbs": 3.4,
+        "fat": 33.3,
+        "fiber": 0,
+        "sodium": 653
+      },
+      "portions": {
+        "1 cup, melted": 244,
+        "1 slice (1 oz)": 28,
+        "1 cup, shredded": 113,
+        "1 oz": 28.35,
+        "1 cubic inch": 17,
+        "1 cup, diced": 132
+      }
+    },
+    "taco-seasoning": {
+      "fdcId": 172243,
+      "description": "Seasoning mix, dry, taco, original",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 322,
+        "protein": 4.5,
+        "carbs": 58,
+        "fat": 0,
+        "fiber": 13.3,
+        "sodium": 7203
+      },
+      "portions": {
+        "2 tsp": 5.7
+      },
+      "notes": "No tbsp portion; FDC has 2 tsp = 5.7 g."
+    },
+    "pico-de-gallo": {
+      "fdcId": 2709737,
+      "description": "Salsa, pico de gallo",
+      "dataType": "Survey (FNDDS)",
+      "per100g": {
+        "calories": 17,
+        "protein": 0.7,
+        "carbs": 3.7,
+        "fat": 0.1,
+        "fiber": 1.1,
+        "sodium": 443
+      },
+      "portions": {
+        "Quantity not specified": 32,
+        "1 cup": 240
+      },
+      "notes": "Survey (FNDDS); values and portions from the FDC search result for this record."
+    },
+    "avocado": {
+      "fdcId": 171706,
+      "description": "Avocados, raw, California",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 167,
+        "protein": 2,
+        "carbs": 8.6,
+        "fat": 15.4,
+        "fiber": 6.8,
+        "sodium": 8
+      },
+      "portions": {
+        "1 fruit, without skin and seed": 136,
+        "1 cup, pureed": 230,
+        "1 NLEA serving": 50
+      }
+    },
+    "greek-yogurt-nonfat": {
+      "fdcId": 170894,
+      "description": "Yogurt, Greek, plain, nonfat (Includes foods for USDA's Food Distribution Program)",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 59,
+        "protein": 10.2,
+        "carbs": 3.6,
+        "fat": 0.4,
+        "fiber": 0,
+        "sodium": 36
+      },
+      "portions": {
+        "1 container": 170
+      },
+      "notes": "No cup portion in FDC; only 1 container = 170 g."
+    },
+    "lime-juice": {
+      "fdcId": 168156,
+      "description": "Lime juice, raw",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 25,
+        "protein": 0.4,
+        "carbs": 8.4,
+        "fat": 0.1,
+        "fiber": 0.4,
+        "sodium": 2
+      },
+      "portions": {
+        "1 cup": 242,
+        "1 fl oz": 30.8,
+        "1 lime yields": 44
+      }
+    },
+    "chicken-breast-cooked": {
+      "fdcId": 171477,
+      "description": "Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 165,
+        "protein": 31,
+        "carbs": 0,
+        "fat": 3.6,
+        "fiber": 0,
+        "sodium": 74
+      },
+      "portions": {
+        "1 cup, chopped or diced": 140,
+        "1 unit (yield from 1 lb ready-to-cook chicken)": 52,
+        "0.5 breast, bone and skin removed": 86
+      }
+    },
+    "coconut-milk": {
+      "fdcId": 170173,
+      "description": "Nuts, coconut milk, canned (liquid expressed from grated meat and water)",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 197,
+        "protein": 2,
+        "carbs": 2.8,
+        "fat": 21.3,
+        "fiber": null,
+        "sodium": 13
+      },
+      "portions": {
+        "1 cup": 226,
+        "1 tbsp": 15
+      },
+      "notes": "Fiber 1079 not present in this record."
+    },
+    "red-curry-paste": {
+      "fdcId": 2548646,
+      "description": "RED THAI CURRY PASTE, RED THAI CURRY",
+      "dataType": "Branded",
+      "per100g": {
+        "calories": 156,
+        "protein": 0,
+        "carbs": 6.3,
+        "fat": 15.6,
+        "fiber": 0,
+        "sodium": 2000
+      },
+      "brandOwner": "Supervalu, Inc.",
+      "brandName": "CULINARY CIRCLE",
+      "serving": {
+        "servingSize": 16,
+        "servingSizeUnit": "GRM",
+        "householdServingFullText": "1 Tbsp"
+      },
+      "portions": {},
+      "notes": "Branded. No Thai Kitchen red curry paste record appeared in the search (only Thai Kitchen red curry sauce). Chose this record because its label values are internally consistent; values come from the search result (per 100 g)."
+    },
+    "curry-powder": {
+      "fdcId": 170924,
+      "description": "Spices, curry powder",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 325,
+        "protein": 14.3,
+        "carbs": 55.8,
+        "fat": 14,
+        "fiber": 53.2,
+        "sodium": 52
+      },
+      "portions": {
+        "1 tsp": 2,
+        "1 tbsp": 6.3
+      }
+    },
+    "honey": {
+      "fdcId": 169640,
+      "description": "Honey",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 304,
+        "protein": 0.3,
+        "carbs": 82.4,
+        "fat": 0,
+        "fiber": 0.2,
+        "sodium": 4
+      },
+      "portions": {
+        "1 cup": 339,
+        "1 tbsp": 21,
+        "1 packet (0.5 oz)": 14
+      }
+    },
+    "soy-sauce": {
+      "fdcId": 174277,
+      "description": "Soy sauce made from soy and wheat (shoyu)",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 53,
+        "protein": 8.1,
+        "carbs": 4.9,
+        "fat": 0.6,
+        "fiber": 0.8,
+        "sodium": 5493
+      },
+      "portions": {
+        "1 individual packet": 8.9,
+        "1 tbsp": 16,
+        "1 tsp": 5.3,
+        "1 cup": 255
+      }
+    },
+    "peanuts-roasted": {
+      "fdcId": 173806,
+      "description": "Peanuts, all types, dry-roasted, without salt",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 587,
+        "protein": 24.4,
+        "carbs": 21.3,
+        "fat": 49.7,
+        "fiber": 8.4,
+        "sodium": 6
+      },
+      "portions": {
+        "1 oz": 28.35,
+        "1 cup": 146,
+        "1 peanut": 1
+      },
+      "notes": "Without salt."
+    },
+    "rice-cooked": {
+      "fdcId": 168878,
+      "description": "Rice, white, long-grain, regular, enriched, cooked",
+      "dataType": "SR Legacy",
+      "per100g": {
+        "calories": 130,
+        "protein": 2.7,
+        "carbs": 28.2,
+        "fat": 0.3,
+        "fiber": 0.4,
+        "sodium": 1
+      },
+      "portions": {
+        "1 cup": 158
+      },
+      "notes": "Regular long grain; no jasmine record was retrieved."
+    }
+  },
+  "missing": {
+    "chicken-thigh": "Not retrieved. SR Legacy 'thigh, meat only, raw' record was not found before the DEMO_KEY rate limit ran out (172385 is thigh meat and skin, raw; 172387 to 172389 are cooked thigh meat only).",
+    "powdered-peanut-butter": "Not retrieved; DEMO_KEY rate limit reached before the Branded search."
+  }
+}
