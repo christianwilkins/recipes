@@ -12,6 +12,56 @@ for (const button of document.querySelectorAll('.print')) {
   button.hidden = false;
   button.addEventListener('click',()=>window.print());
 }
+// Recipe options: CSS shows the checked variant; this keeps the URL, prompt, and grocery add in sync.
+// scaleAmount and scaleText come from lib/scale.mjs, which the build places ahead of this file.
+const variantInputs = [...document.querySelectorAll('input[name="variant"]')];
+const scaleInputs = [...document.querySelectorAll('input[name="scale"]')];
+const currentVariant = () => variantInputs.find(input => input.checked)?.value;
+const currentScale = () => Number(scaleInputs.find(input => input.checked)?.value ?? 1);
+const choiceStatus = document.querySelector('.choice-status');
+const scaleLabel = factor => `${{0.5:'½', 1.5:'1½'}[factor] ?? factor}×`;
+const formatNutrient = (key, value) => `${(key === 'calories' || key === 'sodium' || value >= 100 ? Math.round(value) : Math.round(value * 10) / 10).toLocaleString('en-US')}${{calories:'', sodium:'mg'}[key] ?? 'g'}`;
+function applyScale() {
+  const factor = currentScale();
+  for (const element of document.querySelectorAll('[data-qty]')) element.textContent = scaleAmount(element.dataset.qty, factor);
+  for (const cell of document.querySelectorAll('td[data-batch]')) cell.textContent = formatNutrient(cell.dataset.key, Number(cell.dataset.batch) * factor);
+  for (const label of document.querySelectorAll('.batch-label')) label.textContent = `(${scaleLabel(factor)})`;
+  for (const label of document.querySelectorAll('.batch-print')) label.textContent = `Batch: ${scaleLabel(factor)}`;
+  for (const prompt of document.querySelectorAll('[data-template]')) prompt.value = scaleText(prompt.dataset.template.replace('Batch: 1×', `Batch: ${scaleLabel(factor)}`), factor);
+}
+function syncUrl(name, input) {
+  const url = new URL(location.href);
+  if (input.defaultChecked) url.searchParams.delete(name); else url.searchParams.set(name, input.value);
+  history.replaceState(null, '', url);
+}
+function resetAddButton() {
+  const addButton = document.querySelector('[data-add-recipe]');
+  if (addButton && !addButton.disabled) addButton.textContent = 'Add ingredients';
+  const status = document.querySelector('.action-status');
+  if (status) status.textContent = '';
+}
+if (variantInputs.length) {
+  const param = variantInputs[0].closest('fieldset').dataset.param;
+  const requested = variantInputs.find(input => input.value === new URLSearchParams(location.search).get(param));
+  if (requested) requested.checked = true;
+  for (const input of variantInputs) input.addEventListener('change', () => {
+    syncUrl(param, input);
+    choiceStatus.textContent = `Showing ${input.labels[0].textContent}.`;
+    resetAddButton();
+  });
+}
+if (scaleInputs.length) {
+  scaleInputs[0].closest('fieldset').hidden = false;
+  const requested = scaleInputs.find(input => input.value === new URLSearchParams(location.search).get('batch'));
+  if (requested) requested.checked = true;
+  applyScale();
+  for (const input of scaleInputs) input.addEventListener('change', () => {
+    applyScale();
+    syncUrl('batch', input);
+    choiceStatus.textContent = `Amounts and nutrition now show a ${input.labels[0].textContent} batch.`;
+    resetAddButton();
+  });
+}
 for (const button of document.querySelectorAll('[data-add-recipe]')) {
   button.hidden = false;
   button.addEventListener('click',async () => {
@@ -20,7 +70,7 @@ for (const button of document.querySelectorAll('[data-add-recipe]')) {
     button.textContent = 'Adding…';
     status.textContent = '';
     try {
-      const response = await fetch('/api/groceries/recipe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:button.dataset.addRecipe}),signal:AbortSignal.timeout(15000)});
+      const response = await fetch('/api/groceries/recipe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({slug:button.dataset.addRecipe,variant:currentVariant(),scale:scaleInputs.length ? currentScale() : undefined}),signal:AbortSignal.timeout(15000)});
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Could not add ingredients. Try again.');
       status.replaceChildren(document.createTextNode('Ingredients added. '));
@@ -34,12 +84,13 @@ for (const button of document.querySelectorAll('[data-add-recipe]')) {
   });
 }
 
-const promptText = document.querySelector('#recipe-prompt-text');
-if (promptText) {
+const activePrompt = () => document.querySelector(`[data-prompt="${currentVariant() ?? ''}"]`);
+if (activePrompt()) {
   const copyButton = document.querySelector('[data-copy-prompt]');
   const shareButton = document.querySelector('[data-share-prompt]');
   const status = document.querySelector('.prompt-status');
   const showManualCopy = message => {
+    const promptText = activePrompt();
     document.querySelector('.prompt-preview').open = true;
     promptText.focus();
     promptText.select();
@@ -50,20 +101,20 @@ if (promptText) {
     copyButton.disabled = true;
     status.textContent = '';
     try {
-      await navigator.clipboard.writeText(promptText.value);
+      await navigator.clipboard.writeText(activePrompt().value);
       status.textContent = 'Prompt copied. Paste it into Muse or your preferred agent.';
     } catch {
       showManualCopy('Select and copy the prompt below, then paste it into your agent.');
     } finally { copyButton.disabled = false; }
   });
-  const shareData = {title: document.querySelector('h1').textContent, text: promptText.value};
-  if (typeof navigator.share === 'function' && (!navigator.canShare || navigator.canShare(shareData))) {
+  const shareData = () => ({title: document.querySelector('h1').textContent, text: activePrompt().value});
+  if (typeof navigator.share === 'function' && (!navigator.canShare || navigator.canShare(shareData()))) {
     shareButton.hidden = false;
     shareButton.addEventListener('click', async () => {
       shareButton.disabled = true;
       status.textContent = '';
       try {
-        await navigator.share(shareData);
+        await navigator.share(shareData());
       } catch (error) {
         if (error.name !== 'AbortError') showManualCopy('Sharing is unavailable. Copy the prompt below and paste it into your agent.');
       } finally { shareButton.disabled = false; }
