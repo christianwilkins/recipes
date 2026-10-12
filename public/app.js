@@ -99,6 +99,7 @@ if (recipeHeading) {
     const variant = currentVariant();
     const url = new URL(`/${slug}/${variant ? `${variant}/` : ''}`, location.origin);
     if (currentScale() !== 1) url.searchParams.set('batch', currentScale());
+    url.searchParams.set('preview', variantInputs.find(input => input.checked)?.dataset.shareVersion ?? recipeHeading.dataset.shareVersion);
     const label = variantInputs.find(input => input.checked)?.labels[0].textContent;
     return {title: `${label ? `${label} · ` : ''}${document.querySelector('h1').textContent}`, url: url.href};
   };
