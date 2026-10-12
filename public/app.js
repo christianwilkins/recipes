@@ -31,7 +31,11 @@ function applyScale() {
 }
 function syncUrl(name, input) {
   const url = new URL(location.href);
-  if (input.defaultChecked) url.searchParams.delete(name); else url.searchParams.set(name, input.value);
+  const slug = document.querySelector('[data-recipe-slug]')?.dataset.recipeSlug;
+  if (name !== 'batch' && slug) {
+    url.pathname = `/${slug}/${input.value}/`;
+    url.searchParams.delete(name);
+  } else if (input.defaultChecked) url.searchParams.delete(name); else url.searchParams.set(name, input.value);
   history.replaceState(null, '', url);
 }
 function resetAddButton() {
@@ -85,6 +89,42 @@ for (const button of document.querySelectorAll('[data-add-recipe]')) {
 }
 
 const activePrompt = () => document.querySelector(`[data-prompt="${currentVariant() ?? ''}"]`);
+const recipeHeading = document.querySelector('[data-recipe-slug]');
+if (recipeHeading) {
+  const slug = recipeHeading.dataset.recipeSlug;
+  const copy = document.querySelector('[data-copy-link]');
+  const share = document.querySelector('[data-share-link]');
+  const status = document.querySelector('.share-status');
+  const linkData = () => {
+    const variant = currentVariant();
+    const url = new URL(`/${slug}/${variant ? `${variant}/` : ''}`, location.origin);
+    if (currentScale() !== 1) url.searchParams.set('batch', currentScale());
+    const label = variantInputs.find(input => input.checked)?.labels[0].textContent;
+    return {title: `${label ? `${label} · ` : ''}${document.querySelector('h1').textContent}`, url: url.href};
+  };
+  const manualCopy = () => {
+    const field = document.querySelector('.manual-link');
+    const input = field.querySelector('input');
+    field.hidden = false;
+    input.value = linkData().url;
+    input.focus(); input.select();
+    status.textContent = 'Copy the selected link and paste it into Messages.';
+  };
+  copy.hidden = false;
+  copy.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(linkData().url);
+      status.textContent = 'Recipe link copied. Paste it into Messages to share this version.';
+    } catch { manualCopy(); }
+  });
+  if (typeof navigator.share === 'function') {
+    share.hidden = false;
+    share.addEventListener('click', async () => {
+      try { await navigator.share(linkData()); }
+      catch (error) { if (error.name !== 'AbortError') manualCopy(); }
+    });
+  }
+}
 if (activePrompt()) {
   const copyButton = document.querySelector('[data-copy-prompt]');
   const shareButton = document.querySelector('[data-share-prompt]');
