@@ -6,7 +6,6 @@
     "source": "https://www.instagram.com/reel/DandCQwMIAE/",
     "servings": "1 bowl",
     "time": "10 minutes in the freezer, plus mixing",
-    "nutrition": "Creator’s estimate: 350 calories · 45g protein · 35g carbs · 5.5g fat per bowl. Brands and scoop sizes change these numbers.",
     "ingredients": [
       [
         "200g",
@@ -55,7 +54,21 @@
       "Add the pudding mix as dry powder; do not prepare it using the box’s milk instructions.",
       "Vanilla whey works in both recipes, so there is no need to buy a second flavor.",
       "Budget swaps: store-brand vanilla wafers, reduced-fat Neufchâtel, and ordinary skim milk. Taste before adding extra sweetener; you can also omit the extract if the vanilla whey gives enough flavor. These swaps change the original recipe."
-    ]
+    ],
+    "nutritionServings": {
+      "count": 1,
+      "label": "bowl"
+    },
+    "nutritionEstimate": {
+      "label": "Creator’s estimate",
+      "calories": 350,
+      "protein": 45,
+      "carbs": 35,
+      "fat": 5.5,
+      "fiber": null,
+      "sodium": null,
+      "note": "The recipe creator’s estimate per bowl. Brands and scoop sizes change these numbers."
+    }
   },
   {
     "slug": "biscoff-protein-cheesecake-bowl",
@@ -64,7 +77,6 @@
     "source": "https://www.instagram.com/reel/Db05yhrM7M0/",
     "servings": "1 bowl",
     "time": "No baking; mix until smooth",
-    "nutrition": "Creator’s estimate: 395 calories · 45g protein · 33g carbs · 8g fat per bowl. Brands, scoop sizes, and optional toppings change these numbers.",
     "ingredients": [
       [
         "200g",
@@ -113,63 +125,215 @@
       "Add the pudding mix as dry powder; do not prepare it separately.",
       "The tablespoon of cookie butter goes into the bowl. Only the extra teaspoon on top is optional in the original recipe.",
       "Budget swaps: reduced-fat Neufchâtel and ordinary skim milk. Taste before adding monk fruit because the whey, pudding mix, and cookie butter already contribute sweetness."
-    ]
+    ],
+    "nutritionServings": {
+      "count": 1,
+      "label": "bowl"
+    },
+    "nutritionEstimate": {
+      "label": "Creator’s estimate",
+      "calories": 395,
+      "protein": 45,
+      "carbs": 33,
+      "fat": 8,
+      "fiber": null,
+      "sodium": null,
+      "note": "The recipe creator’s estimate per bowl. Brands, scoop sizes, and optional toppings change these numbers."
+    }
   },
   {
     "slug": "cuban-style-black-beans",
     "title": "Cuban-Style Black Beans",
-    "description": "A large-batch Cuban-style black bean recipe made from 2 lb dried black beans, with onion, green pepper, garlic, cumin, oregano, and vinegar. Includes both soaked and no-soak cooking methods.",
     "category": "Side dish",
+    "description": "A large batch of Cuban-style black beans with onion, green pepper, garlic, cumin, oregano, and vinegar. Start from 2 lb dried beans, soaked or not, or from canned beans for a weeknight version.",
     "servings": "approximately 12–16 servings",
     "time": "Prep: about 20 minutes. Soaked beans: cook 1 hour 20 minutes–2 hours; total 1 hour 40 minutes–2 hours 20 minutes, plus 8–12 hours soaking. No-soak beans: cook 2 hours 15 minutes–3 hours 10 minutes; total 2 hours 35 minutes–3 hours 30 minutes. Allow additional time to bring the pot to a boil; older beans may take longer.",
+    "variantLegend": "Start from",
+    "variantParam": "beans",
+    "variants": [
+      {
+        "id": "dried",
+        "label": "Dried beans",
+        "default": true,
+        "ingredients": [
+          [
+            "2 lb",
+            "dried black beans",
+            {
+              "food": "black-beans-dried",
+              "g": 907
+            }
+          ],
+          [
+            "About 14–16 cups",
+            "water"
+          ],
+          [
+            "2",
+            "bay leaves"
+          ],
+          [
+            "1½ tbsp, plus ½–1 tsp more to taste",
+            "salt",
+            {
+              "food": "salt",
+              "g": 27,
+              "note": "Salt counts the 1½ tbsp in the pot, not the extra added to taste."
+            }
+          ],
+          [
+            "1 tsp",
+            "black pepper, for the pot",
+            {
+              "food": "black-pepper",
+              "g": 2.3
+            }
+          ],
+          [
+            "1 tsp",
+            "ground cumin, for the pot",
+            {
+              "food": "cumin",
+              "g": 2.1
+            }
+          ],
+          [
+            "1 tsp",
+            "dried oregano, for the pot",
+            {
+              "food": "oregano",
+              "g": 1
+            }
+          ]
+        ],
+        "steps": [
+          "Rinse the dried black beans thoroughly and pick out any stones or damaged beans. Choose either Option A or Option B below to cook the beans, then continue with the remaining steps.",
+          "Option A — Soaked Beans: Cover the beans generously with water and soak for 8–12 hours or overnight. Drain and discard the soaking water. Add the beans to a large pot with {about 14 cups} fresh water. Add the bay leaves, {1½ tbsp} salt, {1 tsp} black pepper, {1 tsp} cumin, and {1 tsp} oregano. Bring to a boil, then reduce to a gentle simmer and partially cover. Cook approximately 60–90 minutes, until the beans are completely tender.",
+          "Option B — No-Soak / Straight From Dry: Place the rinsed dry beans directly into a large pot. Add {about 16 cups} water, the bay leaves, {1½ tbsp} salt, {1 tsp} black pepper, {1 tsp} cumin, and {1 tsp} oregano. Bring to a full boil. Boil for about 10 minutes, then reduce to a gentle simmer and partially cover. Cook approximately 1¾–2½ hours, or until the beans are completely tender. Check periodically and add additional hot water if the beans are no longer comfortably submerged. Older beans may require additional cooking time.",
+          "Regardless of which method you use, do not drain the beans once cooked. Keep the cooking liquid because it becomes the base of the sauce."
+        ]
+      },
+      {
+        "id": "canned",
+        "label": "Canned beans",
+        "time": "Prep: about 20 minutes. Cook: about 45 minutes–1 hour, with no soaking.",
+        "ingredients": [
+          [
+            "8 cans (15 oz each)",
+            "black beans, with their liquid",
+            {
+              "food": "black-beans-canned",
+              "g": 3400,
+              "note": "Canned beans use the USDA canned black turtle bean record with liquid, at 425g (15 oz) per can; brands vary a lot in sodium."
+            }
+          ],
+          [
+            "About 2 cups",
+            "water"
+          ],
+          [
+            "2",
+            "bay leaves"
+          ],
+          [
+            "1 tsp",
+            "black pepper, for the pot",
+            {
+              "food": "black-pepper",
+              "g": 2.3
+            }
+          ],
+          [
+            "1 tsp",
+            "ground cumin, for the pot",
+            {
+              "food": "cumin",
+              "g": 2.1
+            }
+          ],
+          [
+            "1 tsp",
+            "dried oregano, for the pot",
+            {
+              "food": "oregano",
+              "g": 1
+            }
+          ],
+          [
+            "To taste, after simmering",
+            "salt"
+          ]
+        ],
+        "steps": [
+          "Pour {8 cans} of black beans, with their liquid, into a large pot. Add {about 2 cups} water, the bay leaves, {1 tsp} black pepper, {1 tsp} cumin, and {1 tsp} oregano. Do not add salt yet; canned beans are already salted.",
+          "Bring to a gentle simmer over medium heat, partially cover, and cook for about 15 minutes while you make the sofrito. Stir now and then so the beans do not stick."
+        ]
+      }
+    ],
     "ingredients": [
       [
-        "2 lb",
-        "dried black beans"
-      ],
-      [
-        "About 14–16 cups",
-        "water"
-      ],
-      [
-        "2",
-        "bay leaves"
-      ],
-      [
-        "1½ tbsp, plus ½–1 tsp more to taste",
-        "salt"
-      ],
-      [
-        "1½ tsp total",
-        "black pepper"
-      ],
-      [
-        "3 tsp total",
-        "ground cumin"
-      ],
-      [
-        "2½ tsp total",
-        "dried oregano"
-      ],
-      [
         "2 tbsp",
-        "olive oil"
+        "olive oil",
+        {
+          "food": "olive-oil",
+          "g": 27
+        }
       ],
       [
         "1 medium",
-        "onion, diced"
+        "onion, diced",
+        {
+          "food": "onion",
+          "g": 110
+        }
       ],
       [
         "1",
-        "green bell pepper, diced"
+        "green bell pepper, diced",
+        {
+          "food": "green-bell-pepper",
+          "g": 119
+        }
       ],
       [
         "6–8 cloves",
-        "garlic, minced"
+        "garlic, minced",
+        {
+          "food": "garlic",
+          "g": 21
+        }
+      ],
+      [
+        "2 tsp",
+        "ground cumin, for the sofrito",
+        {
+          "food": "cumin",
+          "g": 4.2
+        }
+      ],
+      [
+        "1½ tsp",
+        "dried oregano, for the sofrito",
+        {
+          "food": "oregano",
+          "g": 1.5
+        }
+      ],
+      [
+        "½ tsp",
+        "black pepper, for the sofrito",
+        {
+          "food": "black-pepper",
+          "g": 1.2
+        }
       ],
       [
         "2 tbsp",
-        "white vinegar"
+        "white vinegar",
+        {
+          "food": "white-vinegar",
+          "g": 29.8
+        }
       ],
       [
         "1–2 tsp, optional",
@@ -177,18 +341,14 @@
       ]
     ],
     "steps": [
-      "Rinse the dried black beans thoroughly and pick out any stones or damaged beans. Choose either Option A or Option B below to cook the beans, then continue with the remaining steps.",
-      "Option A — Soaked Beans: Cover the beans generously with water and soak for 8–12 hours or overnight. Drain and discard the soaking water. Add the beans to a large pot with about 14 cups fresh water. Add the bay leaves, 1½ tbsp salt, 1 tsp black pepper, 1 tsp cumin, and 1 tsp oregano. Bring to a boil, then reduce to a gentle simmer and partially cover. Cook approximately 60–90 minutes, until the beans are completely tender.",
-      "Option B — No-Soak / Straight From Dry: Place the rinsed dry beans directly into a large pot. Add about 16 cups water, the bay leaves, 1½ tbsp salt, 1 tsp black pepper, 1 tsp cumin, and 1 tsp oregano. Bring to a full boil. Boil for about 10 minutes, then reduce to a gentle simmer and partially cover. Cook approximately 1¾–2½ hours, or until the beans are completely tender. Check periodically and add additional hot water if the beans are no longer comfortably submerged. Older beans may require additional cooking time.",
-      "Regardless of which method you use, do not drain the beans once cooked. Keep the cooking liquid because it becomes the base of the sauce.",
-      "While the beans are finishing, heat 2 tbsp olive oil in a skillet over medium heat.",
+      "While the beans cook, heat {2 tbsp} olive oil in a skillet over medium heat.",
       "Add the diced onion and green bell pepper. Cook until softened, approximately 6–8 minutes.",
       "Add the minced garlic and cook for about 30–60 seconds, until fragrant.",
-      "Stir 2 tsp cumin, 1½ tsp oregano, and ½ tsp black pepper into the sofrito. Cook briefly to bloom the spices.",
+      "Stir {2 tsp} cumin, {1½ tsp} oregano, and {½ tsp} black pepper into the sofrito. Cook briefly to bloom the spices.",
       "Once the beans are completely tender, stir the sofrito into the bean pot.",
-      "Add 2 tbsp white vinegar and, optionally, 1–2 tsp sugar.",
-      "Taste and add another ½–1 tsp salt as needed.",
-      "Simmer uncovered for another 20–30 minutes until the liquid reduces and becomes rich and creamy.",
+      "Add {2 tbsp} white vinegar and, optionally, {1–2 tsp} sugar.",
+      "Taste and adjust the salt. Dried beans usually need another {½–1 tsp}; canned beans often need little or none.",
+      "Simmer uncovered for another 20–30 minutes until the liquid reduces and becomes rich and creamy. Larger batches take longer to reduce.",
       "For thicker beans, mash a small portion of the beans against the side of the pot and stir them back into the mixture.",
       "Remove the bay leaves before serving."
     ],
@@ -200,9 +360,23 @@
       "Cook times can vary significantly depending on the age of the dried beans.",
       "If the beans are still firm, continue cooking rather than relying strictly on the stated time.",
       "The beans will thicken considerably as they cool.",
+      "Canned option: about 8 standard 15 oz cans stand in for 2 lb dried beans, since a pound of dried beans cooks up to roughly what four cans hold. The can liquid replaces the bean cooking liquid. For less sodium, use low-sodium beans or rinse them and add more water.",
       "They are especially good reheated the next day.",
       "Serve with rice, chicken, tofu, or other Cuban-style dishes."
-    ]
+    ],
+    "related": [
+      {
+        "slug": "quesadillas",
+        "variant": "black-bean",
+        "text": "Black bean quesadillas",
+        "note": "Use 200–250g of these beans, lifted out of their liquid, as the filling."
+      }
+    ],
+    "nutritionServings": {
+      "count": 14,
+      "label": "serving",
+      "note": "Per serving assumes 14 servings from a 1× batch, the middle of the 12–16 range."
+    }
   },
   {
     "slug": "beef-stuffed-sweet-potatoes",
@@ -214,39 +388,81 @@
     "ingredients": [
       [
         "4 medium",
-        "sweet potatoes"
+        "sweet potatoes",
+        {
+          "food": "sweet-potato",
+          "g": 520,
+          "note": "Each sweet potato is counted as a 5 inch potato (130g)."
+        }
       ],
       [
         "1 lb",
-        "ground beef, already on hand"
+        "ground beef, already on hand",
+        {
+          "food": "ground-beef-85",
+          "g": 454,
+          "note": "Ground beef is counted as 85% lean, weighed raw; draining fat lowers the fat and calories."
+        }
       ],
       [
         "1 can / 15 oz",
-        "black beans, drained and rinsed"
+        "black beans, drained and rinsed",
+        {
+          "food": "black-beans-canned-drained",
+          "g": 250,
+          "note": "A drained 15 oz can is counted as about 250g."
+        }
       ],
       [
         "About ½ cup",
-        "shredded cheese, already on hand; adjust to taste"
+        "shredded cheese, already on hand; adjust to taste",
+        {
+          "food": "cheddar",
+          "g": 56.5,
+          "note": "Shredded cheese is counted as cheddar."
+        }
       ],
       [
         "1–2 tbsp",
-        "taco seasoning, to taste; or use cumin, chili powder, and garlic powder"
+        "taco seasoning, to taste; or use cumin, chili powder, and garlic powder",
+        {
+          "food": "taco-seasoning",
+          "g": 12.8
+        }
       ],
       [
         "½–1 cup",
-        "pico de gallo"
+        "pico de gallo",
+        {
+          "food": "pico-de-gallo",
+          "g": 180
+        }
       ],
       [
         "1–2",
-        "avocados, sliced"
+        "avocados, sliced",
+        {
+          "food": "avocado",
+          "g": 204
+        }
       ],
       [
         "½ cup",
-        "plain Greek yogurt"
+        "plain Greek yogurt",
+        {
+          "food": "greek-yogurt-nonfat",
+          "g": 120,
+          "note": "Greek yogurt is counted as plain nonfat, about 120g for ½ cup."
+        }
       ],
       [
         "1–2",
-        "limes, to taste"
+        "limes, to taste",
+        {
+          "food": "lime-juice",
+          "g": 66,
+          "note": "Limes count only their juice."
+        }
       ],
       [
         "To taste",
@@ -273,7 +489,11 @@
       "Use the beef and cheese already on hand. Scale the filling to the amount of beef available.",
       "The grocery list includes extra beans, yogurt, and produce for other meals.",
       "Jarred salsa works in place of pico. Keep the cool toppings separate when saving leftovers."
-    ]
+    ],
+    "nutritionServings": {
+      "count": 4,
+      "label": "stuffed sweet potato"
+    }
   },
   {
     "slug": "chicken-satay-rice-bowls",
@@ -351,9 +571,9 @@
       ]
     ],
     "steps": [
-      "Whisk together 50ml coconut milk, 1 tsp red curry paste, curry powder, honey, and salt. Add the chicken and coat well. Cover and marinate in the refrigerator for at least 2 hours, or overnight.",
-      "Whisk the powdered peanut butter with 50ml hot water until smooth. Stir in 1 tbsp coconut milk, 1 tsp red curry paste, dark soy sauce, and a squeeze of lime. Add more water as needed, up to about 100ml total, and adjust to taste.",
-      "Thread the chicken onto 8 skewers, around 60g per skewer. If using wooden skewers, prepare them according to their package directions. You can also cook the pieces without skewers.",
+      "Whisk together {50ml} coconut milk, {1 tsp} red curry paste, curry powder, honey, and salt. Add the chicken and coat well. Cover and marinate in the refrigerator for at least 2 hours, or overnight.",
+      "Whisk the powdered peanut butter with {50ml} hot water until smooth. Stir in {1 tbsp} coconut milk, {1 tsp} red curry paste, dark soy sauce, and a squeeze of lime. Add more water as needed, up to {about 100ml} total, and adjust to taste.",
+      "Thread the chicken onto {8 skewers}, around 60g per skewer. If using wooden skewers, prepare them according to their package directions. You can also cook the pieces without skewers.",
       "Grill or pan-cook the chicken, turning to brown both sides, or bake on a lined baking sheet at 425°F. Cook until the thickest pieces reach 165°F internally; cooking time depends on the size of the pieces and the method. Do not rely on browning alone.",
       "Let the chicken rest for 2 minutes. Serve 4 skewers per bowl with 150g cooked rice and half the peanut sauce. Finish with optional crushed peanuts, cilantro, chili, and lime."
     ],
@@ -362,7 +582,140 @@
       "Thai red curry paste and curry powder are separate ingredients. Curry simmer sauce is not a direct substitute for the paste.",
       "Powdered peanut butter, Thai red curry paste, and dark soy sauce may require a second store; availability at Trader Joe’s has not been verified.",
       "Regular peanut butter can replace the powder: start with about 2 tbsp and thin with warm water, then adjust to taste. It changes the sauce’s fat, calories, and texture. Regular soy sauce can replace dark soy with a different flavor.",
-      "Nutrition has not been calculated for the complete bowls, including sauce and rice."
+      "Nutrition has not been calculated yet. USDA reference values for raw chicken thigh and powdered peanut butter still need to be added."
     ]
+  },
+  {
+    "slug": "quesadillas",
+    "title": "Quesadillas with creamy jalapeño yogurt sauce",
+    "category": "Dinner",
+    "description": "One quesadilla base with two fillings: chipotle chicken or vegetarian black beans. The tortillas, cheese, creamy jalapeño Greek yogurt sauce, and cooking method stay the same.",
+    "servings": "Servings not recorded",
+    "time": "Time not recorded",
+    "variantLegend": "Filling",
+    "variantParam": "filling",
+    "ingredients": [
+      [
+        "Amount not recorded",
+        "tortillas"
+      ],
+      [
+        "Amount not recorded",
+        "shredded cheese; use a vegetarian-compatible cheese for the black bean filling"
+      ],
+      [
+        "Amount not recorded",
+        "plain Greek yogurt, for the creamy jalapeño sauce"
+      ],
+      [
+        "Amount not recorded",
+        "jalapeño, for the creamy jalapeño sauce"
+      ]
+    ],
+    "variants": [
+      {
+        "id": "chicken",
+        "label": "Chipotle chicken",
+        "default": true,
+        "ingredients": [
+          [
+            "200–250g",
+            "fully cooked chipotle-seasoned chicken, chopped or shredded",
+            {
+              "food": "chicken-breast-cooked",
+              "g": 225,
+              "note": "Chicken is counted as roasted chicken breast without the chipotle seasoning."
+            }
+          ]
+        ],
+        "steps": [
+          "Chop or shred {200–250g} fully cooked chipotle-seasoned chicken into small pieces so it spreads evenly. If the chicken is cold leftovers, warm it in the skillet first; reheated leftovers should reach 165°F."
+        ]
+      },
+      {
+        "id": "black-bean",
+        "label": "Black bean",
+        "vegetarian": "Vegetarian when made with vegetarian-compatible cheese and tortillas.",
+        "ingredients": [
+          [
+            "200–250g",
+            "Cuban-style black beans, or canned black beans, drained and rinsed",
+            {
+              "food": "black-beans-canned-drained",
+              "g": 225,
+              "note": "Beans are counted as drained and rinsed canned black beans; Cuban-style beans add a little oil and more sodium."
+            }
+          ],
+          [
+            "To taste, quick method",
+            "smoked paprika"
+          ],
+          [
+            "To taste, quick method",
+            "ground cumin"
+          ],
+          [
+            "To taste, quick method",
+            "chili powder"
+          ],
+          [
+            "To taste, quick method",
+            "garlic powder"
+          ],
+          [
+            "A splash, quick method",
+            "water"
+          ]
+        ],
+        "link": {
+          "slug": "cuban-style-black-beans",
+          "text": "Cuban-style black beans",
+          "note": "are the base for this filling. Canned beans work for a quick version."
+        },
+        "steps": [
+          "Using Cuban-style black beans: lift {200–250g} of the beans out with a slotted spoon so most of the cooking liquid stays behind, because extra liquid makes the tortillas soggy. Warm them in a skillet and lightly mash some of the beans so the filling holds together.",
+          "Quick alternative with canned beans: warm {200–250g} canned black beans, drained and rinsed, in a skillet with smoked paprika, cumin, chili powder, garlic powder, and a splash of water. Stir until heated through and the water has mostly cooked off, then lightly mash some of the beans so the filling holds together."
+        ]
+      }
+    ],
+    "steps": [
+      "Make the creamy jalapeño Greek yogurt sauce by mixing the Greek yogurt with finely chopped or blended jalapeño. The sauce is the same for both fillings.",
+      "Heat a skillet over medium heat. Lay a tortilla in the pan, scatter cheese over half of it, add some of the filling, and top with a little more cheese so the quesadilla holds together.",
+      "Fold the tortilla over and cook until the underside is golden and crisp. Flip and cook until the second side is golden and the cheese has melted. Lower the heat if the tortilla browns before the cheese melts.",
+      "Repeat with the remaining tortillas, cheese, and filling. Let the quesadillas rest for a minute, cut into wedges, and serve with the sauce."
+    ],
+    "methodNote": "The filling amounts come from the recipe notes. The skillet method is a standard quesadilla technique, written here because the original method details were not recorded.",
+    "unrecorded": [
+      "the number and size of the tortillas",
+      "the type and amount of cheese",
+      "the full ingredient list and amounts for the creamy jalapeño Greek yogurt sauce",
+      "spice amounts for the quick canned beans",
+      "servings and cooking time"
+    ],
+    "notes": [
+      "The creamy jalapeño Greek yogurt sauce is identical for both fillings.",
+      "The black bean filling is vegetarian when the cheese is vegetarian-compatible. Some cheeses are made with animal rennet, and some flour tortillas contain lard, so check both labels.",
+      "The nutrition estimate covers the filling only. The tortilla, cheese, and sauce amounts are not recorded, so adding them would mean guessing."
+    ],
+    "customization": [
+      [
+        "Chipotle chicken (default)",
+        "Use {200–250g} fully cooked, chipotle-seasoned chicken."
+      ],
+      [
+        "Black bean (vegetarian)",
+        "Use {200–250g} Cuban-style black beans, or canned black beans warmed with smoked paprika, cumin, chili powder, garlic powder, and a splash of water. Lightly mash some of the beans so the filling holds together. Vegetarian when made with vegetarian-compatible cheese."
+      ],
+      [
+        "Mixed batch",
+        "Fill half the quesadillas with chicken and the other half with black beans. Use half of each filling, about {100–125g} chicken and {100–125g} beans, instead of the full amount of both. The tortillas, cheese, and sauce stay the same as one batch."
+      ],
+      [
+        "Other fillings",
+        "The tortillas, cheese, sauce, and method work as a base for other fillings, such as leftover cooked meat, roasted vegetables, or sautéed peppers and onions. Keep the filling near {200–250g} per batch and drain wet fillings well."
+      ]
+    ],
+    "nutritionLabel": "Filling only",
+    "nutritionNote": "Tortillas, cheese, and sauce are left out until their amounts are recorded, so this is not a full quesadilla estimate."
   }
 ]
