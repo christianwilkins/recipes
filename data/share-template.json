@@ -1,0 +1,21 @@
+{
+  "width": 1200,
+  "height": 630,
+  "padding": 72,
+  "titleAreaBottom": 480,
+  "titleMaxSize": 92,
+  "titleMinSize": 60,
+  "titleMaxLines": 2,
+  "lineGap": 12,
+  "signatureY": 550,
+  "signatureSize": 32,
+  "signature": "recipes.chriswiki.com",
+  "origin": "https://recipes.chriswiki.com",
+  "siteName": "Christian Wilkins · Recipes",
+  "serif": "assets/fonts/Newsreader.ttf",
+  "sans": "assets/fonts/IBMPlexSans.ttf",
+  "pages": [
+    {"id": "recipes", "path": "/", "title": "Recipes"},
+    {"id": "shopping", "path": "/shopping/", "title": "Grocery list"}
+  ]
+}

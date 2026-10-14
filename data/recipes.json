@@ -216,7 +216,8 @@
           "Option B — No-Soak / Straight From Dry: Place the rinsed dry beans directly into a large pot. Add {about 16 cups} water, the bay leaves, {1½ tbsp} salt, {1 tsp} black pepper, {1 tsp} cumin, and {1 tsp} oregano. Bring to a full boil. Boil for about 10 minutes, then reduce to a gentle simmer and partially cover. Cook approximately 1¾–2½ hours, or until the beans are completely tender. Check periodically and add additional hot water if the beans are no longer comfortably submerged. Older beans may require additional cooking time.",
           "Regardless of which method you use, do not drain the beans once cooked. Keep the cooking liquid because it becomes the base of the sauce."
         ],
-        "notes": []
+        "notes": [],
+        "shareTitle": "Cuban black beans (dried)"
       },
       {
         "id": "canned",
@@ -275,7 +276,8 @@
         ],
         "notes": [
           "This 8-can option adapts the dried-bean batch to a similar yield. The earlier four-can version from the chat history used different seasoning ratios and remains in the source audit."
-        ]
+        ],
+        "shareTitle": "Cuban black beans (canned)"
       }
     ],
     "ingredients": [
@@ -384,7 +386,8 @@
       "count": 14,
       "label": "serving",
       "note": "Per serving assumes 14 servings from a 1× batch, the middle of the 12–16 range."
-    }
+    },
+    "shareTitle": "Cuban black beans"
   },
   {
     "slug": "beef-stuffed-sweet-potatoes",
@@ -513,7 +516,8 @@
         "text": "Garlic-lime avocado yogurt spread",
         "note": "A sauce to serve alongside."
       }
-    ]
+    ],
+    "shareTitle": "Beef & black bean sweet potatoes"
   },
   {
     "slug": "chicken-satay-rice-bowls",
@@ -775,7 +779,8 @@
     "sauceStart": 3,
     "prepSteps": [
       "Prepare the sauce: finely mince the pickled jalapeños. Stir or blend all the sauce ingredients until creamy. For less tang, start with {1½ tsp} brine and add the rest to taste. Refrigerate for 15–20 minutes. This smaller sauce batch makes about {¾ cup}, with some extra for dipping."
-    ]
+    ],
+    "shareVariantSuffix": "quesadillas"
   },
   {
     "slug": "greek-yogurt-pudding",
@@ -861,7 +866,8 @@
         "nutritionServings": {
           "count": 1,
           "label": "bowl"
-        }
+        },
+        "shareTitle": "Banana pudding yogurt"
       },
       {
         "id": "biscoff-cheesecake",
@@ -931,7 +937,8 @@
         "nutritionServings": {
           "count": 1,
           "label": "bowl"
-        }
+        },
+        "shareTitle": "Biscoff cheesecake yogurt"
       },
       {
         "id": "mixed-berry-cheesecake",
@@ -985,7 +992,8 @@
         "servings": "1 bowl",
         "time": "Mix, then chill",
         "label": "Mixed berry cheesecake",
-        "default": false
+        "default": false,
+        "shareTitle": "Berry cheesecake yogurt"
       },
       {
         "id": "nutella-strawberry-banana",
@@ -1031,7 +1039,8 @@
         "servings": "900g yogurt batch",
         "time": "20–30 minutes chilling",
         "label": "Nutella strawberry-banana cheesecake",
-        "default": false
+        "default": false,
+        "shareTitle": "Nutella & fruit cheesecake yogurt"
       },
       {
         "id": "ferrero-rocher",
@@ -1097,7 +1106,8 @@
         "servings": "400g yogurt batch",
         "time": "15–30 minutes chilling",
         "label": "Ferrero Rocher",
-        "default": false
+        "default": false,
+        "shareTitle": "Ferrero Rocher yogurt"
       },
       {
         "id": "berry-chantilly",
@@ -1163,7 +1173,8 @@
         "servings": "800g yogurt batch",
         "time": "Mix, then chill",
         "label": "Berry Chantilly",
-        "default": false
+        "default": false,
+        "shareTitle": "Berry Chantilly yogurt"
       },
       {
         "id": "peanut-banana-pie",
@@ -1228,7 +1239,8 @@
         "servings": "900g yogurt batch",
         "time": "30 minutes chilling",
         "label": "Peanut banana cream pie",
-        "default": false
+        "default": false,
+        "shareTitle": "Peanut banana pie yogurt"
       },
       {
         "id": "pistachio",
@@ -1274,7 +1286,8 @@
         "notes": [],
         "servings": "1 bowl",
         "time": "About 10 minutes in the freezer, plus mixing",
-        "default": false
+        "default": false,
+        "shareTitle": "Pistachio yogurt"
       },
       {
         "id": "biscoff-fairlife",
@@ -1314,7 +1327,8 @@
         ],
         "servings": "1 bowl",
         "time": "About 15–20 minutes in the freezer",
-        "default": false
+        "default": false,
+        "shareTitle": "Biscoff & Fairlife yogurt"
       },
       {
         "id": "chocolate-peanut-cheesecake",
@@ -1374,7 +1388,8 @@
         ],
         "servings": "4–5 servings",
         "time": "30–60 minutes chilling",
-        "default": false
+        "default": false,
+        "shareTitle": "Chocolate peanut cheesecake yogurt"
       },
       {
         "id": "snickers",
@@ -1418,7 +1433,8 @@
         ],
         "servings": "400g yogurt batch",
         "time": "Mix, then chill",
-        "default": false
+        "default": false,
+        "shareTitle": "Snickers yogurt"
       }
     ],
     "gaps": [
@@ -1428,7 +1444,9 @@
     "variantLegend": "Flavor",
     "variantParam": "flavor",
     "guidance": "Start here, then taste. Pudding mix and whey thicken differently by brand, so add liquid a little at a time. Sweetener, fruit, and toppings are flexible; the quantities below give you a batch to work from.",
-    "gapsTitle": "More ways to mix it up"
+    "gapsTitle": "More ways to mix it up",
+    "shareTitle": "Greek yogurt bowls",
+    "shareVariantSuffix": "yogurt"
   },
   {
     "slug": "protein-overnight-oats",
@@ -1489,7 +1507,8 @@
         "servings": "1 portion",
         "time": "Overnight chilling",
         "label": "Shared oats base",
-        "default": true
+        "default": true,
+        "shareTitle": "Overnight oats"
       },
       {
         "id": "pistachio-cardamom",
@@ -1615,7 +1634,8 @@
         "servings": "1 portion",
         "time": "At least 6 hours chilling",
         "label": "Strawberry banana Nutella cheesecake",
-        "default": false
+        "default": false,
+        "shareTitle": "Strawberry banana Nutella oats"
       },
       {
         "id": "pb-and-j",
@@ -1958,7 +1978,8 @@
         ],
         "servings": "1 portion",
         "time": "6–8 hours chilling",
-        "default": false
+        "default": false,
+        "shareTitle": "Berry white chocolate oats"
       }
     ],
     "gaps": [
@@ -1969,7 +1990,9 @@
     "variantLegend": "Flavor",
     "variantParam": "flavor",
     "guidance": "Use these amounts as a starting point. Mix it a little looser than you want to eat it: oats, chia, whey, and pudding all thicken as they sit. Start at the low end of the liquid range, then loosen it up in the morning.",
-    "gapsTitle": "More ways to mix it up"
+    "gapsTitle": "More ways to mix it up",
+    "shareTitle": "Overnight oats",
+    "shareVariantSuffix": "oats"
   },
   {
     "slug": "avocado-yogurt-spread",
@@ -2034,7 +2057,8 @@
     ],
     "servings": "6 mini avocado batch",
     "time": "Mix until smooth",
-    "category": "Sauce"
+    "category": "Sauce",
+    "shareTitle": "Avocado yogurt spread"
   },
   {
     "slug": "greek-yogurt-ranch",
@@ -2191,6 +2215,7 @@
     ],
     "servings": "10 burritos",
     "time": "Cook, cool, assemble, and freeze",
-    "category": "Breakfast"
+    "category": "Breakfast",
+    "shareTitle": "Chicken & Gouda breakfast burritos"
   }
 ]

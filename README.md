@@ -51,3 +51,36 @@ Original contribution note: if you make a PR, add a picture of the final product
 Greek yogurt pudding and overnight oats each use one canonical page with flavor variants. `familyVariants` means each variant contains its full ingredient list; the parent ingredient and step arrays are empty. Variant servings, time, notes, and creator nutrition override their respective defaults. Family grocery additions keep separate flavor sources and update existing amounts when the same flavor is added again. Legacy dessert pages use `family` and `familyVariant` to link to the canonical family. The history audit records recovered recipes and remaining gaps.
 
 Run `node scripts/check-links.mjs` after the build to check all generated internal links.
+
+## Share cards
+
+Messages and other link previews use one shared format: a short title and the site signature on the site's dark background. `data/share-template.json` controls dimensions, margins, type sizes, line limits, branding, and the root and grocery list cards. Colors come from the dark tokens in `public/style.css`.
+
+Recipes and variants automatically receive a card and static share URL. The title defaults to the recipe title, or the variant label followed by the recipe title. Optional content fields keep previews concise:
+
+```json
+{
+  "shareTitle": "Greek yogurt bowls",
+  "shareVariantSuffix": "yogurt",
+  "variants": [
+    {"id": "pistachio", "label": "Pistachio pudding", "shareTitle": "Pistachio yogurt"}
+  ]
+}
+```
+
+These fields sit alongside the existing recipe data. A variant's `shareTitle` overrides the suffix rule. They change preview copy only; ingredients, instructions, and the full recipe title stay intact. There are no recipe-specific branches in the renderer.
+
+To regenerate after editing titles or the template:
+
+```sh
+python3 -m pip install -r scripts/requirements-share.txt
+npm run share:images
+npm run test:cards
+npm run build
+```
+
+The bundled Newsreader and IBM Plex Sans fonts live in `assets/fonts` with their SIL Open Font License files. They come from the [Newsreader](https://github.com/google/fonts/tree/main/ofl/newsreader) and [IBM Plex Sans](https://github.com/google/fonts/tree/main/ofl/ibmplexsans) directories in Google Fonts. Font files are build inputs, not extra website downloads.
+
+`lib/share-cards.mjs` supplies one manifest to the renderer, HTML metadata, and share button. The renderer balances titles across at most two lines and rejects text that cannot fit. Save the generated `public/social` PNGs and `data/share-assets.json` with your changes. The regular build checks their source fingerprint, image hashes, dimensions, file sizes, and every page's preview metadata. Stale, missing, or orphaned cards stop deployment. Remove obsolete generated PNGs explicitly when removing a recipe or variant.
+
+Deployment serves committed PNGs and needs no Python or image generation service. Changing a card changes its image version and the link produced by Share; messaging apps may retain previews already sent.
