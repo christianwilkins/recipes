@@ -1825,54 +1825,57 @@
         "label": "Biscoff cheesecake",
         "ingredients": [
           [
-            "50g",
+            "180g",
             "rolled oats"
           ],
           [
-            "150g",
-            "plain nonfat Greek yogurt"
+            "600g",
+            "Greek yogurt"
           ],
           [
-            "1 scoop",
-            "vanilla whey"
+            "90g / 3 scoops",
+            "vanilla whey protein"
           ],
           [
-            "100–120g",
-            "milk"
-          ],
-          [
-            "8g",
+            "30g",
             "chia seeds"
           ],
           [
-            "½ tsp",
-            "vanilla extract"
+            "2¼ tbsp",
+            "Jell-O zero-sugar cheesecake pudding mix, dry"
           ],
           [
-            "To taste",
-            "sweetener"
+            "52–55g",
+            "Biscoff cookie butter"
+          ],
+          [
+            "225ml",
+            "water or milk"
+          ],
+          [
+            "¾ tsp",
+            "cinnamon"
+          ],
+          [
+            "¾ tsp, optional",
+            "vanilla extract"
           ],
           [
             "Pinch",
             "salt"
-          ],
-          [
-            "1 tbsp",
-            "sugar-free instant cheesecake pudding mix, dry"
-          ],
-          [
-            "15g",
-            "Biscoff cookie butter"
           ]
         ],
         "steps": [
-          "Mix yogurt, whey, milk, dry pudding, vanilla, and salt until smooth. Stir in oats, chia, and the remaining flavorings. Taste before adding sweetener.",
-          "Warm cookie butter for about 10 seconds and swirl it through. Try half mixed in and half on top. Cover and refrigerate overnight; loosen with milk in the morning if needed."
+          "Stir the Greek yogurt, whey, dry cheesecake pudding mix, cookie butter, cinnamon, optional vanilla, and salt together until smooth. Gradually stir in the water or milk.",
+          "Fold in the rolled oats and chia seeds until evenly mixed. Divide between containers, cover, and refrigerate overnight.",
+          "Stir before serving. Add a splash of water or milk if you prefer a looser texture."
         ],
         "notes": [
-          "A crushed cookie is optional. The cookie butter supplies most of the Biscoff flavor."
+          "Ingredient amounts are transcribed from the supplied recipe image, scaled to 600g Greek yogurt for approximately 3 servings.",
+          "The method was cut off in the image; these mixing and chilling directions are a practical adaptation.",
+          "Measure whey by weight when possible; the recipe assumes 30g per scoop. Add the pudding mix as dry powder, without preparing it separately."
         ],
-        "servings": "1 portion",
+        "servings": "approximately 3 servings",
         "time": "Overnight chilling",
         "default": false
       },
