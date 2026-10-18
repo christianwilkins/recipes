@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile, cp, rm } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { categories } from '../lib/groceries.mjs';
-import { scaleFactors, scaleText } from '../lib/scale.mjs';
+import { scaleAmount, scaleFactors, scaleText } from '../lib/scale.mjs';
 import { recipeNutrition, nutrients } from '../lib/nutrition.mjs';
 import { loadShareCards, verifyShareAssets } from '../lib/share-cards.mjs';
 
@@ -128,7 +128,7 @@ for (const r of recipes) {
   const template = promptTemplate(r, v);
   return `<div class="field"${variantAttr(v)}><label for="${id}">Recipe prompt${v ? ` (${e(variantName(v).toLowerCase())})` : ''}</label><textarea id="${id}" data-prompt="${e(v?.id ?? '')}" data-template="${e(template)}" readonly rows="10">${e(plain(template))}</textarea></div>`;
  }).join('');
- const ingredientRow = (amount, name, key, v) => `<li${variantAttr(v)}><label><input type="checkbox" data-check="${key}"><span><strong data-qty="${e(amount)}">${e(amount)}</strong> ${e(name)}</span></label></li>`;
+ const ingredientRow = (amount, name, key, v) => `<li${variantAttr(v)}><label><input type="checkbox" data-check="${key}"><span><strong data-qty="${e(amount)}">${e(scaleAmount(amount, 1))}</strong> ${e(name)}</span></label></li>`;
  const variantIngredients = (r.variants ?? []).map(v=>v.ingredients.map(([amount,name],i)=>ingredientRow(amount, name, `${r.slug}-${v.id}-${i}`, v)).join('')).join('');
  const variantLinks = (r.variants ?? []).filter(v=>v.link).map(v=>`<p class="small"${variantAttr(v)}><a href="/${e(v.link.slug)}/">${e(v.link.text)}</a> ${e(v.link.note)}</p>`).join('');
  const variantSteps = (r.variants ?? []).map(v=>v.steps.map(s=>`<li${variantAttr(v)}>${qty(s)}</li>`).join('')).join('');

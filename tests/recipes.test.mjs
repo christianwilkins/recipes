@@ -30,15 +30,18 @@ test('flavors share one base amount at every supported batch size',()=>{
  }
 });
 
-test('normalized decimal amounts and small spices retain precision',()=>{
- assert.equal(scaleAmount('0.056 tsp',0.5),'0.028 tsp');
- assert.equal(scaleAmount('245.5g',2),'491g');
- assert.equal(scaleAmount('⅛ tsp',0.5),'0.063 tsp');
- assert.equal(scaleAmount('⅓ scoop',0.5),'0.167 scoop');
+test('amounts round to practical kitchen measurements at every scale',()=>{
+ assert.equal(scaleAmount('0.056 tsp',0.5),'a pinch');
+ assert.equal(scaleAmount('245.5g',2),'490g');
+ assert.equal(scaleAmount('⅛ tsp',0.5),'a pinch');
+ assert.equal(scaleAmount('⅓ scoop',0.5),'⅛ scoop');
+ assert.equal(scaleAmount('48.9g',1),'50g');
+ assert.equal(scaleAmount('0.444 scoop',1),'½ scoop');
+ assert.equal(scaleAmount('1.556 tsp',1),'1½ tsp');
  const banoffee=recipe('greek-yogurt-pudding').variants.find(v=>v.id==='banoffee-cheesecake');
- assert.match(scaleText(banoffee.steps[0],2),/62.2g.*35.6g/);
+ assert.match(scaleText(banoffee.steps[0],2),/60g.*35g/);
  const fairlife=recipe('greek-yogurt-pudding').variants.find(v=>v.id==='biscoff-fairlife');
- assert.match(scaleText(fairlife.notes[0],2),/4.8–8g/);
+ assert.match(scaleText(fairlife.notes[0],2),/5–8g/);
 });
 
 test('nutrition is per serving and stays consistent between dried and canned beans',()=>{
