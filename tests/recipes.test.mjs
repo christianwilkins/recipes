@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { scaleAmount, scaleText } from '../lib/scale.mjs';
+import { scaleAmount, scaleText, scaleFactors } from '../lib/scale.mjs';
 import { recipeNutrition } from '../lib/nutrition.mjs';
 import recipes from '../data/recipes.json' with { type: 'json' };
 const recipe = slug => recipes.find(r => r.slug === slug);
@@ -19,6 +19,26 @@ test('every braced quantity in recipe text scales cleanly',()=>{
  for(const r of recipes) for(const text of [...r.steps,...(r.variants??[]).flatMap(v=>v.steps),...(r.customization??[]).map(([,t])=>t)]) {
   assert.doesNotMatch(scaleText(text,2),/[{}]/,r.slug);
  }
+});
+
+test('flavors share one base amount at every supported batch size',()=>{
+ for(const [slug,name,base] of [['greek-yogurt-pudding',/Greek yogurt/,200],['protein-overnight-oats',/^rolled oats$/,60]]) {
+  for(const v of recipe(slug).variants) {
+   const amount=v.ingredients.find(([,ingredient])=>name.test(ingredient))[0];
+   for(const factor of scaleFactors) assert.equal(scaleAmount(amount,factor),`${base*factor}g`,`${slug}/${v.id}: ${factor}×`);
+  }
+ }
+});
+
+test('normalized decimal amounts and small spices retain precision',()=>{
+ assert.equal(scaleAmount('0.056 tsp',0.5),'0.028 tsp');
+ assert.equal(scaleAmount('245.5g',2),'491g');
+ assert.equal(scaleAmount('⅛ tsp',0.5),'0.063 tsp');
+ assert.equal(scaleAmount('⅓ scoop',0.5),'0.167 scoop');
+ const banoffee=recipe('greek-yogurt-pudding').variants.find(v=>v.id==='banoffee-cheesecake');
+ assert.match(scaleText(banoffee.steps[0],2),/62.2g.*35.6g/);
+ const fairlife=recipe('greek-yogurt-pudding').variants.find(v=>v.id==='biscoff-fairlife');
+ assert.match(scaleText(fairlife.notes[0],2),/4.8–8g/);
 });
 
 test('nutrition is per serving and stays consistent between dried and canned beans',()=>{

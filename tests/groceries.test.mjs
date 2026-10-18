@@ -87,11 +87,11 @@ test('family variants preserve exact quantities, independent flavors, and scaled
  const add=await request(db,'/recipe','POST',{slug:'protein-overnight-oats',variant:'pb-and-j',scale:2});
  assert.equal(add.status,200);
  const yogurt=add.items.find(i=>i.name==='Plain Greek yogurt');
- assert.equal(yogurt.sources[0].amount,'800g plain Greek yogurt');
+ assert.equal(yogurt.sources[0].amount,'400g plain Greek yogurt');
  assert.equal(yogurt.sources[0].slug,'protein-overnight-oats/?flavor=pb-and-j');
  const repeat=await request(db,'/recipe','POST',{slug:'protein-overnight-oats',variant:'pb-and-j'});
  assert.equal(repeat.items.length,add.items.length);
- assert.equal(repeat.items.find(i=>i.name==='Plain Greek yogurt').sources[0].amount,'400g plain Greek yogurt');
+ assert.equal(repeat.items.find(i=>i.name==='Plain Greek yogurt').sources[0].amount,'200g plain Greek yogurt');
  await request(db,'/recipe','POST',{slug:'protein-overnight-oats',variant:'plain'});
  await request(db,'/recipe','POST',{slug:'greek-yogurt-pudding',variant:'ferrero-rocher'});
  const list=await readList(db);
