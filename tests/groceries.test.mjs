@@ -107,3 +107,17 @@ test('every family variant adds only its own ingredients',async()=>{
   assert.ok(result.items.flatMap(i=>i.sources).every(s=>s.slug===`${r.slug}/?flavor=${v.id}`));
  }
 });
+
+
+test('grocery additions and saved source amounts use kitchen rounding',async()=>{
+ const db=database();
+ const added=await request(db,'/recipe','POST',{slug:'greek-yogurt-pudding',variant:'banoffee-cheesecake'});
+ const banana=added.items.find(i=>i.name==='ripe banana');
+ assert.match(banana.sources[0].amount,/^50g ripe banana/);
+ assert.match(added.items.find(i=>i.name==='Vanilla whey protein').sources[0].amount,/^½ scoop/);
+ db.sqlite.prepare('UPDATE grocery_sources SET amount = ? WHERE item_id = ?').run('48.9g ripe banana',banana.id);
+ assert.match((await readList(db)).find(i=>i.id===banana.id).sources[0].amount,/^50g ripe banana/);
+ const doubled=await request(db,'/recipe','POST',{slug:'greek-yogurt-pudding',variant:'banoffee-cheesecake',scale:2});
+ assert.match(doubled.items.find(i=>i.id===banana.id).sources[0].amount,/^100g ripe banana/);
+ assert.equal((await request(db,'/recipe','POST',{slug:'greek-yogurt-pudding',variant:'biscoff-fairlife'})).status,404);
+});

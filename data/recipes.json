@@ -1291,47 +1291,6 @@
         "shareTitle": "Pistachio yogurt"
       },
       {
-        "id": "biscoff-fairlife",
-        "label": "Biscoff with Fairlife, no whey",
-        "ingredients": [
-          [
-            "200g",
-            "plain nonfat Greek yogurt"
-          ],
-          [
-            "4–4.8 fl oz",
-            "vanilla Fairlife protein shake"
-          ],
-          [
-            "12g",
-            "sugar-free instant cheesecake pudding mix, dry"
-          ],
-          [
-            "0.4 tsp, to taste",
-            "monk fruit sweetener"
-          ],
-          [
-            "12g",
-            "Biscoff cookie butter"
-          ],
-          [
-            "Optional",
-            "crushed Biscoff cookie"
-          ]
-        ],
-        "steps": [
-          "Mix yogurt, protein shake, dry pudding powder, and sweetener until smooth. Swirl in the cookie butter.",
-          "Freeze for about 15–20 minutes, checking for the texture you want. Add the optional crushed cookie just before eating."
-        ],
-        "notes": [
-          "The shake supplies the liquid, so skip the extra milk from the whey version. If too thin, try another {2.4–4g} pudding powder; if too thick, add a splash of shake. Measure the shake by the listed fluid ounces because bottle sizes vary."
-        ],
-        "servings": "1 bowl / 200g yogurt",
-        "time": "About 15–20 minutes in the freezer",
-        "default": false,
-        "shareTitle": "Biscoff & Fairlife yogurt"
-      },
-      {
         "id": "chocolate-peanut-cheesecake",
         "label": "Chocolate peanut cheesecake",
         "ingredients": [

@@ -40,8 +40,7 @@ test('amounts round to practical kitchen measurements at every scale',()=>{
  assert.equal(scaleAmount('1.556 tsp',1),'1½ tsp');
  const banoffee=recipe('greek-yogurt-pudding').variants.find(v=>v.id==='banoffee-cheesecake');
  assert.match(scaleText(banoffee.steps[0],2),/60g.*35g/);
- const fairlife=recipe('greek-yogurt-pudding').variants.find(v=>v.id==='biscoff-fairlife');
- assert.match(scaleText(fairlife.notes[0],2),/5–8g/);
+ assert.ok(!recipe('greek-yogurt-pudding').variants.some(v=>v.id==='biscoff-fairlife'));
 });
 
 test('nutrition is per serving and stays consistent between dried and canned beans',()=>{
